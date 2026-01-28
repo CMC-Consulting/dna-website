@@ -1,0 +1,233 @@
+# Hướng Dẫn Thêm Bài Blog Mới - Thủ Công
+
+Hướng dẫn này giải thích cách thêm bài blog mới vào website DNA theo cách thủ công.
+
+## Tổng Quan
+
+Các bài blog được viết bằng **định dạng MDX** (Markdown + JSX) và được tổ chức theo ngôn ngữ trong thư mục `blogs/`.
+
+## Cấu Trúc Thư Mục
+
+```
+blogs/
+├── en/          # Bài viết tiếng Anh
+├── vi/          # Bài viết tiếng Việt
+├── ja/          # Bài viết tiếng Nhật
+└── zh/          # Bài viết tiếng Trung
+```
+
+## Bước 1: Tạo File MDX
+
+### Quy Tắc Đặt Tên File
+
+File theo mẫu: `{số}.{slug}.mdx`
+
+- **Số**: Thứ tự/ID của bài viết (ví dụ: `11`)
+- **Slug**: Tên thân thiện với URL, sử dụng dấu gạch ngang (ví dụ: `bai-blog-moi`)
+
+**Ví dụ**: `11.bai-blog-moi.mdx`
+
+### Vị Trí File
+
+Đặt file vào thư mục ngôn ngữ phù hợp:
+- Tiếng Anh: `blogs/en/11.my-new-blog-post.mdx`
+- Tiếng Việt: `blogs/vi/11.bai-blog-moi.mdx`
+
+## Bước 2: Thêm Frontmatter
+
+Mỗi bài blog phải bắt đầu với frontmatter (metadata nằm giữa hai dấu `---`):
+
+```yaml
+---
+title: "Tiêu Đề Bài Blog Của Bạn"
+description: "Mô tả ngắn gọn về bài blog (dùng cho SEO và hiển thị preview)"
+slug: /bai-blog-moi
+image: /blog/11.jpg
+tags: tag1,tag2,tag3
+date: 2026-01-21
+visible: published
+pin: false
+---
+```
+
+### Giải Thích Các Trường Frontmatter
+
+| Trường | Bắt buộc | Mô tả |
+|--------|----------|-------|
+| `title` | Có | Tiêu đề hiển thị trên bài blog |
+| `description` | Có | Mô tả ngắn cho SEO và card hiển thị |
+| `slug` | Có | Đường dẫn URL (ví dụ: `/bai-blog-moi` → `/blog/bai-blog-moi`) |
+| `image` | Có | Đường dẫn ảnh bìa (lưu trong `public/blog/`) |
+| `tags` | Có | Các tag phân loại, cách nhau bằng dấu phẩy |
+| `date` | Có | Ngày xuất bản theo định dạng `YYYY-MM-DD` |
+| `visible` | Có | Trạng thái hiển thị (xem bên dưới) |
+| `pin` | Không | Đặt `true` để ghim bài viết lên đầu |
+
+### Các Tùy Chọn Hiển Thị
+
+- `published` - Bài viết đã xuất bản, hiển thị công khai
+- `draft` - Bài viết ẩn (đang viết dở)
+- `invisible` - Bài viết tồn tại nhưng không hiển thị trong danh sách
+
+## Bước 3: Thêm Ảnh Bìa
+
+1. Chuẩn bị ảnh bìa (khuyến nghị: 1200x630px để chia sẻ mạng xã hội)
+2. Đặt tên theo số bài viết (ví dụ: `11.jpg`)
+3. Đặt vào thư mục `public/blog/11.jpg`
+
+## Bước 4: Viết Nội Dung
+
+Sau phần frontmatter, viết nội dung bài blog bằng Markdown:
+
+```mdx
+---
+title: "Tìm Hiểu AI Trong Doanh Nghiệp"
+description: "Hướng dẫn toàn diện về triển khai AI"
+slug: /tim-hieu-ai-doanh-nghiep
+image: /blog/11.jpg
+tags: ai,doanh-nghiep,huong-dan
+date: 2026-01-21
+visible: published
+pin: false
+---
+
+## Giới Thiệu
+
+Đoạn giới thiệu của bạn ở đây...
+
+## Phần Chính
+
+### Phần Con
+
+- Điểm 1
+- Điểm 2
+
+### Ví Dụ Code
+
+\`\`\`javascript
+const viDu = "Xin chào";
+console.log(viDu);
+\`\`\`
+
+### Bảng Biểu
+
+| Cột 1 | Cột 2 |
+|-------|-------|
+| Dữ liệu 1 | Dữ liệu 2 |
+
+## Kết Luận
+
+Kết luận của bạn ở đây...
+
+---
+
+*Lời kêu gọi hành động hoặc ghi chú kết thúc*
+```
+
+## Bước 5: Hỗ Trợ Đa Ngôn Ngữ
+
+Để hỗ trợ nhiều ngôn ngữ, tạo file tương tự trong mỗi thư mục ngôn ngữ:
+
+1. `blogs/en/11.my-new-blog-post.mdx` - Phiên bản tiếng Anh
+2. `blogs/vi/11.bai-blog-moi.mdx` - Phiên bản tiếng Việt
+3. `blogs/ja/11.my-new-blog-post.mdx` - Phiên bản tiếng Nhật
+4. `blogs/zh/11.my-new-blog-post.mdx` - Phiên bản tiếng Trung
+
+**Quan trọng**: Sử dụng cùng tên file và slug trên tất cả các ngôn ngữ.
+
+## Ví Dụ Hoàn Chỉnh
+
+Đây là ví dụ đầy đủ của một bài blog mới:
+
+**File**: `blogs/vi/11.bat-dau-voi-nextjs.mdx`
+
+```mdx
+---
+title: "Bắt Đầu Với Next.js"
+description: "Học các kiến thức cơ bản về Next.js và xây dựng ứng dụng đầu tiên với hướng dẫn từng bước."
+slug: /bat-dau-voi-nextjs
+image: /blog/11.jpg
+tags: nextjs,react,huong-dan,lap-trinh-web
+date: 2026-01-21
+visible: published
+pin: false
+---
+
+## Giới Thiệu
+
+Next.js là một framework React mạnh mẽ giúp bạn xây dựng các ứng dụng web nhanh, thân thiện với SEO.
+
+## Yêu Cầu Trước Khi Bắt Đầu
+
+Trước khi bắt đầu, đảm bảo bạn có:
+
+- Node.js 18+ đã cài đặt
+- Kiến thức cơ bản về React
+- Trình soạn thảo code (khuyến nghị VS Code)
+
+## Tạo Dự Án Đầu Tiên
+
+Chạy lệnh sau để tạo ứng dụng Next.js mới:
+
+\`\`\`bash
+npx create-next-app@latest my-app
+\`\`\`
+
+## Cấu Trúc Dự Án
+
+| Thư mục | Mục đích |
+|---------|----------|
+| `app/` | Các route và trang ứng dụng |
+| `public/` | Tài nguyên tĩnh |
+| `components/` | Các component React tái sử dụng |
+
+## Kết Luận
+
+Bây giờ bạn đã có hiểu biết cơ bản về Next.js. Chúc bạn code vui vẻ!
+
+---
+
+*Cần hỗ trợ? Liên hệ với đội ngũ của chúng tôi.*
+```
+
+## Danh Sách Kiểm Tra
+
+Trước khi xuất bản, hãy xác nhận:
+
+- [ ] Frontmatter đầy đủ các trường bắt buộc
+- [ ] `slug` bắt đầu bằng `/`
+- [ ] `date` đúng định dạng (`YYYY-MM-DD`)
+- [ ] `visible` được đặt là `published` (hoặc `draft` nếu đang viết)
+- [ ] Ảnh bìa tồn tại trong `public/blog/`
+- [ ] Các tag cách nhau bằng dấu phẩy (không có khoảng trắng sau dấu phẩy)
+- [ ] Nội dung sử dụng đúng cú pháp Markdown
+- [ ] (Tùy chọn) Các phiên bản dịch tồn tại trong thư mục ngôn ngữ khác
+
+---
+
+Vậy là xong! Bài blog mới của bạn sẽ tự động xuất hiện trên website sau khi lưu file.
+
+
+
+
+
+///cách Tự động
+
+Yêu cầu: cần có quyền truy cập mã nguồn dự Án
+
+Trang Công cụ để soạn thảo và xem trước bài đăng: http://draft-dna.cmcconsulting.vn
+
+
+Chuẩn bị:
+Cần chuẩn bị sẵn nội dung -> Soạn thảo ở trang công cụ trên
+Chuẩn bị ảnh bìa bài blog (định dạng .jpg), đặt tên theo bài đăng. Ví dụ bài đăng là 28.bai-dang-mau.mdx thì ảnh sẽ là 28.jpg
+
+Sau khi soạn xong -> tải về định dạng mdx 
+
+mở nội dung bài viết -> dùng AI để tạo thêm 1 phiên bản ngôn ngữ khác (En, Jp,...)
+
+Đặt tên theo số thứ tự bài viết
+Đưa bài viết vào thư mục chứa
+Đưa ảnh vào thư mục chứa
+
+commit và đẩy bài viết lên trên source code. Hệ thống sẽ tự động đồng bộ và hiển thị sau ít phút

@@ -1,0 +1,146 @@
+---
+title: "LangGraph và Kiến trúc Multi-Agent trong Prisma AI: Sức Mạnh của Sự Phối Hợp Thông Minh"
+description: "Khám phá cách Prisma AI sử dụng kiến trúc Multi-Agent với LangGraph để phối hợp các AI Agent chuyên biệt - Planner, Narrator và Designer - tạo ra bài thuyết trình và báo cáo chuyên nghiệp."
+slug: /langgraph-multi-agent-prisma-ai
+image: /blog/8.jpg
+tags: prisma-ai,langgraph,multi-agent,ai-architecture,state-machine,planner,narrator,designer,pptx
+date: 2026-01-15
+visible: published
+pin: false
+---
+
+## Giới Thiệu
+
+Trong kiến trúc của Prisma AI, thay vì chỉ sử dụng một mô hình ngôn ngữ duy nhất để xử lý mọi yêu cầu, chúng tôi áp dụng kiến trúc **Multi-Agent** (đa tác nhân) được vận hành bởi **LangGraph**. Hệ thống này hoạt động như một **Máy trạng thái (State Machine)**, nơi các AI Agent chuyên biệt phối hợp nhịp nhàng thông qua một **Bộ nhớ dùng chung (Shared Memory)** gọi là State để hoàn thành các tác vụ phức tạp với độ chính xác và tính thẩm mỹ cao.
+
+Dưới đây là cách bộ ba **"Planner - Narrator - Designer"** phối hợp để chuyển hóa dữ liệu thô thành những bài thuyết trình và báo cáo chuyên nghiệp.
+
+## 1. Strategic Planner: "Kiến Trúc Sư" Lập Kế Hoạch
+
+Mọi quy trình bắt đầu với **Strategic Planner**, tác nhân đóng vai trò như một chuyên gia tư vấn chiến lược.
+
+### Phân Tích Sâu
+
+Agent này quét qua toàn bộ tài liệu nguồn và truy vấn của người dùng để xác định:
+- Đối tượng mục tiêu
+- Tông giọng phù hợp
+- Mục đích truyền đạt
+
+### Thiết Kế Khung Sườn
+
+Planner xây dựng một **dàn ý logic (Outline)** với các quy tắc nghiêm ngặt:
+- Mỗi tiêu đề phải là một câu hoàn chỉnh
+- Súc tích và không quá 12 từ
+- Đảm bảo sự chuyên nghiệp và mạch lạc
+
+```
+┌─────────────────────────────────────┐
+│         STRATEGIC PLANNER           │
+├─────────────────────────────────────┤
+│  Input: Tài liệu nguồn + Query      │
+│                                     │
+│  ┌─────────────────────────────┐    │
+│  │  1. Phân tích đối tượng     │    │
+│  │  2. Xác định tông giọng     │    │
+│  │  3. Xây dựng Outline        │    │
+│  └─────────────────────────────┘    │
+│                                     │
+│  Output: Dàn ý logic (Outline)      │
+└─────────────────────────────────────┘
+```
+
+## 2. Narrative Story Agent: "Người Kể Chuyện" Nội Dung
+
+Sau khi có khung sườn, **Narrative Story Agent (Narrator)** sẽ tiếp quản để thổi hồn vào nội dung.
+
+### Khai Thác Tri Thức
+
+Sử dụng các mô hình **Long Context LLM**, tác nhân này "đọc" sâu các tài liệu để viết các ý chính cho từng phần:
+- Trích xuất thông tin quan trọng
+- Tổng hợp dữ liệu từ nhiều nguồn
+- Tạo nội dung mạch lạc và logic
+
+### Tư Duy Logic
+
+Thay vì chỉ liệt kê dữ liệu thô, Narrator tập trung trả lời câu hỏi **"Tại sao?"** để:
+- Chứng minh và bảo vệ cho thông điệp cốt lõi
+- Xây dựng lập luận thuyết phục
+- Kết nối các ý tưởng một cách logic
+
+| Đặc điểm | Mô tả |
+|----------|-------|
+| **Long Context** | Đọc và hiểu tài liệu dài |
+| **Tư duy logic** | Trả lời "Tại sao?" thay vì chỉ "Cái gì?" |
+| **Storytelling** | Biến dữ liệu thành câu chuyện hấp dẫn |
+
+## 3. Visual Reasoning & Layout Agent: "Nghệ Sĩ" Trực Quan
+
+Khi nội dung đã sẵn sàng, các tác nhân chuyên trách về thẩm mỹ **(Designer)** sẽ tham gia để tối ưu hóa trải nghiệm thị giác.
+
+### Visual Reasoning Agent
+
+AI phân tích nội dung để đưa ra quyết định thông minh:
+
+**Trường hợp 1: Quy trình hoặc cấu trúc phân cấp**
+- Tự động tạo mã **Mermaid** để vẽ sơ đồ
+- Biểu diễn trực quan các luồng công việc
+- Thể hiện mối quan hệ giữa các thành phần
+
+**Trường hợp 2: Khái niệm trừu tượng**
+- Soạn lệnh cho **DALL-E 3** để tạo hình ảnh minh họa độc bản
+- Thiết kế hình ảnh phù hợp với ngữ cảnh
+- Tăng tính trực quan cho nội dung
+
+### Layout Design Agent
+
+Tác nhân này xác định kiểu dàn trang tối ưu dựa trên sự hiện diện của các tài sản hình ảnh:
+
+| Layout | Mô tả | Sử dụng khi |
+|--------|-------|-------------|
+| **SPLIT** | Chia đôi văn bản và hình ảnh | Có hình ảnh minh họa |
+| **FULL** | Toàn bộ nội dung văn bản | Nội dung chữ thuần túy |
+| **VISUAL** | Hình ảnh làm trung tâm | Biểu đồ, sơ đồ chính |
+
+## Cơ Chế Phối Hợp Hoàn Hảo qua LangGraph
+
+Sự phối hợp này không phải là ngẫu nhiên mà được kiểm soát chặt chẽ thông qua các **luồng dữ liệu của LangGraph**.
+
+### Kiến Trúc State Machine
+
+```
+┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+│   PLANNER    │────▶│   NARRATOR   │────▶│   DESIGNER   │
+└──────┬───────┘     └──────┬───────┘     └──────┬───────┘
+       │                    │                    │
+       ▼                    ▼                    ▼
+┌─────────────────────────────────────────────────────────┐
+│              PRESENTATION STATE (Shared Memory)         │
+├─────────────────────────────────────────────────────────┤
+│  • Outline          • Content           • Visuals       │
+│  • Target Audience  • Key Messages      • Layouts       │
+│  • Tone             • Arguments         • PPTX Output   │
+└─────────────────────────────────────────────────────────┘
+```
+
+### Luồng Dữ Liệu Có Kiểm Soát
+
+Dữ liệu chạy có kiểm soát giữa các bước, cho phép các tác nhân:
+- **Đọc** từ PresentationState dùng chung
+- **Ghi** kết quả vào State sau mỗi bước xử lý
+- **Đồng bộ** thông tin giữa các Agent
+
+Điều này giúp toàn bộ hệ thống luôn **nhất quán** từ bước lập kế hoạch đến khi xuất bản tệp PPTX cuối cùng.
+
+## Kết Luận
+
+Kiến trúc Multi-Agent với LangGraph trong Prisma AI thể hiện sức mạnh của sự phối hợp thông minh:
+
+- **Planner** đảm bảo chiến lược và cấu trúc rõ ràng
+- **Narrator** tạo nội dung có chiều sâu và logic
+- **Designer** mang lại trải nghiệm thị giác chuyên nghiệp
+
+Sự kết hợp này không chỉ tạo ra sản phẩm chất lượng cao mà còn đảm bảo tính nhất quán và khả năng mở rộng cho các tác vụ phức tạp trong tương lai.
+
+---
+
+*Muốn trải nghiệm sức mạnh của kiến trúc Multi-Agent trong Prisma AI? Liên hệ với chúng tôi để được tư vấn và demo sản phẩm.*

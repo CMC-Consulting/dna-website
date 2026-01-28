@@ -1,0 +1,205 @@
+{
+  "LanguageDetection": {
+    "title": "Gợi ý ngôn ngữ",
+    "description": "Chúng tôi nhận thấy ngôn ngữ trình duyệt của bạn khác với ngôn ngữ hiện tại của trang. Bạn có thể đổi ngôn ngữ bất cứ lúc nào.",
+    "countdown": "Tự động đóng sau {countdown} giây",
+    "switchTo": "Chuyển sang"
+  },
+  "Header": {
+    "links": [
+      {
+        "name": "Blog",
+        "href": "/blog"
+      },
+      {
+        "name": "Giới thiệu",
+        "href": "/about"
+      },
+      {
+        "name": "Mã nguồn",
+        "href": "https://github.com/weijunext/nextjs-starter",
+        "target": "_blank",
+        "rel": "noopener noreferrer nofollow"
+      },
+      {
+        "name": "Bản Pro",
+        "href": "https://nexty.dev",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      }
+    ]
+  },
+  "Footer": {
+    "Copyright": "Bản quyền © {year} {name} Giữ toàn bộ bản quyền.",
+    "PrivacyPolicy": "Chính sách bảo mật",
+    "TermsOfService": "Điều khoản dịch vụ",
+    "Links": {
+      "groups": [
+        {
+          "title": "Ngôn ngữ",
+          "links": [
+            {
+              "href": "/en",
+              "name": "English",
+              "useA": true
+            },
+            {
+              "href": "/zh",
+              "name": "中文",
+              "useA": true
+            },
+            {
+              "href": "/ja",
+              "name": "日本語",
+              "useA": true
+            },
+            {
+              "href": "/vi",
+              "name": "Tiếng Việt",
+              "useA": true
+            }
+          ]
+        },
+        {
+          "title": "Mã nguồn mở",
+          "links": [
+            {
+              "href": "https://github.com/weijunext/nextjs-starter",
+              "name": "Next.js Starter",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            },
+            {
+              "href": "https://github.com/weijunext/landing-page-boilerplate",
+              "name": "Landing Page Boilerplate",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            },
+            {
+              "href": "https://github.com/weijunext/weekly-boilerplate",
+              "name": "Blog Boilerplate",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            }
+          ]
+        },
+        {
+          "title": "Sản phẩm khác",
+          "links": [
+            {
+              "href": "https://nexty.dev/",
+              "name": "Nexty - SaaS Template",
+              "rel": "noopener noreferrer",
+              "target": "_blank"
+            },
+            {
+              "href": "https://myogimage.com/",
+              "name": "OG Image Generator",
+              "rel": "noopener noreferrer",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    },
+    "Newsletter": {
+      "title": "Đăng ký nhận bản tin",
+      "description": "Nhận tin tức và cập nhật mới nhất từ Next.js Starter.",
+      "defaultErrorMessage": "Vui lòng nhập một địa chỉ email hợp lệ.",
+      "successMessage": "Đăng ký thành công.",
+      "errorMessage": "Đăng ký không thành công.",
+      "errorMessage2": "Đăng ký không thành công. Vui lòng thử lại sau.",
+      "subscribe": "Đăng ký",
+      "subscribing": "Đang đăng ký...",
+      "subscribed": "Đăng ký thành công! Cảm ơn bạn đã quan tâm."
+    }
+  },
+  "Home": {
+    "title": "Next.js Starter",
+    "tagLine": "Starter Next.js 16 đa ngôn ngữ",
+    "description": "Starter Next.js 16 đa ngôn ngữ với i18n tích hợp sẵn. Khởi chạy website sẵn sàng toàn cầu với nền tảng sạch, hiệu quả và tối ưu SEO."
+  },
+  "Blog": {
+    "title": "Bài viết blog",
+    "description": "Danh sách các bài viết blog"
+  },
+  "About": {
+    "title": "Giới thiệu",
+    "description": "Giới thiệu về trang web"
+  },
+  "TermsOfService": {
+    "title": "Điều khoản dịch vụ",
+    "description": "Điều khoản dịch vụ"
+  },
+  "PrivacyPolicy": {
+    "title": "Chính sách bảo mật",
+    "description": "Chính sách bảo mật"
+  },
+  "Showcase": {
+    "title": "Các sản phẩm xây dựng bằng Starter này",
+    "description": "Khám phá những sản phẩm và website ấn tượng được xây dựng bằng Next.js Starter này.",
+    "visitSite": "Truy cập website"
+  },
+  "Submission": {
+    "badge": "Đề xuất nổi bật",
+    "title": "Gửi sản phẩm của bạn",
+    "description": "Bạn đã xây dựng sản phẩm tuyệt vời với starter này? Hãy chia sẻ với cộng đồng và xuất hiện trong mục showcase.",
+    "productNameLabel": "Tên sản phẩm",
+    "productNamePlaceholder": "Dự án tuyệt vời của tôi",
+    "productUrlLabel": "URL sản phẩm",
+    "submit": "Gửi sản phẩm",
+    "submitting": "Đang gửi...",
+    "successMessage": "Cảm ơn bạn! Chúng tôi đã nhận được gửi sản phẩm của bạn và sẽ sớm xem xét.",
+    "errorMessage": "Đã xảy ra lỗi. Vui lòng thử lại."
+  },
+  "Solutions": {
+    "title": "Giải pháp",
+    "description": "Khám phá bộ sản phẩm AI và dịch vụ dữ liệu doanh nghiệp được thiết kế để đẩy nhanh hành trình chuyển đổi số của bạn."
+  },
+  "Contact": {
+    "title": "Liên hệ chúng tôi",
+    "description": "Hy vọng biểu mẫu này vượt qua bộ lọc thư rác của chúng tôi.",
+    "info": {
+      "office": {
+        "title": "Văn phòng công ty",
+        "address": "Tòa CMC, 11 Duy Tân\nHà Nội, Việt Nam"
+      },
+      "email": {
+        "title": "Gửi email cho chúng tôi",
+        "careers": {
+          "label": "Tuyển dụng",
+          "email": "careers@cmccconsulting.com"
+        },
+        "press": {
+          "label": "Báo chí",
+          "email": "cmcc@cmccconsulting.com"
+        }
+      },
+      "social": {
+        "title": "Theo dõi chúng tôi"
+      }
+    },
+    "form": {
+      "title": "Yêu cầu"
+    },
+    "Form": {
+      "nameLabel": "Tên",
+      "namePlaceholder": "Tên của bạn",
+      "emailLabel": "Email",
+      "emailPlaceholder": "email@example.com",
+      "subjectLabel": "Chủ đề",
+      "subjectPlaceholder": "Vấn đề này về gì?",
+      "messageLabel": "Tin nhắn",
+      "messagePlaceholder": "Hãy cho chúng tôi biết thêm...",
+      "submit": "Gửi tin nhắn",
+      "submitting": "Đang gửi...",
+      "successMessage": "Cảm ơn bạn! Tin nhắn của bạn đã được gửi. Chúng tôi sẽ phản hồi sớm.",
+      "errorMessage": "Đã xảy ra lỗi. Vui lòng thử lại."
+    },
+    "Team": {
+      "title": "Đội ngũ của chúng tôi",
+      "description": "Gặp gỡ những người đứng sau thành công."
+    }
+  }
+}
+

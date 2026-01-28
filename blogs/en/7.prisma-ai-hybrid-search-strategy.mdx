@@ -1,0 +1,130 @@
+---
+title: "The Power of Hybrid Search: Combining Vector and Full-text Search"
+description: "Discover Hybrid Search technology in Prisma AI - the perfect combination of Vector Search and Full-text Search with RRF algorithm to ensure optimal accuracy when retrieving information."
+slug: /prisma-ai-hybrid-search-strategy
+image: /blog/7.jpg
+tags: prisma-ai,hybrid-search,vector-search,full-text-search,rrf,postgresql,embedding,semantic-search
+date: 2026-01-10
+visible: published
+pin: true
+---
+
+## Introduction
+
+In the era of big data, information retrieval goes beyond simple keyword matching—it requires understanding semantics and context. Prisma AI uses **Hybrid Search** technology to ensure optimal accuracy when retrieving information from personal and enterprise knowledge bases.
+
+## 1. Two Pillars of Hybrid Search in Prisma AI
+
+Prisma AI's search system is built on the combination of two complementary methods:
+
+### Vector Search (Semantic Search)
+
+Uses embedding models to transform text into mathematical vectors. This method allows the system to find information based on **meaning and concepts**, even when users don't use the exact words found in the documents.
+
+**Technical Features:**
+- Uses **HNSW** (Hierarchical Navigable Small World) indexes
+- Applies **cosine** distance for vector queries
+- Extremely fast query speed with high accuracy
+
+### Full-text Search (Keyword Search)
+
+Leverages PostgreSQL's capabilities with **tsvector** and **tsquery** to perform traditional keyword searches. This method is extremely effective for finding:
+
+- Technical terminology
+- Error codes
+- Specific names
+
+These are cases where vector search might sometimes miss. The system utilizes **GIN** indexes to optimize text lookups.
+
+| Method | Advantages | Technology |
+|--------|------------|------------|
+| **Vector Search** | Understands semantics, finds by meaning | HNSW Index, Cosine Distance |
+| **Full-text Search** | Precise keywords, technical terms | tsvector, tsquery, GIN Index |
+
+## 2. Reciprocal Rank Fusion (RRF) Algorithm: The Heart of Accuracy
+
+The breakthrough of Prisma AI lies in using the **Reciprocal Rank Fusion (RRF)** algorithm to merge results from both search methods.
+
+### RRF Processing Workflow
+
+**Step 1: Separate Ranking**
+
+The system performs Semantic Search and Keyword Search queries in parallel, then assigns each document a rank based on relevance in each method.
+
+**Step 2: Calculate RRF Score**
+
+Prisma AI applies the formula:
+
+```
+Score = 1.0 / (k + Rank_Vector) + 1.0 / (k + Rank_Text)
+```
+
+Where the constant **k** is typically set to **60** to balance weights between the two methods.
+
+**Step 3: Merge Results**
+
+Documents from both sources are combined through a **FULL OUTER JOIN**. Documents appearing in high positions in both ranking lists receive the highest combined scores.
+
+**Step 4: Sort and Filter**
+
+Finally, the system re-sorts the entire list by descending RRF score and extracts only the most relevant chunks to send to the LLM for processing.
+
+### RRF Process Illustration
+
+```
+┌─────────────────┐     ┌─────────────────┐
+│  Vector Search  │     │ Full-text Search│
+│    (Semantic)   │     │   (Keyword)     │
+└────────┬────────┘     └────────┬────────┘
+         │                       │
+         ▼                       ▼
+┌─────────────────┐     ┌─────────────────┐
+│   Rank: 1,2,3   │     │   Rank: 1,2,3   │
+│   Doc A, B, C   │     │   Doc B, D, A   │
+└────────┬────────┘     └────────┬────────┘
+         │                       │
+         └───────────┬───────────┘
+                     ▼
+         ┌───────────────────────┐
+         │   FULL OUTER JOIN     │
+         │   + RRF Score Calc    │
+         └───────────┬───────────┘
+                     ▼
+         ┌───────────────────────┐
+         │  Final Ranked List    │
+         │  Doc B > A > C > D    │
+         └───────────────────────┘
+```
+
+## 3. Why is Hybrid Search Important?
+
+This combination helps Prisma AI overcome the limitations of each individual method:
+
+### Increased Recall
+
+Ensures no information is missed thanks to the ability to search by both keywords and meaning. When one method misses, the other compensates.
+
+### Increased Precision
+
+The RRF algorithm prioritizes truly relevant documents, helping AI deliver focused answers and **avoid hallucination**.
+
+### Transparency with Citations
+
+Thanks to Hybrid Search finding the exact original text passages, Prisma AI can attach accurate **Citations** to specific document IDs, allowing users to easily verify sources.
+
+| Benefit | Description |
+|---------|-------------|
+| **High Recall** | No important information missed |
+| **High Precision** | Accurate, relevant results |
+| **Transparency** | Clear source citations |
+| **Reliability** | Minimized AI hallucination |
+
+## Conclusion
+
+With powerful Hybrid Search technology, Prisma AI is not just a search tool, but a **digital brain** capable of finding and connecting the smallest pieces of knowledge in your massive data repository in a scientific and reliable manner.
+
+The combination of Vector Search and Full-text Search, orchestrated by the RRF algorithm, creates a superior search system—where semantics and keywords work together to deliver the best results for users.
+
+---
+
+*Want to experience the power of Hybrid Search in Prisma AI? Contact us for consultation and product demo.*

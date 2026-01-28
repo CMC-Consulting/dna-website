@@ -1,0 +1,118 @@
+import { Link } from '@/i18n/routing';
+
+const members = [
+    {
+        name: 'Daniel Pham',
+        role: 'Founder - CEO',
+        avatar: '/teams/dna-1.png',
+        link: '#',
+    },
+    {
+        name: 'Thanh Pham',
+        role: 'AI Engineer',
+        avatar: '/teams/dna-1.png',
+        link: '#',
+    },
+    {
+        name: 'Dat Chau',
+        role: 'Fullstack Engineer',
+        avatar: '/teams/dna-1.png',
+        link: '#',
+    },
+    {
+        name: 'Hung Pham',
+        role: 'AI Engineer',
+        avatar: '/teams/dna-1.png',
+        link: '#',
+    },
+    {
+        name: 'Chinh Pham',
+        role: 'Fullstack Engineer',
+        avatar: '/teams/dna-1.png',
+        link: '#',
+    },
+    {
+        name: 'Dat Le',
+        role: 'AI Engineer',
+        avatar: '/teams/dat_le.jpeg',
+        link: '#',
+    },
+    {
+        name: 'Cuong Le',
+        role: 'AI Engineer',
+        avatar: '/teams/dna-1.png',
+        link: '#',
+    },
+    {
+        name: 'Manh Duong',
+        role: 'AI Engineer',
+        avatar: '/teams/manh_duong.png',
+        link: '#',
+    },
+    {
+        name: 'Khai Pham',
+        role: 'AI Engineer',
+        avatar: '/teams/dna-1.png',
+        link: '#',
+    },
+
+]
+
+export default function TeamSection() {
+    return (
+        <section className="w-full bg-gray-50 dark:bg-transparent py-16 sm:py-20 lg:py-32">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                {/* Section Header */}
+                <div className="text-center mb-12 sm:mb-16">
+                    <span className="text-muted-foreground text-sm font-medium uppercase tracking-wider">
+                        Team
+                    </span>
+                    <h2 className="mt-3 text-balance text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+                        Our dream team
+                    </h2>
+                    <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+                        During the working process, we perform regular fitting with the
+                        client because he is the only person who can feel whether a new suit
+                        fits or not.
+                    </p>
+                </div>
+
+                {/* Team Grid */}
+                <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+                    {members.map((member, index) => (
+                        <div key={index} className="group overflow-hidden">
+                            <img
+                                className="h-96 w-full rounded-2xl object-cover object-top transition-all duration-500 group-hover:h-[22.5rem] group-hover:rounded-xl"
+                                src={member.avatar}
+                                alt={member.name}
+                                width="826"
+                                height="1239"
+                            />
+                            <div className="px-2 pt-3 sm:pt-4">
+                                <div className="flex justify-between items-center">
+                                    <h3 className="text-base font-medium text-foreground transition-all duration-500 group-hover:tracking-wider">
+                                        {member.name}
+                                    </h3>
+                                    <span className="text-xs text-muted-foreground">
+                                        _0{index + 1}
+                                    </span>
+                                </div>
+                                <div className="mt-1 flex items-center justify-between">
+                                    <span className="text-muted-foreground inline-block translate-y-6 text-sm opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                                        {member.role}
+                                    </span>
+                                    <Link
+                                        href={member.link}
+                                        className="text-[#276df0] hover:text-[#276df0]/80 inline-block translate-y-8 text-sm tracking-wide opacity-0 transition-all duration-500 hover:underline group-hover:translate-y-0 group-hover:opacity-100"
+                                    >
+                                        Linktree
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}

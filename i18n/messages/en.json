@@ -1,0 +1,204 @@
+{
+  "LanguageDetection": {
+    "title": "Language Suggestion",
+    "description": "We noticed your browser language differs from the current site language. You can switch languages anytime.",
+    "countdown": "Closing in {countdown} seconds",
+    "switchTo": "Switch to"
+  },
+  "Header": {
+    "links": [
+      {
+        "name": "Blog",
+        "href": "/blog"
+      },
+      {
+        "name": "About",
+        "href": "/about"
+      },
+      {
+        "name": "Source Code",
+        "href": "https://github.com/weijunext/nextjs-starter",
+        "target": "_blank",
+        "rel": "noopener noreferrer nofollow"
+      },
+      {
+        "name": "Pro Version",
+        "href": "https://nexty.dev",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      }
+    ]
+  },
+  "Footer": {
+    "Copyright": "Copyright © {year} {name} All rights reserved.",
+    "PrivacyPolicy": "Privacy Policy",
+    "TermsOfService": "Terms of Service",
+    "Links": {
+      "groups": [
+        {
+          "title": "Languages",
+          "links": [
+            {
+              "href": "/en",
+              "name": "English",
+              "useA": true
+            },
+            {
+              "href": "/zh",
+              "name": "中文",
+              "useA": true
+            },
+            {
+              "href": "/ja",
+              "name": "日本語",
+              "useA": true
+            },
+            {
+              "href": "/vi",
+              "name": "Tiếng Việt",
+              "useA": true
+            }
+          ]
+        },
+        {
+          "title": "Open Source",
+          "links": [
+            {
+              "href": "https://github.com/cmcconsulting/nextjs-starter",
+              "name": "TEST",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            },
+            {
+              "href": "https://github.com/cmcconsulting/landing-page-boilerplate",
+              "name": "TEST",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            },
+            {
+              "href": "https://github.com/cmcconsulting/weekly-boilerplate",
+              "name": "TEST",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            }
+          ]
+        },
+        {
+          "title": "Other Products",
+          "links": [
+            {
+              "href": "https://nexty.dev/",
+              "name": "TEST",
+              "rel": "noopener noreferrer",
+              "target": "_blank"
+            },
+            {
+              "href": "https://myogimage.com/",
+              "name": "TEST",
+              "rel": "noopener noreferrer",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    },
+    "Newsletter": {
+      "title": "Subscribe to our newsletter",
+      "description": "Get the latest news and updates from Next.js Starter",
+      "defaultErrorMessage": "Please enter a valid email address",
+      "successMessage": "Subscription successful",
+      "errorMessage": "Subscription failed",
+      "errorMessage2": "Subscription failed. Please try again later.",
+      "subscribe": "Subscribe",
+      "subscribing": "Subscribing...",
+      "subscribed": "Subscription successful! Thank you for your attention."
+    }
+  },
+  "Home": {
+    "title": "DnA Solutions",
+    "tagLine": "AI and Data Solutions",
+    "description": "We are a team of AI and data experts from CMC Corporation who are passionate about helping businesses leverage the power of AI and data to achieve their goals."
+  },
+  "Blog": {
+    "title": "Insights & Resources",
+    "description": "Explore expert perspectives on SAP, AI, and data solutions. Our team shares practical insights, industry trends, and strategic guidance to help you navigate digital transformation and unlock the full potential of your enterprise systems."
+  },
+  "About": {
+    "title": "About",
+    "description": "About DnA Solutions"
+  },
+  "TermsOfService": {
+    "title": "Terms of Service",
+    "description": "Terms of Service"
+  },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "description": "Privacy Policy"
+  },
+  "Showcase": {
+    "title": "Built with DnA Solutions",
+    "description": "Discover amazing products and websites built using DnA Solutions.",
+    "visitSite": "Visit site"
+  },
+  "Submission": {
+    "badge": "Get Featured",
+    "title": "Submit Your Product",
+    "description": "Built something awesome with this starter? Share your product with our community and get featured on our showcase.",
+    "productNameLabel": "Product Name",
+    "productNamePlaceholder": "My Awesome Project",
+    "productUrlLabel": "Product URL",
+    "submit": "Submit Product",
+    "submitting": "Submitting...",
+    "successMessage": "Thank you! Your submission has been received. We'll review it shortly.",
+    "errorMessage": "Something went wrong. Please try again."
+  },
+  "Solutions": {
+    "title": "Solutions",
+    "description": "Discover our suite of AI-powered products and enterprise data services designed to accelerate your digital transformation journey."
+  },
+  "Contact": {
+    "title": "Contact us",
+    "description": "Hopefully this form gets through our spam filters.",
+    "info": {
+      "office": {
+        "title": "Corporate Office",
+        "address": "CMC Tower, 11 Duy Tan Str\nHanoi, Vietnam"
+      },
+      "email": {
+        "title": "Email us",
+        "careers": {
+          "label": "Careers",
+          "email": "careers@cmccconsulting.com"
+        },
+        "press": {
+          "label": "Press",
+          "email": "cmcc@cmccconsulting.com"
+        }
+      },
+      "social": {
+        "title": "Follow us"
+      }
+    },
+    "form": {
+      "title": "Inquiries"
+    },
+    "Form": {
+      "nameLabel": "Name",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "your@email.com",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "What's this about?",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell us more...",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "successMessage": "Thank you! Your message has been sent. We'll get back to you soon.",
+      "errorMessage": "Something went wrong. Please try again."
+    },
+    "Team": {
+      "title": "Our Team",
+      "description": "Meet the people behind the magic."
+    }
+  }
+}

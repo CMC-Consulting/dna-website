@@ -1,0 +1,130 @@
+---
+title: "Sức mạnh của Hybrid Search: Sự kết hợp giữa Vector và Full-text Search"
+description: "Khám phá công nghệ Hybrid Search trong Prisma AI - sự kết hợp hoàn hảo giữa Vector Search và Full-text Search với thuật toán RRF để đảm bảo độ chính xác tối ưu khi truy xuất thông tin."
+slug: /prisma-ai-hybrid-search-strategy
+image: /blog/7.jpg
+tags: prisma-ai,hybrid-search,vector-search,full-text-search,rrf,postgresql,embedding,semantic-search
+date: 2026-01-10
+visible: published
+pin: true
+---
+
+## Giới Thiệu
+
+Trong kỷ nguyên của dữ liệu lớn, việc tìm kiếm thông tin không chỉ dừng lại ở việc so khớp từ khóa mà còn yêu cầu sự thấu hiểu về ngữ nghĩa và ngữ cảnh. Prisma AI sử dụng công nghệ **Hybrid Search** (Tìm kiếm hỗn hợp) để đảm bảo độ chính xác tối ưu khi truy xuất thông tin từ kho tri thức cá nhân và doanh nghiệp.
+
+## 1. Hai Trụ Cột của Hybrid Search trong Prisma AI
+
+Hệ thống tìm kiếm của Prisma AI được xây dựng trên sự kết hợp của hai phương thức bổ trợ cho nhau:
+
+### Vector Search (Tìm kiếm ngữ nghĩa)
+
+Sử dụng các mô hình nhúng (embedding models) để biến văn bản thành các vector toán học. Phương thức này cho phép hệ thống tìm thấy thông tin dựa trên **ý nghĩa và khái niệm**, ngay cả khi người dùng không sử dụng chính xác các từ ngữ có trong tài liệu.
+
+**Đặc điểm kỹ thuật:**
+- Sử dụng các chỉ mục **HNSW** (Hierarchical Navigable Small World)
+- Áp dụng khoảng cách **cosine** để thực hiện truy vấn vector
+- Tốc độ truy vấn cực nhanh với độ chính xác cao
+
+### Full-text Search (Tìm kiếm toàn văn)
+
+Sử dụng khả năng của PostgreSQL với **tsvector** và **tsquery** để thực hiện tìm kiếm từ khóa truyền thống. Phương thức này cực kỳ hiệu quả trong việc tìm kiếm:
+
+- Các thuật ngữ chuyên môn
+- Mã lỗi
+- Tên riêng biệt
+
+Đây là những trường hợp mà tìm kiếm vector đôi khi có thể bỏ lỡ. Hệ thống tận dụng chỉ mục **GIN** để tối ưu hóa việc tra cứu văn bản.
+
+| Phương thức | Ưu điểm | Công nghệ |
+|-------------|---------|-----------|
+| **Vector Search** | Hiểu ngữ nghĩa, tìm theo ý nghĩa | HNSW Index, Cosine Distance |
+| **Full-text Search** | Chính xác từ khóa, thuật ngữ chuyên môn | tsvector, tsquery, GIN Index |
+
+## 2. Thuật Toán Reciprocal Rank Fusion (RRF): Trái Tim của Sự Chính Xác
+
+Điểm đột phá của Prisma AI chính là việc sử dụng thuật toán **Reciprocal Rank Fusion (RRF)** để hợp nhất kết quả từ hai phương thức tìm kiếm trên.
+
+### Quy Trình Xử Lý của RRF
+
+**Bước 1: Xếp hạng riêng biệt**
+
+Hệ thống thực hiện song song truy vấn Semantic Search và Keyword Search, sau đó gán cho mỗi tài liệu một thứ hạng (rank) dựa trên độ liên quan trong từng phương thức.
+
+**Bước 2: Tính toán điểm số RRF**
+
+Prisma AI áp dụng công thức:
+
+```
+Điểm số = 1.0 / (k + Rank_Vector) + 1.0 / (k + Rank_Text)
+```
+
+Trong đó hằng số **k** thường được đặt là **60** để cân bằng trọng số giữa hai phương thức.
+
+**Bước 3: Hợp nhất kết quả**
+
+Các tài liệu từ cả hai nguồn được gộp lại thông qua một phép **FULL OUTER JOIN**. Những tài liệu xuất hiện ở vị trí cao trong cả hai danh sách xếp hạng sẽ nhận được điểm số tổng hợp cao nhất.
+
+**Bước 4: Sắp xếp và cắt lọc**
+
+Cuối cùng, hệ thống sắp xếp lại toàn bộ danh sách theo điểm số RRF giảm dần và chỉ lấy ra những đoạn thông tin (chunks) tinh hoa nhất để gửi cho LLM xử lý.
+
+### Minh Họa Quy Trình RRF
+
+```
+┌─────────────────┐     ┌─────────────────┐
+│  Vector Search  │     │ Full-text Search│
+│    (Semantic)   │     │   (Keyword)     │
+└────────┬────────┘     └────────┬────────┘
+         │                       │
+         ▼                       ▼
+┌─────────────────┐     ┌─────────────────┐
+│   Rank: 1,2,3   │     │   Rank: 1,2,3   │
+│   Doc A, B, C   │     │   Doc B, D, A   │
+└────────┬────────┘     └────────┬────────┘
+         │                       │
+         └───────────┬───────────┘
+                     ▼
+         ┌───────────────────────┐
+         │   FULL OUTER JOIN     │
+         │   + RRF Score Calc    │
+         └───────────┬───────────┘
+                     ▼
+         ┌───────────────────────┐
+         │  Final Ranked List    │
+         │  Doc B > A > C > D    │
+         └───────────────────────┘
+```
+
+## 3. Tại Sao Hybrid Search Lại Quan Trọng?
+
+Việc kết hợp này giúp Prisma AI vượt qua những hạn chế của từng phương thức đơn lẻ:
+
+### Tăng Độ Phủ (Recall)
+
+Đảm bảo không bỏ sót thông tin nhờ khả năng tìm kiếm theo cả từ khóa và ý nghĩa. Khi một phương thức bỏ lỡ, phương thức kia sẽ bổ sung.
+
+### Tăng Độ Chính Xác (Precision)
+
+Thuật toán RRF giúp ưu tiên những tài liệu thực sự liên quan, giúp AI đưa ra câu trả lời tập trung và **tránh hiện tượng "ảo giác" (hallucination)**.
+
+### Minh Bạch với Trích Dẫn
+
+Nhờ Hybrid Search tìm đúng đoạn văn bản gốc, Prisma AI có thể đính kèm các **trích dẫn (Citations)** chính xác đến từng ID tài liệu, giúp người dùng dễ dàng kiểm chứng nguồn tin.
+
+| Lợi ích | Mô tả |
+|---------|-------|
+| **Recall cao** | Không bỏ sót thông tin quan trọng |
+| **Precision cao** | Kết quả chính xác, liên quan |
+| **Minh bạch** | Trích dẫn nguồn rõ ràng |
+| **Đáng tin cậy** | Giảm thiểu AI hallucination |
+
+## Kết Luận
+
+Với công nghệ Hybrid Search mạnh mẽ, Prisma AI không chỉ là một công cụ tìm kiếm, mà là một **bộ não số** có khả năng lục tìm và kết nối những mảnh tri thức nhỏ nhất trong kho dữ liệu khổng lồ của bạn một cách khoa học và đáng tin cậy.
+
+Sự kết hợp giữa Vector Search và Full-text Search, được điều phối bởi thuật toán RRF, tạo nên một hệ thống tìm kiếm vượt trội - nơi mà ngữ nghĩa và từ khóa cùng làm việc để mang đến kết quả tốt nhất cho người dùng.
+
+---
+
+*Muốn trải nghiệm sức mạnh của Hybrid Search trong Prisma AI? Liên hệ với chúng tôi để được tư vấn và demo sản phẩm.*

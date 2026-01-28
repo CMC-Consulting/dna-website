@@ -1,0 +1,146 @@
+---
+title: "LangGraph and Multi-Agent Architecture in Prisma AI: The Power of Intelligent Coordination"
+description: "Discover how Prisma AI uses Multi-Agent architecture with LangGraph to coordinate specialized AI Agents - Planner, Narrator and Designer - to create professional presentations and reports."
+slug: /langgraph-multi-agent-prisma-ai
+image: /blog/8.jpg
+tags: prisma-ai,langgraph,multi-agent,ai-architecture,state-machine,planner,narrator,designer,pptx
+date: 2026-01-15
+visible: published
+pin: false
+---
+
+## Introduction
+
+In Prisma AI's architecture, instead of using a single language model to handle all requests, we implement a **Multi-Agent** architecture powered by **LangGraph**. This system operates as a **State Machine**, where specialized AI Agents coordinate seamlessly through a **Shared Memory** called State to complete complex tasks with high accuracy and aesthetic quality.
+
+Below is how the trio **"Planner - Narrator - Designer"** collaborates to transform raw data into professional presentations and reports.
+
+## 1. Strategic Planner: The "Architect" of Planning
+
+Every process begins with the **Strategic Planner**, an agent that acts as a strategic consulting expert.
+
+### Deep Analysis
+
+This Agent scans through all source documents and user queries to identify:
+- Target audience
+- Appropriate tone
+- Communication objectives
+
+### Framework Design
+
+The Planner builds a **logical Outline** with strict rules:
+- Each heading must be a complete sentence
+- Concise and no more than 12 words
+- Ensuring professionalism and coherence
+
+```
+┌─────────────────────────────────────┐
+│         STRATEGIC PLANNER           │
+├─────────────────────────────────────┤
+│  Input: Source docs + Query         │
+│                                     │
+│  ┌─────────────────────────────┐    │
+│  │  1. Analyze audience        │    │
+│  │  2. Determine tone          │    │
+│  │  3. Build Outline           │    │
+│  └─────────────────────────────┘    │
+│                                     │
+│  Output: Logical Outline            │
+└─────────────────────────────────────┘
+```
+
+## 2. Narrative Story Agent: The "Storyteller" of Content
+
+Once the framework is ready, the **Narrative Story Agent (Narrator)** takes over to breathe life into the content.
+
+### Knowledge Extraction
+
+Using **Long Context LLM** models, this agent "reads" deeply into documents to write key points for each section:
+- Extract important information
+- Synthesize data from multiple sources
+- Create coherent and logical content
+
+### Logical Thinking
+
+Instead of just listing raw data, the Narrator focuses on answering the question **"Why?"** to:
+- Prove and defend the core message
+- Build persuasive arguments
+- Connect ideas logically
+
+| Feature | Description |
+|---------|-------------|
+| **Long Context** | Read and understand lengthy documents |
+| **Logical thinking** | Answer "Why?" instead of just "What?" |
+| **Storytelling** | Transform data into compelling narratives |
+
+## 3. Visual Reasoning & Layout Agent: The "Artist" of Visuals
+
+When content is ready, the aesthetic-focused agents **(Designer)** join to optimize the visual experience.
+
+### Visual Reasoning Agent
+
+AI analyzes content to make intelligent decisions:
+
+**Case 1: Processes or hierarchical structures**
+- Automatically generate **Mermaid** code to draw diagrams
+- Visually represent workflows
+- Show relationships between components
+
+**Case 2: Abstract concepts**
+- Compose prompts for **DALL-E 3** to create unique illustrations
+- Design images appropriate to the context
+- Enhance content visualization
+
+### Layout Design Agent
+
+This agent determines the optimal page layout based on the presence of visual assets:
+
+| Layout | Description | Used When |
+|--------|-------------|-----------|
+| **SPLIT** | Split text and image | Has illustrations |
+| **FULL** | Full text content | Pure text content |
+| **VISUAL** | Image-centered | Main charts, diagrams |
+
+## Perfect Coordination Mechanism via LangGraph
+
+This coordination is not random but tightly controlled through **LangGraph's data flows**.
+
+### State Machine Architecture
+
+```
+┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+│   PLANNER    │────▶│   NARRATOR   │────▶│   DESIGNER   │
+└──────┬───────┘     └──────┬───────┘     └──────┬───────┘
+       │                    │                    │
+       ▼                    ▼                    ▼
+┌─────────────────────────────────────────────────────────┐
+│              PRESENTATION STATE (Shared Memory)         │
+├─────────────────────────────────────────────────────────┤
+│  • Outline          • Content           • Visuals       │
+│  • Target Audience  • Key Messages      • Layouts       │
+│  • Tone             • Arguments         • PPTX Output   │
+└─────────────────────────────────────────────────────────┘
+```
+
+### Controlled Data Flow
+
+Data flows in a controlled manner between steps, allowing agents to:
+- **Read** from the shared PresentationState
+- **Write** results to State after each processing step
+- **Synchronize** information between Agents
+
+This ensures the entire system remains **consistent** from the planning stage to the final PPTX file export.
+
+## Conclusion
+
+The Multi-Agent architecture with LangGraph in Prisma AI demonstrates the power of intelligent coordination:
+
+- **Planner** ensures clear strategy and structure
+- **Narrator** creates content with depth and logic
+- **Designer** delivers professional visual experience
+
+This combination not only produces high-quality outputs but also ensures consistency and scalability for complex tasks in the future.
+
+---
+
+*Want to experience the power of Multi-Agent architecture in Prisma AI? Contact us for consultation and product demo.*

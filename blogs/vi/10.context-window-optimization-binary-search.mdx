@@ -1,0 +1,189 @@
+---
+title: "Tối ưu hóa Context Window bằng Binary Search"
+description: "Khám phá cách Prisma AI sử dụng thuật toán Binary Search để tối ưu hóa việc phân bổ thông tin trong Context Window, đảm bảo AI hoạt động với hiệu suất cao nhất mà không gặp lỗi quá tải."
+slug: /context-window-optimization-binary-search
+image: /blog/10.jpg
+tags: prisma-ai,context-window,binary-search,token-optimization,llm,ai-performance,token-limit
+date: 2026-01-20
+visible: published
+pin: false
+---
+
+## Giới Thiệu
+
+Trong thế giới của các mô hình ngôn ngữ lớn (LLM), **Context Window** (Cửa sổ ngữ cảnh) là một tài nguyên hữu hạn và vô cùng quý giá. Để đảm bảo AI luôn hoạt động với hiệu suất cao nhất mà không gặp lỗi quá tải hay mất đi các chi tiết quan trọng, Prisma AI đã triển khai kỹ thuật **Binary Search** (Tìm kiếm nhị phân) để tối ưu hóa việc phân bổ thông tin.
+
+## 1. Thách Thức của Giới Hạn Token
+
+Mọi mô hình AI đều có một giới hạn tối đa về số lượng **Token** (đơn vị văn bản) mà nó có thể xử lý trong một lần truy vấn.
+
+### Vấn Đề Khi Gửi Quá Nhiều
+
+- AI bị "ngộp" dữ liệu
+- Phản hồi sai hoặc không chính xác
+- Lỗi hệ thống do vượt quá giới hạn
+
+### Vấn Đề Khi Gửi Quá Ít
+
+- AI thiếu bối cảnh cần thiết
+- Câu trả lời không đầy đủ
+- Mất đi các chi tiết quan trọng
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                   TOKEN LIMIT CHALLENGE                 │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│   Quá nhiều token          Quá ít token                │
+│   ┌─────────────┐          ┌─────────────┐             │
+│   │ ████████████│          │ ██          │             │
+│   │ ████████████│          │             │             │
+│   │ ████████████│          │             │             │
+│   │ ██ OVERFLOW │          │  MISSING    │             │
+│   └─────────────┘          └─────────────┘             │
+│   ❌ Lỗi hệ thống          ❌ Thiếu context            │
+│                                                         │
+│                    "Điểm vàng"                          │
+│                  ┌─────────────┐                        │
+│                  │ ████████    │                        │
+│                  │ ████████    │                        │
+│                  │ ████████    │                        │
+│                  │  OPTIMAL    │                        │
+│                  └─────────────┘                        │
+│                  ✅ Hiệu suất tối ưu                    │
+└─────────────────────────────────────────────────────────┘
+```
+
+## 2. Kỹ Thuật Tối Ưu Hóa Bằng Tìm Kiếm Nhị Phân
+
+Prisma AI sử dụng hàm `optimize_documents_for_token_limit` kết hợp với thuật toán **Binary Search** để tìm ra "điểm vàng" của lượng thông tin đầu vào.
+
+### Quy Trình Xử Lý
+
+**Bước 1: Tính toán bối cảnh gốc**
+
+Hệ thống trước tiên xác định số lượng token của các thành phần cố định:
+- Lời nhắc hệ thống (System Prompt)
+- Lịch sử trò chuyện (Chat History)
+- Các mẫu câu hỏi (Query Templates)
+
+**Bước 2: Đo lường chi phí tài liệu**
+
+Mọi đoạn thông tin (chunk) từ kho tri thức đều được đếm token chính xác bằng công nghệ `token_counter`.
+
+**Bước 3: Tìm kiếm độ dài tối ưu**
+
+Thay vì cắt bỏ tài liệu một cách ngẫu nhiên, thuật toán Binary Search sẽ:
+- Liên tục chia đôi danh sách tài liệu
+- Thử nghiệm từng phần
+- Xác định chính xác số lượng đoạn tài liệu tối đa
+
+**Bước 4: Dành chỗ cho phản hồi**
+
+Hệ thống luôn chủ động dự phòng một khoảng trống (**output buffer**) khoảng **2000 token** để đảm bảo AI có đủ không gian viết câu trả lời đầy đủ.
+
+### Minh Họa Thuật Toán Binary Search
+
+```
+┌─────────────────────────────────────────────────────────┐
+│              BINARY SEARCH OPTIMIZATION                 │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  Documents: [D1, D2, D3, D4, D5, D6, D7, D8]           │
+│  Token Limit: 8000 tokens                               │
+│                                                         │
+│  Iteration 1: Try all 8 docs → 12000 tokens ❌         │
+│               [████████████████████████]                │
+│                                                         │
+│  Iteration 2: Try 4 docs → 5000 tokens ✅              │
+│               [████████████]                            │
+│                                                         │
+│  Iteration 3: Try 6 docs → 7500 tokens ✅              │
+│               [██████████████████]                      │
+│                                                         │
+│  Iteration 4: Try 7 docs → 8500 tokens ❌              │
+│               [████████████████████████]                │
+│                                                         │
+│  Result: 6 documents = OPTIMAL ✅                       │
+│               [██████████████████]                      │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+| Bước | Số tài liệu | Token | Kết quả |
+|------|-------------|-------|---------|
+| 1 | 8 | 12,000 | ❌ Vượt giới hạn |
+| 2 | 4 | 5,000 | ✅ Còn dư |
+| 3 | 6 | 7,500 | ✅ Gần tối ưu |
+| 4 | 7 | 8,500 | ❌ Vượt giới hạn |
+| **Kết quả** | **6** | **7,500** | **✅ Tối ưu** |
+
+## 3. Tối Ưu Hóa Nội Dung Tóm Tắt Chuyên Sâu
+
+Đối với các tài liệu cực dài, Prisma AI áp dụng kỹ thuật `optimize_content_for_context_window`.
+
+### Cách Hoạt Động
+
+AI sẽ sử dụng tìm kiếm nhị phân để:
+- Thu gọn nội dung văn bản gốc đến độ dài lý tưởng
+- Giữ được những luận điểm cốt lõi
+- Không vượt quá khả năng xử lý của mô hình
+
+```
+┌─────────────────────────────────────────────────────────┐
+│           CONTENT OPTIMIZATION FLOW                     │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  Original Document (50,000 tokens)                      │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │ ████████████████████████████████████████████████│   │
+│  └─────────────────────────────────────────────────┘   │
+│                         │                               │
+│                         ▼                               │
+│              Binary Search Optimization                 │
+│                         │                               │
+│                         ▼                               │
+│  Optimized Content (8,000 tokens)                       │
+│  ┌─────────────────┐                                   │
+│  │ ████████████████│ ← Core arguments preserved        │
+│  └─────────────────┘                                   │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+## 4. Kết Quả: Thông Tin Chính Xác, Hiệu Suất Ổn Định
+
+Nhờ khả năng quản lý token thông minh, Prisma AI mang lại những lợi ích vượt trội:
+
+### Loại Bỏ Lỗi Quá Tải
+
+Đảm bảo **100%** các truy vấn đều được thực hiện thành công, không còn tình trạng lỗi do vượt quá giới hạn token.
+
+### Ưu Tiên Thông Tin Quan Trọng
+
+Các tài liệu có độ liên quan cao nhất (đã qua **Rerank**) luôn được ưu tiên đưa vào cửa sổ ngữ cảnh trước.
+
+### Tiết Kiệm Chi Phí
+
+Chỉ gửi lượng dữ liệu vừa đủ, giúp tối ưu hóa ngân sách sử dụng API cho doanh nghiệp.
+
+| Lợi ích | Mô tả |
+|---------|-------|
+| **Độ tin cậy 100%** | Không còn lỗi token overflow |
+| **Chất lượng cao** | Thông tin quan trọng được ưu tiên |
+| **Chi phí tối ưu** | Chỉ sử dụng token cần thiết |
+| **Phản hồi đầy đủ** | Luôn có buffer cho output |
+
+## Kết Luận
+
+Với Prisma AI, dữ liệu khổng lồ của bạn sẽ luôn được **tinh lọc** và **truyền tải** đến AI một cách khoa học nhất. Kỹ thuật Binary Search đảm bảo:
+
+- Mọi câu trả lời đều thông minh và đầy đủ dẫn chứng
+- Hệ thống hoạt động ổn định không lỗi
+- Chi phí được tối ưu hóa tối đa
+
+Đây chính là cách Prisma AI biến giới hạn của Context Window thành lợi thế cạnh tranh cho doanh nghiệp của bạn.
+
+---
+
+*Muốn trải nghiệm khả năng tối ưu hóa token thông minh của Prisma AI? Liên hệ với chúng tôi để được tư vấn và demo sản phẩm.*

@@ -1,0 +1,208 @@
+# How to Add a New Blog Post
+
+This guide explains how to add a new blog post to the DNA website.
+
+## Overview
+
+Blog posts are written in **MDX format** (Markdown + JSX) and organized by locale (language) in the `blogs/` directory.
+
+## Directory Structure
+
+```
+blogs/
+├── en/          # English posts
+├── vi/          # Vietnamese posts
+├── ja/          # Japanese posts
+└── zh/          # Chinese posts
+```
+
+## Step 1: Create the MDX File
+
+### File Naming Convention
+
+Files follow this pattern: `{number}.{slug}.mdx`
+
+- **Number**: Order/ID of the post (e.g., `11`)
+- **Slug**: URL-friendly name with hyphens (e.g., `my-new-blog-post`)
+
+**Example**: `11.my-new-blog-post.mdx`
+
+### File Location
+
+Place your file in the appropriate language folder:
+- English: `blogs/en/11.my-new-blog-post.mdx`
+- Vietnamese: `blogs/vi/11.my-new-blog-post.mdx`
+
+## Step 2: Add Frontmatter
+
+Every blog post must start with frontmatter (metadata between `---` delimiters):
+
+```yaml
+---
+title: "Your Blog Post Title"
+description: "A brief description of your blog post (used for SEO and previews)"
+slug: /my-new-blog-post
+image: /blog/11.jpg
+tags: tag1,tag2,tag3
+date: 2026-01-21
+visible: published
+pin: false
+---
+```
+
+### Frontmatter Fields Explained
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `title` | Yes | The title displayed on the blog post |
+| `description` | Yes | Short description for SEO and blog cards |
+| `slug` | Yes | URL path (e.g., `/my-new-blog-post` → `/blog/my-new-blog-post`) |
+| `image` | Yes | Cover image path (stored in `public/blog/`) |
+| `tags` | Yes | Comma-separated tags for categorization |
+| `date` | Yes | Publication date in `YYYY-MM-DD` format |
+| `visible` | Yes | Visibility status (see below) |
+| `pin` | No | Set to `true` to pin the post at the top |
+
+### Visibility Options
+
+- `published` - Post is live and visible to everyone
+- `draft` - Post is hidden (work in progress)
+- `invisible` - Post exists but is not shown in listings
+
+## Step 3: Add Cover Image
+
+1. Prepare your cover image (recommended: 1200x630px for social sharing)
+2. Name it to match your post number (e.g., `11.jpg`)
+3. Place it in `public/blog/11.jpg`
+
+## Step 4: Write Your Content
+
+After the frontmatter, write your blog content using Markdown:
+
+```mdx
+---
+title: "Understanding AI in Enterprise"
+description: "A comprehensive guide to AI implementation"
+slug: /understanding-ai-enterprise
+image: /blog/11.jpg
+tags: ai,enterprise,guide
+date: 2026-01-21
+visible: published
+pin: false
+---
+
+## Introduction
+
+Your introduction paragraph here...
+
+## Main Section
+
+### Subsection
+
+- Bullet point 1
+- Bullet point 2
+
+### Code Examples
+
+\`\`\`javascript
+const example = "Hello World";
+console.log(example);
+\`\`\`
+
+### Tables
+
+| Column 1 | Column 2 |
+|----------|----------|
+| Data 1   | Data 2   |
+
+## Conclusion
+
+Your conclusion here...
+
+---
+
+*Call to action or closing note*
+```
+
+## Step 5: Multi-language Support
+
+To support multiple languages, create the same file in each locale folder:
+
+1. `blogs/en/11.my-new-blog-post.mdx` - English version
+2. `blogs/vi/11.my-new-blog-post.mdx` - Vietnamese version
+3. `blogs/ja/11.my-new-blog-post.mdx` - Japanese version
+4. `blogs/zh/11.my-new-blog-post.mdx` - Chinese version
+
+**Important**: Use the same filename and slug across all locales.
+
+## Complete Example
+
+Here's a full example of a new blog post:
+
+**File**: `blogs/en/11.getting-started-with-nextjs.mdx`
+
+```mdx
+---
+title: "Getting Started with Next.js"
+description: "Learn the fundamentals of Next.js and build your first application with this step-by-step guide."
+slug: /getting-started-with-nextjs
+image: /blog/11.jpg
+tags: nextjs,react,tutorial,web-development
+date: 2026-01-21
+visible: published
+pin: false
+---
+
+## Introduction
+
+Next.js is a powerful React framework that enables you to build fast, SEO-friendly web applications.
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+- Node.js 18+ installed
+- Basic knowledge of React
+- A code editor (VS Code recommended)
+
+## Creating Your First Project
+
+Run the following command to create a new Next.js app:
+
+\`\`\`bash
+npx create-next-app@latest my-app
+\`\`\`
+
+## Project Structure
+
+| Folder | Purpose |
+|--------|---------|
+| `app/` | Application routes and pages |
+| `public/` | Static assets |
+| `components/` | Reusable React components |
+
+## Conclusion
+
+You now have a basic understanding of Next.js. Happy coding!
+
+---
+
+*Need help? Contact our team for support.*
+```
+
+## Checklist
+
+Before publishing, verify:
+
+- [ ] Frontmatter is complete with all required fields
+- [ ] `slug` starts with `/`
+- [ ] `date` is in correct format (`YYYY-MM-DD`)
+- [ ] `visible` is set to `published` (or `draft` for WIP)
+- [ ] Cover image exists in `public/blog/`
+- [ ] Tags are comma-separated (no spaces after commas)
+- [ ] Content uses proper Markdown syntax
+- [ ] (Optional) Translated versions exist in other locale folders
+
+---
+
+That's it! Your new blog post will automatically appear on the website after saving the file.

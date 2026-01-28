@@ -1,0 +1,106 @@
+---
+title: Giới thiệu
+description: Giới thiệu về Next.js Starter - Starter Next.js 16 đa ngôn ngữ
+lastUpdated: 2025-02-19
+---
+
+> Ngày cập nhật: 2025-02-19
+
+# Giới thiệu về Next.js Starter
+
+Next.js Starter là một starter template Next.js 16 giàu tính năng, hỗ trợ đa ngôn ngữ, giúp bạn xây dựng nhanh các website sẵn sàng cho thị trường toàn cầu. Dự án đi kèm i18n tích hợp sẵn, giao diện hiện đại, chuyển đổi giao diện sáng/tối, layout responsive, hệ thống blog MDX, tối ưu SEO và các công cụ phân tích.
+
+## ✨ Tính năng chính
+
+- 🌐 **Hỗ trợ i18n tích hợp sẵn**: Hỗ trợ sẵn tiếng Anh, tiếng Trung, tiếng Nhật và tiếng Việt, giúp bạn dễ dàng tạo website đa ngôn ngữ.
+- 🎨 **Giao diện hiện đại**: Giao diện sạch, hiện đại, sử dụng Tailwind CSS.
+- 🌙 **Chuyển đổi chế độ sáng/tối**: Cho phép người dùng chuyển đổi dễ dàng giữa chế độ sáng và tối.
+- 📱 **Layout responsive**: Thiết kế responsive đảm bảo trải nghiệm tốt trên cả thiết bị di động và máy tính.
+- 📝 **Hệ thống blog MDX**: Viết bài blog bằng MDX với sự linh hoạt và mạnh mẽ.
+- 🔍 **Tối ưu SEO**: Bao gồm sitemap.xml tự động, cấu hình robots.txt và metadata tối ưu.
+- 📊 **Tích hợp Analytics**: Tích hợp Google Analytics, Baidu Analytics, Google Adsense và Vercel Analytics để theo dõi và phân tích.
+- 🌿 **Hiệu năng thân thiện môi trường**: Đạt điểm A+ trên [Website Carbon](https://www.websitecarbon.com/website/nextjsstarter-io/), là một trong những website tiết kiệm năng lượng.
+
+## 🚀 Bắt đầu nhanh
+
+1. Clone repository:
+
+```bash
+git clone https://github.com/weijunext/nextjs-starter.git
+```
+
+2. Cài đặt dependencies:
+
+```bash
+npm install
+```
+
+3. Sao chép biến môi trường:
+
+```bash
+cp .env.example .env
+```
+
+4. Chạy server development:
+
+```bash
+npm run dev
+```
+
+Truy cập [http://localhost:3000](http://localhost:3000) để xem ứng dụng.
+
+## ⚙️ Cấu hình
+
+1. **Cấu hình cơ bản**:
+   - Chỉnh sửa `config/site.ts` để cấu hình thông tin website.
+   - Cập nhật icon và logo trong thư mục `public/`.
+   - Cấu hình `app/sitemap.ts` và `app/robots.ts`.
+
+2. **Cấu hình i18n**:
+   - Thêm hoặc sửa file ngôn ngữ trong `i18n/messages/`.
+   - Cấu hình danh sách ngôn ngữ hỗ trợ trong `i18n/routing.ts`.
+   - Thiết lập i18n routing trong `middleware.ts`.
+
+## 📝 Quản lý nội dung
+
+### Bài viết blog
+
+Tạo file MDX trong `blog/[locale]` với định dạng:
+
+````
+---
+title: Tiêu đề bài viết
+description: Mô tả bài viết
+image: /image.png
+slug: /duong-dan-url
+tags: tag1,tag2
+date: 2025-02-20
+visible: published
+pin: true
+---
+
+Nội dung bài viết...
+````
+
+### Trang tĩnh
+
+Quản lý nội dung trang tĩnh trong `content/[page]/[locale].mdx`.
+
+## 📄 Giấy phép
+
+Next.js Starter được phát hành dưới giấy phép MIT, cho phép bạn tự do sử dụng, chỉnh sửa và phân phối template.
+
+## 🤝 Đóng góp
+
+Chúng tôi luôn hoan nghênh các issue và pull request! Mọi đóng góp của bạn đều giúp dự án tốt hơn.
+
+## Về tác giả
+
+Chuyên gia Next.js full-stack, cung cấp dịch vụ phát triển dự án, tối ưu hiệu năng và cải thiện SEO.
+
+Liên hệ tư vấn và đào tạo: weijunext@gmail.com
+
+- [Github](https://github.com/weijunext)
+- [Bento](https://bento.me/weijunext)
+- [Twitter/X](https://twitter.com/judewei_dev)
+
