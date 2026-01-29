@@ -75,14 +75,14 @@ export default async function Contact({ params }: { params: Params }) {
       content: (
         <div className="mt-3 flex gap-6 lg:gap-10">
           <Link
-            href="#"
+            href="https://www.facebook.com/cmcconsulting.vn"
             className="text-muted-foreground hover:text-foreground transition-colors"
             aria-label="Facebook"
           >
             <Facebook className="size-5" />
           </Link>
           <Link
-            href="#"
+            href="https://www.linkedin.com/company/cmcconsulting/"
             className="text-muted-foreground hover:text-foreground transition-colors"
             aria-label="LinkedIn"
           >

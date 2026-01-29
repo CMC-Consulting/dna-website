@@ -74,12 +74,12 @@ export function AboutHero() {
             </h1>
 
             <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed md:text-xl">
-              CMCC DnA is a platform that helps businesses manage their projects
+              CMC Consulting AI is a platform that helps businesses manage their projects
               and teams with cutting-edge AI and data solutions.
             </p>
 
             <p className="text-muted-foreground hidden max-w-xl text-base leading-relaxed text-balance md:block lg:text-lg">
-              At CMCC DnA, we are dedicated to transforming the way teams plan,
+              At CMC Consulting AI, we are dedicated to transforming the way teams plan,
               execute, and deliver projects. Our mission is to provide our customers
               with an unbeatable edge over delays, inefficiencies, and disorganisation
               through actionable insights and seamless collaboration.

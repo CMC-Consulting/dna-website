@@ -181,11 +181,11 @@
         "title": "Gửi email cho chúng tôi",
         "careers": {
           "label": "Tuyển dụng",
-          "email": "careers@cmccconsulting.com"
+          "email": "hr.cmcconsulting@cmc.com.vn"
         },
         "press": {
-          "label": "Báo chí",
-          "email": "cmcc@cmccconsulting.com"
+          "label": "Thư điện tử",
+          "email": "cmc@cmcconsulting.com"
         }
       },
       "social": {
@@ -201,7 +201,7 @@
       "emailLabel": "Email",
       "emailPlaceholder": "email@example.com",
       "subjectLabel": "Chủ đề",
-      "subjectPlaceholder": "Vấn đề này về gì?",
+      "subjectPlaceholder": "Tiêu đề",
       "messageLabel": "Tin nhắn",
       "messagePlaceholder": "Hãy cho chúng tôi biết thêm...",
       "submit": "Gửi tin nhắn",
@@ -211,7 +211,7 @@
     },
     "Team": {
       "title": "Đội ngũ của chúng tôi",
-      "description": "Gặp gỡ những người đứng sau thành công."
+      "description": "Gặp gỡ những thành viên đội ngũ của chúng tôi"
     }
   }
 }

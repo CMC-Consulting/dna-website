@@ -65,7 +65,7 @@ export const Navbar = () => {
         <Link href="/" className="flex shrink-0 items-center gap-2 text-[#276df0]">
           <Icons.icon className="w-auto h-5 font-bold" />
           <span className="text-base md:text-lg font-bold">
-            CMCC DnA
+            CMC Consulting AI
           </span>
         </Link>
 
