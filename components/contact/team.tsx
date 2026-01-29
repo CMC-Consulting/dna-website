@@ -4,25 +4,25 @@ const members = [
     {
         name: 'Daniel Pham',
         role: 'Founder - CEO',
-        avatar: '/teams/dna-1.png',
+        avatar: '/teams/dien_pham.png',
         link: '#',
     },
     {
-        name: 'Thanh Pham',
+        name: 'Thanh Nguyen',
         role: 'AI Engineer',
-        avatar: '/teams/dna-1.png',
+        avatar: '/teams/thanh_nguyen.png',
         link: '#',
     },
     {
         name: 'Dat Chau',
         role: 'Fullstack Engineer',
-        avatar: '/teams/dna-1.png',
+        avatar: '/teams/dat_chau.jpg',
         link: '#',
     },
     {
         name: 'Hung Pham',
         role: 'AI Engineer',
-        avatar: '/teams/dna-1.png',
+        avatar: '/teams/hung_pham.png',
         link: '#',
     },
     {
