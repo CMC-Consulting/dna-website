@@ -156,6 +156,19 @@
     "title": "Giải pháp",
     "description": "Khám phá bộ sản phẩm AI và dịch vụ dữ liệu doanh nghiệp được thiết kế để đẩy nhanh hành trình chuyển đổi số của bạn."
   },
+  "Navbar": {
+    "solutions": "Giải pháp",
+    "allSolutionsTitle": "Tất cả giải pháp",
+    "allSolutionsDescription": "Khám phá toàn bộ danh mục sản phẩm AI và dịch vụ dữ liệu của chúng tôi.",
+    "aiProductsTitle": "Sản phẩm AI",
+    "aiProductsDescription": "Tự động hóa thông minh cho quản lý dự án, hóa đơn, nhân sự và phân loại Email thông minh.",
+    "dataServicesTitle": "Dịch vụ dữ liệu",
+    "dataServicesDescription": "Quản trị dữ liệu doanh nghiệp, lakehouse và các dịch vụ tích hợp.",
+    "aboutUs": "Về chúng tôi",
+    "techInsights": "Bài viết Công nghệ",
+    "contact": "Liên hệ",
+    "bookDemo": "Đặt lịch demo"
+  },
   "Contact": {
     "title": "Liên hệ chúng tôi",
     "description": "Hy vọng biểu mẫu này vượt qua bộ lọc thư rác của chúng tôi.",
@@ -202,4 +215,3 @@
     }
   }
 }
-

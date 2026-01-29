@@ -156,6 +156,19 @@
     "title": "Solutions",
     "description": "Discover our suite of AI-powered products and enterprise data services designed to accelerate your digital transformation journey."
   },
+  "Navbar": {
+    "solutions": "Solutions",
+    "allSolutionsTitle": "All Solutions",
+    "allSolutionsDescription": "Explore our complete suite of AI products and data services.",
+    "aiProductsTitle": "AI Products",
+    "aiProductsDescription": "Intelligent automation for project management, invoicing, HR, and email classification.",
+    "dataServicesTitle": "Data Services",
+    "dataServicesDescription": "Enterprise data governance, lakehouse, and integration services.",
+    "aboutUs": "About Us",
+    "techInsights": "Tech Insights",
+    "contact": "Contact",
+    "bookDemo": "Book demo"
+  },
   "Contact": {
     "title": "Contact us",
     "description": "Hopefully this form gets through our spam filters.",

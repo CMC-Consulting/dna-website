@@ -18,41 +18,41 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-
-const ITEMS = [
-  {
-    label: "Solutions",
-    href: "/solutions",
-    dropdownItems: [
-      {
-        title: "All Solutions",
-        href: "/solutions",
-        description:
-          "Explore our complete suite of AI products and data services.",
-      },
-      {
-        title: "AI Products",
-        href: "/solutions#ai-products",
-        description:
-          "Intelligent automation for project management, invoicing, HR, and email.",
-      },
-      {
-        title: "Data Services",
-        href: "/solutions#data-services",
-        description:
-          "Enterprise data governance, lakehouse, and integration services.",
-      },
-    ],
-  },
-  { label: "About Us", href: "/about" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
-];
+import { useTranslations } from "next-intl";
 
 export const Navbar = () => {
+  const t = useTranslations("Navbar");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
+
+  const navigationItems = [
+    {
+      label: t("solutions"),
+      key: "solutions",
+      href: "/solutions",
+      dropdownItems: [
+        {
+          title: t("allSolutionsTitle"),
+          href: "/solutions",
+          description: t("allSolutionsDescription"),
+        },
+        {
+          title: t("aiProductsTitle"),
+          href: "/solutions#ai-products",
+          description: t("aiProductsDescription"),
+        },
+        {
+          title: t("dataServicesTitle"),
+          href: "/solutions#data-services",
+          description: t("dataServicesDescription"),
+        },
+      ],
+    },
+    { label: t("aboutUs"), key: "aboutUs", href: "/about" },
+    { label: t("techInsights"), key: "techInsights", href: "/blog" },
+    { label: t("contact"), key: "contact", href: "/contact" },
+  ];
 
   return (
     <section
@@ -72,16 +72,16 @@ export const Navbar = () => {
         {/* Desktop Navigation */}
         <NavigationMenu className="max-lg:hidden">
           <NavigationMenuList>
-            {ITEMS.map((link) =>
+            {navigationItems.map((link) =>
               link.dropdownItems ? (
-                <NavigationMenuItem key={link.label} className="">
+                <NavigationMenuItem key={link.key} className="">
                   <NavigationMenuTrigger className="data-[state=open]:bg-accent/50 bg-transparent! px-1.5">
                     {link.label}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="w-[400px] space-y-2 p-4">
                       {link.dropdownItems.map((item) => (
-                        <li key={item.title}>
+                        <li key={item.href}>
                           <NavigationMenuLink asChild>
                             <Link
                               href={item.href}
@@ -124,7 +124,7 @@ export const Navbar = () => {
           {/* <ThemeToggle /> */}
           <LanguageSwitcher />
           <Link href="/contact" className="max-lg:hidden">
-            <MainButton text="Book demo" className="border-none" size="small" />
+            <MainButton text={t("bookDemo")} className="border-none" size="small" />
           </Link>
 
           {/* Hamburger Menu Button (Mobile Only) */}
@@ -161,9 +161,9 @@ export const Navbar = () => {
         )}
       >
         <nav className="divide-border flex flex-1 flex-col divide-y">
-          {ITEMS.map((link) =>
+          {navigationItems.map((link) =>
             link.dropdownItems ? (
-              <div key={link.label} className="py-4 first:pt-0 last:pb-0">
+              <div key={link.key} className="py-4 first:pt-0 last:pb-0">
                 <button
                   onClick={() =>
                     setOpenDropdown(
