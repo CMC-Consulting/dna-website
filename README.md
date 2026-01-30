@@ -1,32 +1,10 @@
----
-Ship your SaaS faster with Nexty
-
-NEXTY.DEV is a comprehensive Next.js SaaS boilerplate that provides everything developers need to rapidly build and launch modern AI web applications
-
-Try [NEXTY.DEV today](https://nexty.dev?utm_source=github-nextjs-starter)
----
-
-[<img src="/public/try-nexty.webp">](https://nexty.dev?utm_source=github-nextjs-starter)
-
-
-🌍 *[English](README.md) ∙ [简体中文](README_zh.md) ∙ [日本語](README_ja.md)*
-
-# Next.js Starter - Multilingual Next.js 16 Starter
-
-A feature-rich Next.js 16 multilingual starter template to help you quickly build globally-ready websites.
-
-- [👉 Source Code](https://github.com/weijunext/nextjs-starter)
-- [👉 Live Demo](https://nextjsstarter.io/)
-
-**🚀 Looking for a full-featured SaaS Starter Template? [Check out the complete version](https://nexty.dev)**
-
 ## ✨ Features
 
 - 🌐 Built-in i18n support (English, Chinese, Japanese)
 - 🎨 Modern UI design with Tailwind CSS
 - 🌙 Dark/Light theme toggle
 - 📱 Responsive layout
-- 📝 MDX blog system 
+- 📝 MDX blog system
 - 🔍 SEO optimization
 - 📊 Integrated analytics tools
   - Google Analytics
@@ -34,260 +12,214 @@ A feature-rich Next.js 16 multilingual starter template to help you quickly buil
   - Google Adsense
   - Vercel Analytics
 
-## 🚀 Quick Start
+## 📋 In this document
+
+1. [Installation](#1-installation) — Set up the project locally
+2. [How to upload blog](#2-how-to-upload-blog) — Add and publish blog posts
+
+---
+
+## 1. Installation
 
 ### Prerequisites
 
-- Node.js 20.9 or higher
-- pnpm 9.0 or higher (recommended)
+- **Node.js** 20.x (see `engines` in `package.json`)
+- **Package manager**: pnpm 10.x (recommended), npm, or yarn
 
-> **Note**: The project has configured `packageManager` field, we recommend using pnpm for the best experience.
+> **Note**: The project has `packageManager: "pnpm@10.12.4"` in `package.json`. You can use **pnpm**, **npm**, or **yarn**; enable Corepack only if you use pnpm.
 
-### Installation
+### Steps
 
-1. Clone the repository:
-```bash
-git clone https://github.com/weijunext/nextjs-starter.git
-cd nextjs-starter
-```
+1. **Clone the repository**
 
-2. Enable Corepack (recommended):
-```bash
-corepack enable
-```
+   ```bash
+   git clone <your-repo-url>
+   cd dna-website
+   ```
 
-3. Install dependencies:
-```bash
-pnpm install
-# or use other package managers
-npm install
-yarn
-```
+2. **Enable Corepack** (only if using pnpm)
 
-4. Copy environment variables:
-```bash
-cp .env.example .env
-```
+   ```bash
+   corepack enable
+   ```
 
-5. Start the development server:
-```bash
-pnpm dev
-# or npm run dev
-```
+3. **Install dependencies**
 
-Visit http://localhost:3000 to view your application.
+   ```bash
+   pnpm install
+   # or
+   npm install
+   # or
+   yarn
+   ```
 
-## ⚙️ Configuration
+4. **Set up environment variables**
 
-1. Basic Setup
-   - Edit `config/site.ts` for website information
-   - Update icons and logo in `public/`
-   - Configure `app/sitemap.ts` for sitemap
-   - Update `app/robots.ts` for robots.txt
+   ```bash
+   cp .env.example .env
+   ```
 
-2. i18n Setup
-   - Add/modify language files in `i18n/messages/`
-   - Configure supported languages in `i18n/routing.ts`
-   - Set up i18n routing in `middleware.ts`
-   - Create pages under `app/[locale]/`
-   - Use the `Link` component from `i18n/routing.ts` instead of Next.js default
+   Edit `.env` and set at least:
 
-## 📝 Content Management
+   - `NEXT_PUBLIC_SITE_URL` — Your site URL (e.g. `http://localhost:3000` for dev)
+   - Optional: Resend, Upstash, analytics IDs (see `.env.example`)
 
-### Blog Posts
-Create MDX files in `blog/[locale]` with the following format:
+5. **Run the development server**
 
-```markdown
+   ```bash
+   pnpm dev
+   # or
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+   Open [http://localhost:3000](http://localhost:3000).
+
 ---
-title: Post Title
-description: Post Description
-image: /image.png
-slug: /url-path
-tags: tag1,tag2
-date: 2025-02-20
+
+## 2. How to upload blog
+
+Blog posts are **file-based**: you add or edit `.mdx` files in the repo. There is no admin UI; “upload” means adding a new file (or editing an existing one) in the right folder with the correct frontmatter.
+
+**Draft, preview, and download as MDX:** Use [blog-draft](https://blog-draft-livid.vercel.app/) to write posts in the browser, preview them, and download the result as an `.mdx` file you can drop into `blogs/[locale]/`.
+
+### Where blog files live
+
+- **Folder**: `blogs/[locale]/`
+- **Locales**: `en`, `vi` (and optionally `ja`, `zh` if you use them)
+- **Format**: One `.mdx` file per post, e.g. `blogs/en/my-post-slug.mdx`
+
+### Steps to add a new blog post
+
+1. **Pick the locale**  
+   Create or use a folder under `blogs/` for that locale (e.g. `blogs/en/`, `blogs/vi/`).
+
+2. **Create a new `.mdx` file**  
+   Use a descriptive filename that matches the slug (e.g. `my-new-post.mdx` for slug `/my-new-post`).
+
+3. **Add frontmatter at the top** (between `---` lines):
+
+   ```yaml
+   ---
+   title: "Your Post Title"
+   description: "Short description for SEO and listing pages."
+   slug: /your-post-url-path
+   image: /blog/your-image.jpg
+   tags: tag1,tag2,tag3
+   date: 2026-01-30
+   visible: published
+   pin: false
+   ---
+   ```
+
+   | Field         | Required | Description                                                               |
+   | ------------- | -------- | ------------------------------------------------------------------------- |
+   | `title`       | Yes      | Post title.                                                               |
+   | `description` | No       | Summary for SEO and cards.                                                |
+   | `slug`        | Yes      | URL path (e.g. `/my-post` → `/blog/my-post` or `/[locale]/blog/my-post`). |
+   | `image`       | No       | Path under `public/` (e.g. `/blog/1.jpg`).                                |
+   | `tags`        | No       | Comma-separated.                                                          |
+   | `date`        | Yes      | Publish date (YYYY-MM-DD).                                                |
+   | `visible`     | No       | `published` (show) or `draft` / `invisible` (hide). Default: `published`. |
+   | `pin`         | No       | `true` to pin post to top of lists. Default: `false`.                     |
+
+4. **Add the body**  
+   Below the closing `---`, write content in **Markdown** or **MDX** (components allowed if configured).
+
+5. **Optional: add images**  
+   Put images in `public/blog/` and reference them in frontmatter (`image: /blog/filename.jpg`) or [inside the post body](#adding-images-inside-a-blog-post).
+
+6. **Publish**  
+   Set `visible: published`. Save the file; the dev server will pick it up. For production, commit and deploy.
+
+### Example: minimal new post
+
+**File**: `blogs/en/hello-world.mdx`
+
+```mdx
+---
+title: "Hello World"
+description: "First post."
+slug: /hello-world
+date: 2026-01-30
 visible: published
-pin: true
+pin: false
 ---
 
-Post content...
+Your content here. **Markdown** and MDX work.
 ```
 
-Reference `types/blog.ts` for supported fields.
+### Adding images inside a blog post
 
-### Static Pages
-Manage static page content in `content/[page]/[locale].mdx`.
+To show images **in the post body** (not only the featured image in frontmatter):
 
-## 🔍 SEO Optimization
+1. **Put image files in `public/`**  
+   Any path under `public/` is served from the site root. Common choice: `public/blog/` (e.g. `public/blog/diagram.png`).
 
-Built-in comprehensive SEO features:
-   - Server-side rendering and static generation
-   - Automatic sitemap.xml generation
-   - robots.txt configuration
-   - Optimized metadata
-   - Open Graph support
-   - Multilingual SEO support
+2. **Use Markdown in the `.mdx` file**  
+   Paths are from the **site root** (no `public/` in the URL):
 
-## 📊 Analytics
+   ```markdown
+   ![Description of the image](/blog/diagram.png)
+   ```
 
-Enable analytics by adding IDs in `.env`:
-```
-NEXT_PUBLIC_GOOGLE_ANALYTICS=
-NEXT_PUBLIC_BAIDU_TONGJI=
-NEXT_PUBLIC_GOOGLE_ADSENSE=
-```
+   Or with a title (optional):
 
-## 📁 Project Structure
+   ```markdown
+   ![Alt text](/blog/screenshot.jpg "Optional title on hover")
+   ```
 
-```
-nextjs-starter/
-├── app/                      # App directory
-│   ├── [locale]/            # Internationalized routes
-│   │   ├── about/           # About page
-│   │   ├── blog/           # Blog pages
-│   │   └── ...              # Other pages
-│   ├── api/                 # API routes
-│   └── globals/             # Global components
-├── blog/                   # Blog content (MDX)
-│   ├── en/                  # English blog
-│   ├── ja/                  # Japanese blog
-│   └── zh/                  # Chinese blog
-├── components/              # Reusable components
-│   ├── ui/                  # Base UI components
-│   ├── header/              # Header components
-│   ├── footer/              # Footer components
-│   └── ...                  # Other components
-├── config/                  # Configuration files
-├── content/                 # Static content (MDX)
-├── i18n/                    # Internationalization
-│   ├── messages/            # Translation files
-│   ├── routing.ts           # Routing configuration
-│   └── request.ts           # Request configuration
-├── lib/                     # Utility functions
-├── public/                  # Static assets
-└── types/                   # Type definitions
-```
+3. **Or use HTML/MDX `<img>` for more control**  
+   Inline images are styled with rounded corners and spacing by the blog MDX components:
 
-## 🛠️ Tech Stack
+   ```mdx
+   <img src="/blog/diagram.png" alt="Description" />
+   ```
 
-- **Framework**: Next.js 16 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS + Shadcn/ui
-- **Internationalization**: next-intl
-- **Content**: MDX
-- **State Management**: Zustand
-- **Deployment**: Vercel
-- **Package Manager**: pnpm (recommended)
+   You can add your own `className` if needed.
 
-## 🚀 Deployment
+**Summary:** Place files in `public/blog/` (or another folder under `public/`), then reference them in the post with paths starting with `/` (e.g. `/blog/diagram.png`).
 
-### One-Click Deploy
+### Multilingual posts
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/nextjs-starter&project-name=&repository-name=nextjs-starter&demo-title=NextjsStarter&demo-description=Nextjs%2015%20starter.&demo-url=https://nextjsstarter.io&demo-image=https://nextjsstarter.io/og.png)
+To have the same post in multiple languages, add one `.mdx` per locale with the same `slug` (and translated `title`/`description`/body), e.g.:
 
-### Manual Deployment to Vercel
+- `blogs/en/my-post.mdx`
+- `blogs/vi/my-post.mdx`
 
-1. Push your code to GitHub
-2. Import project in Vercel
-3. Configure environment variables
-4. Deploy
+Full frontmatter and types are defined in `types/blog.ts`.
 
-### Other Platforms
+### Multiple people uploading at once
 
-```bash
-# Build for production
-pnpm build
+When several people add blog posts at the same time, avoid conflicts by naming **filenames** and **slugs** uniquely.
 
-# Start production server
-pnpm start
-```
+**Two things must be unique:**
 
-## 💡 Development Best Practices
+1. **Filename** (e.g. `blogs/en/my-post.mdx`)
 
-### Package Manager
+   - Must be unique per locale folder.
+   - If two people use the same filename (e.g. `my-post.mdx`), Git will conflict or one file can overwrite the other.
+   - **Suggested naming:** include date and topic (or author) so filenames rarely collide, e.g.
+     - `2026-01-30-ai-tips.mdx`
+     - `2026-01-30-john-enterprise-workflows.mdx`
+   - Or use a short unique id: `my-post-abc123.mdx`.
 
-- Project configured with `packageManager: "pnpm@10.12.4"`
-- Enable Corepack: `corepack enable`
-- Team members should use the same pnpm version
+2. **Slug** (in frontmatter: `slug: /my-post`)
+   - Must be unique per locale. The slug is the URL path (e.g. `/blog/my-post`).
+   - If two posts share the same slug, the site shows **one** of them for that URL (the first match in the sorted list).
+   - **Suggested naming:** include date or a short id in the slug so URLs stay unique, e.g.
+     - `slug: /2026-01-30-ai-tips`
+     - `slug: /ai-tips-john`
+   - Or coordinate with the team so each post has a different slug.
 
-### Code Quality
+**Which blog renders first (order on the blog list)?**
 
-```bash
-# Lint code
-pnpm lint
+Order is **deterministic** and does not depend on filename or who uploaded first:
 
-# Type checking
-pnpm type-check
-```
+1. **Pinned posts first** — All posts with `pin: true` appear at the top.
+2. **Then by date (newest first)** — Within each group (pinned and non-pinned), posts are ordered by `date` descending (newest first).
 
-### Internationalization Development
+**If multiple posts are pinned:** they all appear at the top, ordered among themselves by **date (newest first)**. There is no “first pinned wins”; the only tiebreaker is `date`. So to control the order of pinned posts, set their `date` values accordingly (newer date = higher in the list).
 
-1. Adding new language support:
-   - Add new language files in `i18n/messages/`
-   - Update `i18n/routing.ts` configuration
-   - Create corresponding language directories in `blog/` and `content/`
-
-2. Using translations:
-```tsx
-import { useTranslations } from 'next-intl';
-
-export default function MyComponent() {
-  const t = useTranslations('namespace');
-  return <h1>{t('title')}</h1>;
-}
-```
-
-## 🔧 Troubleshooting
-
-### Common Issues
-
-**1. Package manager version mismatch**
-```bash
-# Remove node_modules and lockfile
-rm -rf node_modules pnpm-lock.yaml
-# Reinstall
-pnpm install
-```
-
-**2. MDX files not displaying**
-- Check file path is correct
-- Verify frontmatter format
-- Ensure `visible` field is set to `published`
-
-**3. Internationalization routing issues**
-- Use `Link` component from `i18n/routing.ts`
-- Check `middleware.ts` configuration
-
-**4. Styles not working**
-- Verify Tailwind CSS class names are correct
-- Try restarting development server
-
-### Environment Variables
-
-Ensure `.env` file contains necessary configuration:
-```bash
-# Copy example config
-cp .env.example .env
-# Modify as needed
-```
-
-## 📄 License
-
-MIT
-
-## 🤝 Contributing
-
-Issues and Pull Requests are welcome!
-
-## About the Author
-
-Next.js full-stack specialist providing expert services in project development, performance optimization, and SEO improvement.
-
-For consulting and training opportunities, reach out at weijunext@gmail.com
-
-- [Github](https://github.com/weijunext)
-- [Bento](https://bento.me/weijunext)
-- [Twitter/X](https://twitter.com/judewei_dev)
-
-<a href="https://www.buymeacoffee.com/weijunext" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G6TWWMG)
+---
