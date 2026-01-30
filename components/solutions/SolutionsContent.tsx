@@ -19,14 +19,14 @@ import {
   type LucideIcon
 } from "lucide-react";
 import { motion } from "motion/react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 import CTASection from "@/components/cta-section";
-import { Link } from "@/i18n/routing";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 
 // ============================================
@@ -352,9 +352,9 @@ export default function SolutionsContent() {
       description: t("products.prismaAI.description"),
       badge: t("badges.flagship"),
       badgeColor: "flagship",
-      imageFront: "/og.png",
-      imageBack: "/og.png",
-      imageBackLight: "/og.png",
+      imageFront: "/prisma/Prisma -1.png",
+      imageBack: "/prisma/Primsa -6.png",
+      imageBackLight: "/prisma/Prisma -7.png",
       features: PRISMA_FEATURES.map(({ key, icon }) => ({
         icon,
         title: t(`products.prismaAI.features.${key}.title`),
@@ -368,9 +368,9 @@ export default function SolutionsContent() {
       description: t("products.smartEmail.description"),
       badge: t("badges.popular"),
       badgeColor: "popular",
-      imageFront: "/og.png",
-      imageBack: "/og.png",
-      imageBackLight: "/og.png",
+      imageFront: "/smartemail/Email Intelligence - 1.png",
+      imageBack: "/smartemail/Email Intelligence - 2.png",
+      imageBackLight: "/smartemail/Email Intelligence - 2.png",
       features: SMART_EMAIL_FEATURES.map(({ key, icon }) => ({
         icon,
         title: t(`products.smartEmail.features.${key}.title`),
@@ -384,9 +384,9 @@ export default function SolutionsContent() {
       description: t("products.smartInvoice.description"),
       badge: t("badges.enterprise"),
       badgeColor: "enterprise",
-      imageFront: "/og.png",
-      imageBack: "/og.png",
-      imageBackLight: "/og.png",
+      imageFront: "/smartinvoice/Invoice Product.png",
+      imageBack: "/smartinvoice/Invoice Product.png",
+      imageBackLight: "/smartinvoice/Invoice Product.png",
       features: SMART_INVOICE_FEATURES.map(({ key, icon }) => ({
         icon,
         title: t(`products.smartInvoice.features.${key}.title`),

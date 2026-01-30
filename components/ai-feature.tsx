@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { motion, useScroll, useTransform } from "motion/react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { useRef } from "react";
 
 type AIFeatureItem = {

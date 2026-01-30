@@ -4,8 +4,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { BorderBeam } from "@/components/ui/border-beam";
 import { Database, Layers, Shield } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { useState } from "react";
 
 type ImageKey = "item-1" | "item-2" | "item-3";
