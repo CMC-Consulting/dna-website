@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Logo01,
   Logo02,
@@ -9,17 +11,20 @@ import {
   Logo08,
 } from "@/components/logos";
 import { Marquee } from "@/components/ui/marquee";
+import { useTranslations } from "next-intl";
 
 const LogoCloud = () => {
+  const t = useTranslations("Home.logoCloud");
+
   return (
     <section className="w-full bg-background py-16 sm:py-20 lg:py-48">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
-            Trusted by Leading Companies
+            {t("title")}
           </h2>
           <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-            More than 2.2 million companies worldwide already trust us
+            {t("subtitle")}
           </p>
         </div>
 

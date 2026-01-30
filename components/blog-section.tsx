@@ -1,5 +1,8 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/routing";
@@ -16,66 +19,61 @@ type BlogPost = {
   featured?: boolean;
 };
 
-const blogPosts: BlogPost[] = [
-  {
-    id: "1",
-    title: "Generative AI in SAP: Revolutionizing Enterprise Workflows",
-    excerpt:
-      "Discover how generative AI is transforming SAP environments with intelligent document generation and automated assistance.",
-    author: "Dat Le",
-    authorRole: "AI Solutions Architect",
-    authorImage: "/testimonials/amy-chase.webp",
-    image: "/blog/1.jpg",
+const BLOG_POST_IDS = ["1", "2", "3", "4", "5"] as const;
+const BLOG_POST_CONFIG: Record<
+  string,
+  { slug: string; image: string; authorImage: string; featured: boolean }
+> = {
+  "1": {
     slug: "generative-ai-sap-enterprise-workflows",
+    image: "/blog/1.jpg",
+    authorImage: "/testimonials/amy-chase.webp",
     featured: true,
   },
-  {
-    id: "2",
-    title: "Real-time data pipelines connecting SAP to modern AI/ML platforms",
-    excerpt:
-      "Learn how to build robust real-time data pipelines that seamlessly connect SAP systems to modern AI/ML platforms.",
-    author: "Alex Thompson",
-    authorRole: "Data Engineer",
-    authorImage: "/testimonials/jonas-kotara.webp",
-    image: "/blog/2.jpg",
+  "2": {
     slug: "real-time-data-pipelines-sap-ai",
+    image: "/blog/2.jpg",
+    authorImage: "/testimonials/jonas-kotara.webp",
+    featured: false,
   },
-  {
-    id: "3",
-    title: "AI-powered business intelligence transforming static reporting",
-    excerpt:
-      "Learn how AI is transforming business intelligence from static reporting to intelligent analytics.",
-    author: "Emily Watson",
-    authorRole: "BI Consultant",
-    authorImage: "/testimonials/kevin-yam.webp",
-    image: "/blog/3.jpg",
+  "3": {
     slug: "ai-powered-business-intelligence",
+    image: "/blog/3.jpg",
+    authorImage: "/testimonials/kevin-yam.webp",
+    featured: false,
   },
-  {
-    id: "4",
-    title: "SAP data migration strategies for seamless cloud transition",
-    excerpt:
-      "A practical guide to migrating SAP data to cloud platforms with best practices.",
-    author: "David Kim",
-    authorRole: "Cloud Architect",
-    authorImage: "/testimonials/kundo-marta.webp",
-    image: "/blog/4.jpg",
+  "4": {
     slug: "sap-data-migration-cloud-strategy",
+    image: "/blog/4.jpg",
+    authorImage: "/testimonials/kundo-marta.webp",
+    featured: false,
   },
-  {
-    id: "5",
-    title: "Building modern data architectures for enterprise analytics",
-    excerpt:
-      "A comprehensive guide to designing modern data architectures that enable advanced analytics.",
-    author: "Sarah Chen",
-    authorRole: "Data Architect",
-    authorImage: "/testimonials/amy-chase.webp",
-    image: "/blog/5.jpg",
+  "5": {
     slug: "modern-data-architecture-enterprise",
+    image: "/blog/5.jpg",
+    authorImage: "/testimonials/amy-chase.webp",
+    featured: false,
   },
-];
+};
 
 export const BlogSection = () => {
+  const t = useTranslations("Home.blogSection");
+
+  const blogPosts: BlogPost[] = BLOG_POST_IDS.map((id) => {
+    const config = BLOG_POST_CONFIG[id];
+    return {
+      id,
+      title: t(`posts.${id}.title`),
+      excerpt: t(`posts.${id}.excerpt`),
+      author: t(`posts.${id}.author`),
+      authorRole: t(`posts.${id}.authorRole`),
+      authorImage: config.authorImage,
+      image: config.image,
+      slug: config.slug,
+      featured: config.featured,
+    };
+  });
+
   const featuredPost = blogPosts.find((post) => post.featured);
   const regularPosts = blogPosts.filter((post) => !post.featured);
 
@@ -181,14 +179,13 @@ export const BlogSection = () => {
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
         <div className="mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
-              Tech Insights
+              {t("title")}
             </h2>
             <p className="mt-3 text-lg text-muted-foreground">
-              Exploring cutting-edge technologies shaping tomorrow&apos;s digital landscape
+              {t("subtitle")}
             </p>
           </div>
           <Button
@@ -196,8 +193,8 @@ export const BlogSection = () => {
             variant="outline"
             className="group shrink-0 rounded-full border-border bg-background px-6 py-5 text-sm font-medium text-foreground hover:bg-muted"
           >
-            <Link href="/blog" aria-label="View all blog posts">
-              Read More
+            <Link href="/blog" aria-label={t("readMore")}>
+              {t("readMore")}
               <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>

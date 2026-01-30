@@ -117,7 +117,126 @@
   "Home": {
     "title": "DnA Solutions",
     "tagLine": "AI and Data Solutions",
-    "description": "We are a team of AI and data experts from CMC Corporation who are passionate about helping businesses leverage the power of AI and data to achieve their goals."
+    "description": "We are a team of AI and data experts from CMC Corporation who are passionate about helping businesses leverage the power of AI and data to achieve their goals.",
+    "hero": {
+      "headline1": "Empowering",
+      "headline2": "Global Businesses",
+      "subtitle": "From startups to multinational corporations, we deliver scalable, reliable, and cost-effective AI and data services to address your unique challenges.",
+      "cardText": "Transform your business with expert engineering, seamless migrations, and innovative digital AI solutions.",
+      "getConsultation": "Get a consultation",
+      "exploreProducts": "Explore Products"
+    },
+    "logoCloud": {
+      "title": "Trusted by Leading Companies",
+      "subtitle": "More than 2.2 million companies worldwide already trust us"
+    },
+    "whyUs": {
+      "title": "Why Choose Us",
+      "subtitle": "We are a team of experts who are passionate about helping businesses grow.",
+      "reasons": {
+        "aiFirst": {
+          "title": "AI-First",
+          "description": "Build with modern AI capabilities from day one.",
+          "bullets": ["Agentic AI", "RAG", "Multimodal"]
+        },
+        "enterpriseReady": {
+          "title": "Enterprise-Ready",
+          "description": "Built for real-world enterprise constraints.",
+          "bullets": ["Security", "Governance", "Privacy"]
+        },
+        "openIntegrable": {
+          "title": "Open & Integrable",
+          "description": "Fits into your stack and ships everywhere.",
+          "bullets": ["API-first", "Embed anywhere"]
+        },
+        "outcomesDriven": {
+          "title": "Outcomes-Driven",
+          "description": "Optimized for measurable business results.",
+          "bullets": ["Focus on business impact"]
+        }
+      }
+    },
+    "aiFeature": {
+      "badge": "AI PRODUCTS",
+      "title": "Intelligent Automation for Enterprise",
+      "subtitle": "Transform your business operations with our suite of AI-powered products. From document intelligence to email automation and invoice processing, our solutions integrate seamlessly with your existing systems to deliver measurable ROI.",
+      "exploreSolutions": "Explore Solutions",
+      "products": {
+        "prismaAI": {
+          "title": "Prisma AI",
+          "description": "Your intelligent knowledge assistant. Like NotebookLM, Prisma AI synthesizes information from multiple documents, providing instant answers and deep insights through natural conversations. Extract knowledge, generate summaries, and get citations across all your enterprise documents.",
+          "imageAlt": "Prisma AI interface showing document Q&A and knowledge synthesis"
+        },
+        "smartEmail": {
+          "title": "Smart Email",
+          "description": "Intelligent email classification system that automatically categorizes, prioritizes, and routes emails. Reduce inbox overload by up to 60% and ensure critical messages never get missed with AI-powered priority detection and smart routing workflows.",
+          "imageAlt": "Smart Email dashboard with email classification and priority detection"
+        },
+        "smartInvoice": {
+          "title": "Smart Invoice",
+          "description": "Invoice Intelligence Suite for SAP. Automate invoice processing from extraction to approval with seamless SAP integration. Reduce processing time by 80% with advanced OCR, automatic validation, and intelligent approval workflows.",
+          "imageAlt": "Smart Invoice interface showing OCR extraction and SAP integration"
+        }
+      }
+    },
+    "dataServices": {
+      "title": "Enterprise Data Services",
+      "subtitle": "Build a solid data foundation with our comprehensive data services. From governance to integration, we help you unlock the full potential of your data assets.",
+      "items": {
+        "governance": {
+          "title": "Data Governance",
+          "content": "Establish robust data governance frameworks with policies, standards, and controls. Ensure data quality, security, and compliance with metadata management, data lineage tracking, and privacy controls across your organization.",
+          "imageAlt": "Data Governance dashboard"
+        },
+        "lakehouse": {
+          "title": "Data Lakehouse",
+          "content": "Modern data architecture combining the flexibility of data lakes with the reliability of data warehouses. Unified storage layer with ACID transactions, schema enforcement, and cost optimization for all your analytics and AI workloads.",
+          "imageAlt": "Data Lakehouse architecture"
+        },
+        "integration": {
+          "title": "Data Integration",
+          "content": "Seamless data integration connecting disparate systems with real-time data flows. ETL/ELT pipelines, real-time streaming, API integration, and data transformation to ensure data consistency across your enterprise.",
+          "imageAlt": "Data Integration pipelines"
+        }
+      }
+    },
+    "blogSection": {
+      "title": "Tech Insights",
+      "subtitle": "Exploring cutting-edge technologies shaping tomorrow's digital landscape",
+      "readMore": "Read More",
+      "posts": {
+        "1": {
+          "title": "Generative AI in SAP: Revolutionizing Enterprise Workflows",
+          "excerpt": "Discover how generative AI is transforming SAP environments with intelligent document generation and automated assistance.",
+          "author": "Dat Le",
+          "authorRole": "AI Solutions Architect"
+        },
+        "2": {
+          "title": "Real-time data pipelines connecting SAP to modern AI/ML platforms",
+          "excerpt": "Learn how to build robust real-time data pipelines that seamlessly connect SAP systems to modern AI/ML platforms.",
+          "author": "Alex Thompson",
+          "authorRole": "Data Engineer"
+        },
+        "3": {
+          "title": "AI-powered business intelligence transforming static reporting",
+          "excerpt": "Learn how AI is transforming business intelligence from static reporting to intelligent analytics.",
+          "author": "Emily Watson",
+          "authorRole": "BI Consultant"
+        },
+        "4": {
+          "title": "SAP data migration strategies for seamless cloud transition",
+          "excerpt": "A practical guide to migrating SAP data to cloud platforms with best practices.",
+          "author": "David Kim",
+          "authorRole": "Cloud Architect"
+        },
+        "5": {
+          "title": "Building modern data architectures for enterprise analytics",
+          "excerpt": "A comprehensive guide to designing modern data architectures that enable advanced analytics.",
+          "author": "Sarah Chen",
+          "authorRole": "Data Architect"
+        }
+      }
+    }
   },
   "Blog": {
     "title": "Insights & Resources",

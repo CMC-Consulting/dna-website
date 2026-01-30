@@ -1,12 +1,17 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/routing";
 import Particles from "@/components/ui/particles";
 
-export default function Hero() {
+const Hero = () => {
+  const t = useTranslations("Home.hero");
+
   return (
     <section className="relative w-full min-h-screen overflow-hidden bg-white dark:bg-gray-950 py-28 lg:py-52 px-4 sm:px-6 lg:px-8 flex items-center">
-      {/* Dual Gradient Overlay Background */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -30,40 +35,39 @@ export default function Hero() {
       <div className="mx-auto max-w-7xl w-full relative z-10 grid gap-y-20 gap-x-12 lg:grid-cols-[1.4fr_1fr] lg:items-end">
         <div className="space-y-10">
           <h1 className="font-display text-foreground text-[clamp(48px,8vw,120px)] leading-[0.95] tracking-tight">
-            Empowering
+            {t("headline1")}
             <br />
-            Global Businesses
+            {t("headline2")}
           </h1>
           <p className="text-muted-foreground max-w-3xl text-lg leading-relaxed md:text-xl">
-            From startups to multinational corporations, we deliver scalable,
-            reliable, and cost-effective AI and data services to address your unique
-            challenges.
+            {t("subtitle")}
           </p>
         </div>
 
         <div className="space-y-6 rounded-2xl border border-border/60 bg-background/70 p-6 shadow-sm backdrop-blur md:p-8">
           <p className="text-foreground text-lg leading-relaxed">
-            Transform your business with expert engineering, seamless
-            migrations, and innovative digital AI solutions.
+            {t("cardText")}
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <Button
               asChild
               className="bg-[linear-gradient(135deg,#0f1e35,#276df0)] px-6 py-5 text-base font-semibold text-primary-foreground shadow-lg transition hover:brightness-105"
             >
-              <a href="/contact" aria-label="Get a consultation">
-                Get a consultation
+              <Link href="/contact" aria-label={t("getConsultation")}>
+                {t("getConsultation")}
                 <ArrowRight className="ml-2 size-4" />
-              </a>
+              </Link>
             </Button>
             <Button asChild variant="link" className="text-base font-semibold">
-              <a href="/solutions" aria-label="View case studies">
-                Explore Products
-              </a>
+              <Link href="/solutions" aria-label={t("exploreProducts")}>
+                {t("exploreProducts")}
+              </Link>
             </Button>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Hero;

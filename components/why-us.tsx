@@ -1,3 +1,5 @@
+"use client";
+
 import {
   PlugZap,
   ShieldCheck,
@@ -5,6 +7,7 @@ import {
   Target,
   type LucideIcon,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import type { ReactNode } from "react";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -18,32 +21,12 @@ type WhyUsReason = {
   icon: LucideIcon;
 };
 
-const reasons: WhyUsReason[] = [
-  {
-    title: "AI-First",
-    description: "Build with modern AI capabilities from day one.",
-    bullets: ["Agentic AI", "RAG", "Multimodal"],
-    icon: Sparkles,
-  },
-  {
-    title: "Enterprise-Ready",
-    description: "Built for real-world enterprise constraints.",
-    bullets: ["Security", "Governance", "Privacy"],
-    icon: ShieldCheck,
-  },
-  {
-    title: "Open & Integrable",
-    description: "Fits into your stack and ships everywhere.",
-    bullets: ["API-first", "Embed anywhere"],
-    icon: PlugZap,
-  },
-  {
-    title: "Outcomes-Driven",
-    description: "Optimized for measurable business results.",
-    bullets: ["Focus on business impact"],
-    icon: Target,
-  },
-];
+const REASON_KEYS = [
+  { key: "aiFirst", icon: Sparkles },
+  { key: "enterpriseReady", icon: ShieldCheck },
+  { key: "openIntegrable", icon: PlugZap },
+  { key: "outcomesDriven", icon: Target },
+] as const;
 
 type WhyUsProps = {
   variant?: WhyUsVariant;
@@ -62,7 +45,15 @@ const CardDecorator = ({ children }: { children: ReactNode }) => (
 )
 
 export const WhyUs = ({ variant = "chips", className = "" }: WhyUsProps) => {
+  const t = useTranslations("Home.whyUs");
   const labelId = "why-us-title";
+
+  const reasons: WhyUsReason[] = REASON_KEYS.map(({ key, icon }) => ({
+    title: t(`reasons.${key}.title`),
+    description: t(`reasons.${key}.description`),
+    bullets: t.raw(`reasons.${key}.bullets`) as string[],
+    icon,
+  }));
 
   return (
     <section
@@ -172,10 +163,10 @@ export const WhyUs = ({ variant = "chips", className = "" }: WhyUsProps) => {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h2 id={labelId} className="text-balance text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-            Why Choose Us
+            {t("title")}
           </h2>
           <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-            We are a team of experts who are passionate about helping businesses grow.
+            {t("subtitle")}
           </p>
         </div>
 

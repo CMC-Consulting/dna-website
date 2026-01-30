@@ -115,9 +115,128 @@
     }
   },
   "Home": {
-    "title": "Next.js Starter",
-    "tagLine": "Starter Next.js 16 đa ngôn ngữ",
-    "description": "Starter Next.js 16 đa ngôn ngữ với i18n tích hợp sẵn. Khởi chạy website sẵn sàng toàn cầu với nền tảng sạch, hiệu quả và tối ưu SEO."
+    "title": "DnA Solutions",
+    "tagLine": "Giải pháp AI và Dữ liệu",
+    "description": "Chúng tôi là đội ngũ chuyên gia AI và dữ liệu từ Tập đoàn CMC, đam mê giúp doanh nghiệp tận dụng sức mạnh AI và dữ liệu để đạt được mục tiêu.",
+    "hero": {
+      "headline1": "Nâng tầm",
+      "headline2": "Doanh nghiệp Toàn cầu",
+      "subtitle": "Từ startup đến tập đoàn đa quốc gia, chúng tôi cung cấp dịch vụ AI và dữ liệu có thể mở rộng, tin cậy và tiết kiệm chi phí để giải quyết thách thức riêng của bạn.",
+      "cardText": "Chuyển đổi doanh nghiệp với kỹ thuật chuyên sâu, di chuyển liền mạch và giải pháp AI số sáng tạo.",
+      "getConsultation": "Đặt lịch tư vấn",
+      "exploreProducts": "Khám phá Sản phẩm"
+    },
+    "logoCloud": {
+      "title": "Được tin dùng bởi các Công ty Hàng đầu",
+      "subtitle": "Hơn 2,2 triệu công ty trên toàn thế giới đã tin tưởng chúng tôi"
+    },
+    "whyUs": {
+      "title": "Tại sao chọn chúng tôi",
+      "subtitle": "Chúng tôi là đội ngũ chuyên gia đam mê giúp doanh nghiệp phát triển.",
+      "reasons": {
+        "aiFirst": {
+          "title": "AI-First",
+          "description": "Xây dựng với năng lực AI hiện đại ngay từ đầu.",
+          "bullets": ["Agentic AI", "RAG", "Đa phương thức"]
+        },
+        "enterpriseReady": {
+          "title": "Sẵn sàng Doanh nghiệp",
+          "description": "Được xây dựng cho các ràng buộc doanh nghiệp thực tế.",
+          "bullets": ["Bảo mật", "Quản trị", "Riêng tư"]
+        },
+        "openIntegrable": {
+          "title": "Mở & Tích hợp",
+          "description": "Phù hợp với stack của bạn và triển khai mọi nơi.",
+          "bullets": ["API-first", "Nhúng mọi nơi"]
+        },
+        "outcomesDriven": {
+          "title": "Hướng Kết quả",
+          "description": "Tối ưu cho kết quả kinh doanh có thể đo lường.",
+          "bullets": ["Tập trung vào tác động kinh doanh"]
+        }
+      }
+    },
+    "aiFeature": {
+      "badge": "SẢN PHẨM AI",
+      "title": "Tự động hóa Thông minh cho Doanh nghiệp",
+      "subtitle": "Chuyển đổi vận hành doanh nghiệp với bộ sản phẩm AI. Từ tri thức tài liệu đến tự động hóa email và xử lý hóa đơn, các giải pháp của chúng tôi tích hợp liền mạch với hệ thống hiện có để mang lại các giá trị vượt trội như tăng năng suất, giảm chi phí vận hành và thúc đẩy đổi mới bền vững.",
+      "exploreSolutions": "Khám phá Giải pháp",
+      "products": {
+        "prismaAI": {
+          "title": "Prisma AI",
+          "description": "Trợ lý tri thức thông minh của bạn. Giống NotebookLM, Prisma AI tổng hợp thông tin từ nhiều tài liệu, cung cấp câu trả lời tức thì và insight sâu qua hội thoại tự nhiên. Trích xuất tri thức, tạo tóm tắt và trích dẫn nguồn trên toàn bộ tài liệu doanh nghiệp.",
+          "imageAlt": "Giao diện Prisma AI với hỏi đáp tài liệu và tổng hợp tri thức"
+        },
+        "smartEmail": {
+          "title": "Smart Email",
+          "description": "Hệ thống phân loại email thông minh tự động phân loại, ưu tiên và định tuyến email. Giảm tải hộp thư đến 60% và đảm bảo tin nhắn quan trọng không bị bỏ lỡ nhờ phát hiện ưu tiên và quy trình định tuyến thông minh.",
+          "imageAlt": "Bảng điều khiển Smart Email với phân loại email và phát hiện ưu tiên"
+        },
+        "smartInvoice": {
+          "title": "Smart Invoice",
+          "description": "Bộ Giải pháp Hóa đơn Thông minh cho SAP. Tự động hóa xử lý hóa đơn từ trích xuất đến phê duyệt với tích hợp SAP liền mạch. Giảm 80% thời gian xử lý nhờ OCR tiên tiến, kiểm tra tự động và quy trình phê duyệt thông minh.",
+          "imageAlt": "Giao diện Smart Invoice với trích xuất OCR và tích hợp SAP"
+        }
+      }
+    },
+    "dataServices": {
+      "title": "Dịch vụ Dữ liệu Doanh nghiệp",
+      "subtitle": "Xây dựng nền tảng dữ liệu vững chắc với dịch vụ dữ liệu toàn diện. Từ quản trị đến tích hợp, chúng tôi giúp bạn khai thác tối đa tài sản dữ liệu.",
+      "items": {
+        "governance": {
+          "title": "Quản trị Dữ liệu",
+          "content": "Thiết lập khung quản trị dữ liệu vững chắc với chính sách, chuẩn và kiểm soát. Đảm bảo chất lượng, bảo mật và tuân thủ dữ liệu với quản lý siêu dữ liệu, truy vết nguồn gốc và kiểm soát riêng tư trong toàn tổ chức.",
+          "imageAlt": "Bảng điều khiển Quản trị Dữ liệu"
+        },
+        "lakehouse": {
+          "title": "Data Lakehouse",
+          "content": "Kiến trúc dữ liệu hiện đại kết hợp tính linh hoạt của data lake với độ tin cậy của kho dữ liệu. Lớp lưu trữ thống nhất với giao dịch ACID, áp dụng schema và tối ưu chi phí cho mọi khối lượng phân tích và AI.",
+          "imageAlt": "Kiến trúc Data Lakehouse"
+        },
+        "integration": {
+          "title": "Tích hợp Dữ liệu",
+          "content": "Tích hợp dữ liệu liền mạch kết nối các hệ thống riêng lẻ với luồng dữ liệu thời gian thực. Pipeline ETL/ELT, streaming thời gian thực, tích hợp API và chuyển đổi dữ liệu để đảm bảo tính nhất quán trong doanh nghiệp.",
+          "imageAlt": "Pipeline Tích hợp Dữ liệu"
+        }
+      }
+    },
+    "blogSection": {
+      "title": "Bài viết Công nghệ",
+      "subtitle": "Khám phá công nghệ tiên tiến định hình bối cảnh số của ngày mai",
+      "readMore": "Xem thêm",
+      "posts": {
+        "1": {
+          "title": "Generative AI trong SAP: Cách mạng hóa Quy trình Doanh nghiệp",
+          "excerpt": "Khám phá cách AI generative đang chuyển đổi môi trường SAP với tạo tài liệu thông minh và hỗ trợ tự động.",
+          "author": "Dat Le",
+          "authorRole": "Kiến trúc sư Giải pháp AI"
+        },
+        "2": {
+          "title": "Pipeline dữ liệu thời gian thực kết nối SAP với nền tảng AI/ML hiện đại",
+          "excerpt": "Học cách xây dựng pipeline dữ liệu thời gian thực vững chắc kết nối liền mạch hệ thống SAP với nền tảng AI/ML hiện đại.",
+          "author": "Alex Thompson",
+          "authorRole": "Kỹ sư Dữ liệu"
+        },
+        "3": {
+          "title": "Business intelligence dựa trên AI chuyển đổi báo cáo tĩnh",
+          "excerpt": "Học cách AI đang chuyển đổi business intelligence từ báo cáo tĩnh sang phân tích thông minh.",
+          "author": "Emily Watson",
+          "authorRole": "Tư vấn BI"
+        },
+        "4": {
+          "title": "Chiến lược di chuyển dữ liệu SAP cho chuyển đổi đám mây liền mạch",
+          "excerpt": "Hướng dẫn thực tế di chuyển dữ liệu SAP lên nền tảng đám mây với best practices.",
+          "author": "David Kim",
+          "authorRole": "Kiến trúc sư Đám mây"
+        },
+        "5": {
+          "title": "Xây dựng kiến trúc dữ liệu hiện đại cho phân tích doanh nghiệp",
+          "excerpt": "Hướng dẫn toàn diện thiết kế kiến trúc dữ liệu hiện đại cho phép phân tích nâng cao.",
+          "author": "Sarah Chen",
+          "authorRole": "Kiến trúc sư Dữ liệu"
+        }
+      }
+    }
   },
   "Blog": {
     "title": "Bài viết blog",
