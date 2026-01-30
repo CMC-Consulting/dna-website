@@ -115,207 +115,233 @@
     }
   },
   "Home": {
-    "title": "DnA Solutions",
-    "tagLine": "Giải pháp AI và Dữ liệu",
-    "description": "Chúng tôi là đội ngũ chuyên gia AI và dữ liệu từ Tập đoàn CMC, đam mê giúp doanh nghiệp tận dụng sức mạnh AI và dữ liệu để đạt được mục tiêu.",
+    "title": "CMC Consulting Data & AI Solutions",
+    "tagLine": "Giải pháp Dữ liệu & Trí tuệ Nhân tạo Doanh nghiệp",
+    "description": "Chúng tôi là đội ngũ chuyên gia Dữ liệu và AI của CMC, đồng hành cùng doanh nghiệp xây dựng chiến lược dữ liệu, triển khai nền tảng công nghệ hiện đại và khai phá giá trị thực tiễn từ trí tuệ nhân tạo để tạo lợi thế cạnh tranh bền vững.",
     "hero": {
-      "headline1": "Nâng tầm",
-      "headline2": "Doanh nghiệp Toàn cầu",
-      "subtitle": "Từ startup đến tập đoàn đa quốc gia, chúng tôi cung cấp dịch vụ AI và dữ liệu có thể mở rộng, tin cậy và tiết kiệm chi phí để giải quyết thách thức riêng của bạn.",
-      "cardText": "Chuyển đổi doanh nghiệp với kỹ thuật chuyên sâu, di chuyển liền mạch và giải pháp AI số sáng tạo.",
+      "headline1": "Hệ sinh thái Dữ liệu & AI Toàn diện",
+      "headline2": "Kết nối Tri thức – Tăng tốc Chuyển đổi Số",
+      "subtitle": "Chúng tôi xây dựng nền tảng “trí tuệ số” cho doanh nghiệp bằng cách kết hợp kiến trúc dữ liệu hiện đại với AI ứng dụng thực tiễn. Từ quản trị dữ liệu, hợp nhất tri thức đến tự động hóa quy trình bằng AI, giải pháp của chúng tôi giúp tổ chức ra quyết định nhanh hơn, chính xác hơn và dựa trên dữ liệu tin cậy.",
+      "cardText": "Trao quyền cho doanh nghiệp bằng nền tảng dữ liệu vững chắc và các giải pháp AI có khả năng mở rộng.",
       "getConsultation": "Đặt lịch tư vấn",
-      "exploreProducts": "Khám phá Sản phẩm"
+      "exploreProducts": "Khám phá Giải pháp"
     },
     "logoCloud": {
-      "title": "Được tin dùng bởi các Công ty Hàng đầu",
-      "subtitle": "Hơn 2,2 triệu công ty trên toàn thế giới đã tin tưởng chúng tôi"
+      "title": "Đối tác tin cậy của nhiều Doanh nghiệp Lớn",
+      "subtitle": "Chúng tôi đồng hành cùng tổ chức trong hành trình khai thác dữ liệu và ứng dụng AI hiệu quả"
     },
     "whyUs": {
-      "title": "Tại sao chọn chúng tôi",
-      "subtitle": "Chúng tôi là đội ngũ chuyên gia đam mê giúp doanh nghiệp phát triển.",
+      "title": "Vì sao chọn chúng tôi",
+      "subtitle": "Chuyên gia thực chiến về dữ liệu và AI cho môi trường doanh nghiệp.",
       "reasons": {
         "aiFirst": {
           "title": "AI-First",
-          "description": "Xây dựng với năng lực AI hiện đại ngay từ đầu.",
-          "bullets": ["Agentic AI", "RAG", "Đa phương thức"]
+          "description": "Thiết kế giải pháp với AI là năng lực cốt lõi ngay từ đầu.",
+          "bullets": [
+            "AI Agents",
+            "Generative AI & RAG",
+            "Tự động hóa thông minh"
+          ]
         },
         "enterpriseReady": {
-          "title": "Sẵn sàng Doanh nghiệp",
-          "description": "Được xây dựng cho các ràng buộc doanh nghiệp thực tế.",
-          "bullets": ["Bảo mật", "Quản trị", "Riêng tư"]
+          "title": "Sẵn sàng cho Doanh nghiệp",
+          "description": "Đáp ứng các yêu cầu khắt khe về bảo mật, vận hành và tuân thủ.",
+          "bullets": [
+            "Bảo mật & phân quyền",
+            "Quản trị dữ liệu",
+            "Triển khai on-prem & cloud riêng"
+          ]
         },
         "openIntegrable": {
-          "title": "Mở & Tích hợp",
-          "description": "Phù hợp với stack của bạn và triển khai mọi nơi.",
-          "bullets": ["API-first", "Nhúng mọi nơi"]
+          "title": "Mở & Dễ tích hợp",
+          "description": "Kết nối linh hoạt với hệ thống và nền tảng sẵn có của doanh nghiệp.",
+          "bullets": [
+            "API-first",
+            "Tích hợp đa hệ thống"
+          ]
         },
         "outcomesDriven": {
-          "title": "Hướng Kết quả",
-          "description": "Tối ưu cho kết quả kinh doanh có thể đo lường.",
-          "bullets": ["Tập trung vào tác động kinh doanh"]
+          "title": "Hướng tới Kết quả",
+          "description": "Mọi giải pháp đều gắn với chỉ số hiệu quả kinh doanh cụ thể.",
+          "bullets": [
+            "Tối ưu chi phí vận hành",
+            "Tăng năng suất nhân sự"
+          ]
         }
       }
     },
     "aiFeature": {
-      "badge": "SẢN PHẨM AI",
+      "badge": "GIẢI PHÁP AI",
       "title": "Tự động hóa Thông minh cho Doanh nghiệp",
-      "subtitle": "Chuyển đổi vận hành doanh nghiệp với bộ sản phẩm AI. Từ tri thức tài liệu đến tự động hóa email và xử lý hóa đơn, các giải pháp của chúng tôi tích hợp liền mạch với hệ thống hiện có để mang lại các giá trị vượt trội như tăng năng suất, giảm chi phí vận hành và thúc đẩy đổi mới bền vững.",
+      "subtitle": "Bộ giải pháp AI của chúng tôi giúp doanh nghiệp khai thác tri thức từ dữ liệu và tài liệu, đồng thời tự động hóa các quy trình vận hành trọng yếu như xử lý email và hóa đơn. Các giải pháp được thiết kế để tích hợp liền mạch với hệ thống hiện có, đảm bảo bảo mật, khả năng mở rộng và hiệu quả vận hành vượt trội. ",
       "exploreSolutions": "Khám phá Giải pháp",
       "products": {
         "prismaAI": {
           "title": "Prisma AI",
-          "description": "Trợ lý tri thức thông minh của bạn. Giống NotebookLM, Prisma AI tổng hợp thông tin từ nhiều tài liệu, cung cấp câu trả lời tức thì và insight sâu qua hội thoại tự nhiên. Trích xuất tri thức, tạo tóm tắt và trích dẫn nguồn trên toàn bộ tài liệu doanh nghiệp.",
-          "imageAlt": "Giao diện Prisma AI với hỏi đáp tài liệu và tổng hợp tri thức"
+          "description": "Nền tảng trợ lý tri thức doanh nghiệp giúp tổng hợp, tìm kiếm và trò chuyện với toàn bộ tài liệu nội bộ một cách an toàn. Prisma AI kết hợp mô hình RAG với AI Agents để cung cấp câu trả lời có trích dẫn nguồn, tạo báo cáo, sơ đồ tư duy, podcast và nhiều định dạng nội dung khác từ kho tri thức của tổ chức. Triển khai trong môi trường riêng giúp đảm bảo bảo mật dữ liệu tuyệt đối. ",
+          "imageAlt": "Giao diện Prisma AI với hỏi đáp tài liệu và tổng hợp tri thức doanh nghiệp"
         },
         "smartEmail": {
           "title": "Smart Email",
-          "description": "Hệ thống phân loại email thông minh tự động phân loại, ưu tiên và định tuyến email. Giảm tải hộp thư đến 60% và đảm bảo tin nhắn quan trọng không bị bỏ lỡ nhờ phát hiện ưu tiên và quy trình định tuyến thông minh.",
-          "imageAlt": "Bảng điều khiển Smart Email với phân loại email và phát hiện ưu tiên"
+          "description": "Giải pháp phân loại và tóm tắt email ứng dụng AI, tích hợp trực tiếp với Microsoft 365. Hệ thống tự động gắn nhãn, ưu tiên email, tạo tóm tắt nội dung và hỗ trợ tìm kiếm ngữ nghĩa. Cơ chế phản hồi từ người dùng giúp mô hình AI liên tục học hỏi và nâng cao độ chính xác, đồng thời đảm bảo kiểm soát truy cập và giám sát đầy đủ theo tiêu chuẩn doanh nghiệp.",
+          "imageAlt": "Bảng điều khiển Smart Email với phân loại, tìm kiếm và tóm tắt email bằng AI"
         },
         "smartInvoice": {
           "title": "Smart Invoice",
-          "description": "Bộ Giải pháp Hóa đơn Thông minh cho SAP. Tự động hóa xử lý hóa đơn từ trích xuất đến phê duyệt với tích hợp SAP liền mạch. Giảm 80% thời gian xử lý nhờ OCR tiên tiến, kiểm tra tự động và quy trình phê duyệt thông minh.",
-          "imageAlt": "Giao diện Smart Invoice với trích xuất OCR và tích hợp SAP"
+          "description": "Giải pháp xử lý hóa đơn tự động tích hợp SAP, sử dụng AI và OCR để trích xuất dữ liệu, xác thực với cơ quan thuế và thực hiện đối chiếu 3 chiều (Invoice–PO–GR). Hệ thống giúp giảm mạnh xử lý thủ công, tăng độ chính xác, đảm bảo tuân thủ quy định thuế Việt Nam và cung cấp đầy đủ dấu vết kiểm toán cho doanh nghiệp.",
+          "imageAlt": "Giao diện Smart Invoice với trích xuất dữ liệu hóa đơn và đối chiếu tự động"
         }
       }
     },
     "dataServices": {
-      "title": "Dịch vụ Dữ liệu Doanh nghiệp",
-      "subtitle": "Xây dựng nền tảng dữ liệu vững chắc với dịch vụ dữ liệu toàn diện. Từ quản trị đến tích hợp, chúng tôi giúp bạn khai thác tối đa tài sản dữ liệu.",
+      "title": "Dịch vụ Dữ liệu & AI Doanh nghiệp",
+      "subtitle": "Chúng tôi cung cấp dịch vụ tư vấn và triển khai toàn diện từ chiến lược dữ liệu đến nền tảng công nghệ, giúp doanh nghiệp xây dựng năng lực dữ liệu vững chắc để phục vụ phân tích và AI.",
       "items": {
         "governance": {
           "title": "Quản trị Dữ liệu",
-          "content": "Thiết lập khung quản trị dữ liệu vững chắc với chính sách, chuẩn và kiểm soát. Đảm bảo chất lượng, bảo mật và tuân thủ dữ liệu với quản lý siêu dữ liệu, truy vết nguồn gốc và kiểm soát riêng tư trong toàn tổ chức.",
-          "imageAlt": "Bảng điều khiển Quản trị Dữ liệu"
+          "content": "Thiết lập khung quản trị dữ liệu theo chuẩn quốc tế, bao gồm chiến lược dữ liệu, chính sách, tiêu chuẩn và mô hình tổ chức. Chúng tôi hỗ trợ xây dựng quy trình quản lý siêu dữ liệu, chất lượng dữ liệu, phân quyền truy cập và tuân thủ, giúp doanh nghiệp kiểm soát và tin cậy vào dữ liệu của mình.",
+          "imageAlt": "Mô hình quản trị dữ liệu doanh nghiệp"
         },
         "lakehouse": {
-          "title": "Data Lakehouse",
-          "content": "Kiến trúc dữ liệu hiện đại kết hợp tính linh hoạt của data lake với độ tin cậy của kho dữ liệu. Lớp lưu trữ thống nhất với giao dịch ACID, áp dụng schema và tối ưu chi phí cho mọi khối lượng phân tích và AI.",
-          "imageAlt": "Kiến trúc Data Lakehouse"
+          "title": "Kiến trúc Data Lakehouse",
+          "content": "Thiết kế và triển khai kiến trúc dữ liệu hiện đại như Data Lake, Data Warehouse và Lakehouse, kết hợp khả năng lưu trữ linh hoạt với hiệu năng phân tích cao. Nền tảng này tạo cơ sở cho BI, phân tích nâng cao và các ứng dụng AI/ML trong toàn doanh nghiệp.",
+          "imageAlt": "Kiến trúc nền tảng dữ liệu hiện đại Lakehouse"
         },
         "integration": {
-          "title": "Tích hợp Dữ liệu",
-          "content": "Tích hợp dữ liệu liền mạch kết nối các hệ thống riêng lẻ với luồng dữ liệu thời gian thực. Pipeline ETL/ELT, streaming thời gian thực, tích hợp API và chuyển đổi dữ liệu để đảm bảo tính nhất quán trong doanh nghiệp.",
-          "imageAlt": "Pipeline Tích hợp Dữ liệu"
+          "title": "Tích hợp & Đồng bộ Dữ liệu",
+          "content": "Xây dựng các giải pháp tích hợp dữ liệu giúp kết nối hệ thống phân tán, đồng bộ dữ liệu giữa ứng dụng và nền tảng phân tích. Bao gồm ETL/ELT, tích hợp thời gian thực và chuẩn hóa dữ liệu để đảm bảo luồng dữ liệu thông suốt, nhất quán và sẵn sàng cho phân tích và AI.",
+          "imageAlt": "Luồng tích hợp dữ liệu giữa các hệ thống doanh nghiệp"
         }
       }
     },
     "blogSection": {
-      "title": "Bài viết Công nghệ",
-      "subtitle": "Khám phá công nghệ tiên tiến định hình bối cảnh số của ngày mai",
+      "title": "Góc nhìn Công nghệ & AI",
+      "subtitle": "Chia sẻ kiến thức và xu hướng mới trong lĩnh vực dữ liệu, AI và chuyển đổi số",
       "readMore": "Xem thêm",
       "posts": {
         "1": {
-          "title": "Generative AI trong SAP: Cách mạng hóa Quy trình Doanh nghiệp",
-          "excerpt": "Khám phá cách AI generative đang chuyển đổi môi trường SAP với tạo tài liệu thông minh và hỗ trợ tự động.",
-          "author": "Dat Le",
-          "authorRole": "Kiến trúc sư Giải pháp AI"
+          "title": "Ứng dụng Generative AI trong quản lý tri thức doanh nghiệp",
+          "excerpt": "Tìm hiểu cách mô hình RAG và AI Agents giúp khai thác tri thức từ kho tài liệu nội bộ một cách an toàn và hiệu quả.",
+          "author": "CMC DnA Team",
+          "authorRole": "Chuyên gia AI"
         },
         "2": {
-          "title": "Pipeline dữ liệu thời gian thực kết nối SAP với nền tảng AI/ML hiện đại",
-          "excerpt": "Học cách xây dựng pipeline dữ liệu thời gian thực vững chắc kết nối liền mạch hệ thống SAP với nền tảng AI/ML hiện đại.",
-          "author": "Alex Thompson",
-          "authorRole": "Kỹ sư Dữ liệu"
+          "title": "Tự động hóa xử lý email với AI trong môi trường Microsoft 365",
+          "excerpt": "Giải pháp AI giúp phân loại, tóm tắt và ưu tiên email, giảm tải cho nhân viên và nâng cao hiệu suất làm việc.",
+          "author": "CMC DnA Team",
+          "authorRole": "Kiến trúc sư Giải pháp"
         },
         "3": {
-          "title": "Business intelligence dựa trên AI chuyển đổi báo cáo tĩnh",
-          "excerpt": "Học cách AI đang chuyển đổi business intelligence từ báo cáo tĩnh sang phân tích thông minh.",
-          "author": "Emily Watson",
-          "authorRole": "Tư vấn BI"
+          "title": "Từ Data Lake đến Lakehouse: Nền tảng dữ liệu cho AI hiện đại",
+          "excerpt": "So sánh các mô hình kiến trúc dữ liệu và cách lựa chọn nền tảng phù hợp cho chiến lược phân tích và AI.",
+          "author": "CMC DnA Team",
+          "authorRole": "Kiến trúc sư Dữ liệu"
         },
         "4": {
-          "title": "Chiến lược di chuyển dữ liệu SAP cho chuyển đổi đám mây liền mạch",
-          "excerpt": "Hướng dẫn thực tế di chuyển dữ liệu SAP lên nền tảng đám mây với best practices.",
-          "author": "David Kim",
-          "authorRole": "Kiến trúc sư Đám mây"
+          "title": "Tự động hóa quy trình tài chính với AI và SAP",
+          "excerpt": "Ứng dụng AI trong xử lý hóa đơn giúp tăng độ chính xác, đảm bảo tuân thủ và rút ngắn chu kỳ thanh toán.",
+          "author": "CMC DnA Team",
+          "authorRole": "Tư vấn Giải pháp Doanh nghiệp"
         },
         "5": {
-          "title": "Xây dựng kiến trúc dữ liệu hiện đại cho phân tích doanh nghiệp",
-          "excerpt": "Hướng dẫn toàn diện thiết kế kiến trúc dữ liệu hiện đại cho phép phân tích nâng cao.",
-          "author": "Sarah Chen",
-          "authorRole": "Kiến trúc sư Dữ liệu"
+          "title": "Xây dựng chiến lược dữ liệu làm nền tảng cho chuyển đổi số",
+          "excerpt": "Các bước quan trọng để doanh nghiệp xây dựng chiến lược dữ liệu và lộ trình triển khai AI hiệu quả.",
+          "author": "CMC DnA Team",
+          "authorRole": "Tư vấn Chiến lược Dữ liệu"
         }
       }
     }
   },
   "Blog": {
     "title": "Bài viết blog",
-    "description": "Danh sách các bài viết blog"
+    "description": "Chia sẻ kiến thức, xu hướng và kinh nghiệm triển khai AI & Dữ liệu trong doanh nghiệp"
   },
   "About": {
     "title": "Giới thiệu",
-    "description": "Giới thiệu về CMC Consulting AI",
+    "description": "Giới thiệu về năng lực AI và Dữ liệu của CMC Consulting",
     "hero": {
-      "headline1": "CMC Consulting AI",
-      "headlineHighlight": "Định hình kỷ nguyên AI mới",
-      "subtitle": "CMC Consulting AI chuyên cung cấp dịch vụ AI và dữ liệu tiên tiến cho các công ty và tập đoàn, trang bị cho họ các công cụ sáng tạo để đáp ứng nhu cầu vận hành.",
-      "subtitle2": "CMC Consulting AI cam kết mang đến dịch vụ trí tuệ nhân tạo và dữ liệu cho các công ty. Mục tiêu của chúng tôi là hỗ trợ doanh nghiệp đạt được các mục tiêu thông qua chiến lược AI và dữ liệu sáng tạo.",
+      "headline1": "CMC Consulting AI & Data",
+      "headlineHighlight": "Đồng hành cùng doanh nghiệp trong kỷ nguyên trí tuệ nhân tạo",
+      "subtitle": "CMC Consulting cung cấp dịch vụ tư vấn, xây dựng chiến lược và triển khai các giải pháp AI & Dữ liệu toàn diện, giúp doanh nghiệp khai thác giá trị thực sự từ dữ liệu.",
+      "subtitle2": "Chúng tôi kết hợp tư duy chiến lược, năng lực công nghệ và kinh nghiệm triển khai thực tế để thiết kế các nền tảng dữ liệu hiện đại, sẵn sàng cho AI, phân tích nâng cao và chuyển đổi số bền vững.",
       "stats": [
-        { "value": "$20M+", "label": "Huy động vốn" },
-        { "value": "95%", "label": "Tỷ lệ hài lòng khách hàng" },
-        { "value": "12B+", "label": "Doanh thu hàng năm" },
-        { "value": "100+", "label": "Khách hàng" }
+        {
+          "value": "End-to-End",
+          "label": "Chiến lược Dữ liệu & AI"
+        },
+        {
+          "value": "Enterprise",
+          "label": "Chuẩn quản trị & bảo mật"
+        },
+        {
+          "value": "Modern",
+          "label": "Kiến trúc Lakehouse & Cloud"
+        },
+        {
+          "value": "AI-Ready",
+          "label": "Nền tảng sẵn sàng cho GenAI"
+        }
       ]
     },
     "content": {
       "teamTitle": "Đội ngũ",
       "teamParagraphs": [
-        "Chúng tôi bắt đầu phát triển CMC Consulting AI vào năm 2024 và chính thức ra mắt năm 2025. Toàn bộ các mô hình AI, luồng dữ liệu (pipeline) và các tích hợp đều được chúng tôi xây dựng mới hoàn toàn từ nền tảng cốt lõi — nói không với nợ kỹ thuật (technical debt) hay các hệ thống cũ kỹ, lạc hậu. Chúng tôi được định hình với mục tiêu thúc đẩy những bước tiến vượt bậc trong các giải pháp về AI và dữ liệu cho thế kỷ tiếp theo.",
-        "Chúng tôi tự hào là doanh nghiệp có lợi nhuận và thuộc sở hữu 100% bởi chính những người sáng lập cùng đội ngũ nhân viên, với cam kết duy trì một bộ máy tinh gọn và linh hoạt. Trang thông tin này sẽ dần được hoàn thiện theo thời gian, nhưng ngay lúc này, chúng tôi muốn dành trọn sự tập trung để cung cấp những công cụ AI và dữ liệu xuất sắc nhất cho các doanh nghiệp và những người làm đổi mới sáng tạo."
+        "Đội ngũ CMC Consulting quy tụ các chuyên gia về dữ liệu, AI, kiến trúc hệ thống và chuyển đổi số, với kinh nghiệm triển khai các chương trình dữ liệu quy mô lớn cho doanh nghiệp trong nhiều lĩnh vực. Chúng tôi không chỉ tư vấn chiến lược mà còn trực tiếp thiết kế và xây dựng các nền tảng dữ liệu hiện đại như Data Lake, Lakehouse và kiến trúc tích hợp dữ liệu doanh nghiệp.",
+        "Chúng tôi làm việc theo cách tiếp cận thực tiễn, tập trung vào giá trị kinh doanh đo lường được. Từ quản trị dữ liệu, chất lượng dữ liệu đến AI/ML và GenAI, mọi giải pháp đều được thiết kế để phù hợp với bối cảnh vận hành, năng lực tổ chức và mục tiêu dài hạn của khách hàng."
       ],
       "missionParagraphs": [
-        "Tại CMC Consulting AI, chúng tôi giúp doanh nghiệp khai thác sức mạnh thực sự của AI và dữ liệu. Sứ mệnh của chúng tôi là chuyển đổi dữ liệu phức tạp thành thông tin rõ ràng, có thể hành động, thúc đẩy ra quyết định tốt hơn, tăng hiệu quả và tạo lợi thế cạnh tranh thực sự.",
-        "Chúng tôi tập trung vào kết quả có thể đo lường. Bằng cách hiểu sâu thách thức kinh doanh của bạn, chúng tôi thiết kế và triển khai giải pháp AI và dữ liệu phù hợp, loại bỏ phỏng đoán, giảm lãng phí vận hành và thúc đẩy tăng trưởng.",
-        "Thành công của bạn là thành công của chúng tôi — đó là lý do chúng tôi duy trì tỷ lệ giữ chân khách hàng hoàn hảo từ ngày đầu."
+        "Sứ mệnh của chúng tôi là giúp doanh nghiệp biến dữ liệu thành tài sản chiến lược. Thông qua khung quản trị dữ liệu bài bản, kiến trúc hiện đại và các nền tảng AI tiên tiến, chúng tôi giúp doanh nghiệp ra quyết định nhanh hơn, chính xác hơn và dựa trên dữ liệu.",
+        "Chúng tôi tập trung xây dựng nền tảng dữ liệu tin cậy – bảo mật – tuân thủ, làm cơ sở cho phân tích nâng cao, machine learning và GenAI. Điều này giúp doanh nghiệp giảm rủi ro, tối ưu vận hành và mở ra các mô hình kinh doanh mới dựa trên dữ liệu.",
+        "Thành công của khách hàng là thước đo cho thành công của chúng tôi. Vì vậy, chúng tôi luôn đồng hành dài hạn, không chỉ ở giai đoạn triển khai mà còn trong quá trình vận hành, mở rộng và tối ưu liên tục."
       ],
       "imageAlt": {
-        "teamCollaboration": "Hợp tác đội ngũ",
-        "teamWorkspace": "Không gian làm việc đội ngũ",
-        "modernWorkspace": "Không gian làm việc hiện đại",
-        "teamCollaboration2": "Hợp tác đội ngũ"
+        "teamCollaboration": "Đội ngũ chuyên gia dữ liệu và AI đang hợp tác",
+        "teamWorkspace": "Không gian làm việc của đội ngũ công nghệ",
+        "modernWorkspace": "Môi trường làm việc hiện đại về dữ liệu và AI",
+        "teamCollaboration2": "Hợp tác triển khai giải pháp AI & Dữ liệu"
       }
     }
   },
   "TermsOfService": {
     "title": "Điều khoản dịch vụ",
-    "description": "Điều khoản dịch vụ"
+    "description": "Các điều khoản và điều kiện khi sử dụng dịch vụ của chúng tôi"
   },
   "PrivacyPolicy": {
     "title": "Chính sách bảo mật",
-    "description": "Chính sách bảo mật"
+    "description": "Cách chúng tôi thu thập, sử dụng và bảo vệ dữ liệu của bạn"
   },
   "Showcase": {
-    "title": "Các sản phẩm xây dựng",
-    "description": "Khám phá những sản phẩm và website ấn tượng được xây dựng",
+    "title": "Sản phẩm & Giải pháp tiêu biểu",
+    "description": "Khám phá các sản phẩm AI và nền tảng dữ liệu đã được xây dựng và triển khai",
     "visitSite": "Truy cập website"
   },
   "Submission": {
     "badge": "Đề xuất nổi bật",
-    "title": "Gửi sản phẩm của bạn",
-    "description": "Bạn đã xây dựng sản phẩm tuyệt vời với starter này? Hãy chia sẻ với cộng đồng và xuất hiện trong mục showcase.",
-    "productNameLabel": "Tên sản phẩm",
-    "productNamePlaceholder": "Dự án tuyệt vời của tôi",
+    "title": "Chia sẻ giải pháp của bạn",
+    "description": "Bạn đã xây dựng giải pháp trên nền tảng AI & Dữ liệu? Hãy chia sẻ để cùng lan tỏa giá trị tới cộng đồng.",
+    "productNameLabel": "Tên giải pháp",
+    "productNamePlaceholder": "Giải pháp AI của tôi",
     "productUrlLabel": "URL sản phẩm",
-    "submit": "Gửi sản phẩm",
+    "submit": "Gửi thông tin",
     "submitting": "Đang gửi...",
-    "successMessage": "Cảm ơn bạn! Chúng tôi đã nhận được gửi sản phẩm của bạn và sẽ sớm xem xét.",
+    "successMessage": "Cảm ơn bạn! Chúng tôi đã nhận được thông tin và sẽ sớm liên hệ lại.",
     "errorMessage": "Đã xảy ra lỗi. Vui lòng thử lại."
   },
   "Solutions": {
     "title": "Giải pháp",
-    "description": "Khám phá bộ sản phẩm AI và dịch vụ dữ liệu doanh nghiệp được thiết kế để đẩy nhanh hành trình chuyển đổi số của bạn.",
+    "description": "Hệ sinh thái sản phẩm AI và dịch vụ dữ liệu doanh nghiệp giúp tăng tốc hành trình chuyển đổi số.",
     "hero": {
       "badge": "Giải pháp AI & Dữ liệu",
-      "headline": "Chuyển đổi Doanh nghiệp",
-      "headlineHighlight": "với AI & Dữ liệu",
-      "subtitle": "Khám phá bộ sản phẩm AI và dịch vụ dữ liệu doanh nghiệp được thiết kế để đẩy nhanh hành trình chuyển đổi số của bạn.",
+      "headline": "Khai phá giá trị dữ liệu",
+      "headlineHighlight": "và tăng tốc ứng dụng AI",
+      "subtitle": "Từ chiến lược, kiến trúc dữ liệu đến triển khai AI/GenAI, chúng tôi giúp doanh nghiệp xây dựng nền tảng vững chắc cho đổi mới và tăng trưởng.",
       "exploreAIProducts": "Khám phá Sản phẩm AI",
       "viewDataServices": "Xem Dịch vụ Dữ liệu"
     },
     "aiProductsSection": {
       "badge": "Sản phẩm AI",
-      "title": "Bộ Giải pháp Tự động hóa Thông minh",
-      "subtitle": "Sản phẩm AI sẵn sàng cho doanh nghiệp, tự động hóa quy trình, nâng cao năng suất và thúc đẩy kết quả kinh doanh."
+      "title": "Các Giải pháp AI sẵn sàng cho Doanh nghiệp",
+      "subtitle": "Tự động hóa quy trình, nâng cao năng suất và hỗ trợ ra quyết định thông minh trên nền tảng dữ liệu doanh nghiệp."
     },
     "badges": {
       "flagship": "Chủ lực",
@@ -325,108 +351,108 @@
     "products": {
       "prismaAI": {
         "title": "Prisma AI",
-        "tagline": "Trợ lý Tri thức Thông minh",
-        "description": "Thay đổi cách đội ngũ của bạn truy cập và tổng hợp thông tin. Giống NotebookLM, Prisma AI giúp bạn trích xuất thông tin từ nhiều tài liệu thông qua hội thoại tự nhiên.",
+        "tagline": "Trợ lý Nghiên cứu & Tri thức Doanh nghiệp",
+        "description": "Prisma AI là trợ lý tri thức sử dụng công nghệ RAG và tìm kiếm vector, cho phép người dùng trò chuyện với tài liệu nội bộ, tổng hợp thông tin và tạo nội dung có trích dẫn từ nhiều nguồn dữ liệu khác nhau.",
         "features": {
           "multiDocQA": {
-            "title": "Hỏi đáp Đa tài liệu",
-            "description": "Đặt câu hỏi xuyên suốt nhiều tài liệu và nhận câu trả lời kèm nguồn trích dẫn."
+            "title": "Hỏi đáp trên nhiều nguồn tài liệu",
+            "description": "Truy vấn đồng thời nhiều tài liệu, hệ thống và nguồn dữ liệu, nhận câu trả lời có dẫn nguồn rõ ràng."
           },
           "knowledgeSynthesis": {
-            "title": "Tổng hợp Tri thức",
-            "description": "Tự động tổng hợp thông tin từ nhiều nguồn thành các insight mạch lạc."
+            "title": "Tổng hợp và tạo nội dung",
+            "description": "Tự động tạo báo cáo, dàn ý, bản trình bày và mind map dựa trên tri thức doanh nghiệp."
           },
           "lightningFast": {
-            "title": "Cực kỳ Nhanh",
-            "description": "Nhận câu trả lời tức thì nhờ công nghệ RAG và tìm kiếm vector tiên tiến."
+            "title": "Tìm kiếm lai & vector",
+            "description": "Kết hợp tìm kiếm ngữ nghĩa và tìm kiếm truyền thống để trả lời nhanh và chính xác."
           },
           "enterpriseSecurity": {
-            "title": "Bảo mật Doanh nghiệp",
-            "description": "Dữ liệu của bạn được bảo vệ với mã hóa và kiểm soát truy cập cấp doanh nghiệp."
+            "title": "Bảo mật theo chuẩn doanh nghiệp",
+            "description": "Phân quyền truy cập, tích hợp hệ thống nội bộ và kiểm soát dữ liệu chặt chẽ."
           }
         }
       },
       "smartEmail": {
         "title": "Smart Email",
-        "tagline": "Quản lý Email Thông minh",
-        "description": "Không bỏ lỡ email quan trọng. AI tự động phân loại, ưu tiên và định tuyến email để đội ngũ tập trung vào điều quan trọng nhất.",
+        "tagline": "Phân loại và Tóm tắt Email bằng AI",
+        "description": "Smart Email tự động thu thập, phân loại, gán nhãn và tóm tắt email bằng AI, giúp đội ngũ xử lý khối lượng lớn email nhanh hơn và tập trung vào nội dung quan trọng.",
         "features": {
           "smartClassification": {
-            "title": "Phân loại Thông minh",
-            "description": "Tự động phân loại email theo chủ đề, mức độ khẩn cấp và phòng ban."
+            "title": "Phân loại email tự động",
+            "description": "AI tự động gán nhãn email theo nội dung, chủ đề và ngữ cảnh nghiệp vụ."
           },
           "priorityDetection": {
-            "title": "Phát hiện Ưu tiên",
-            "description": "AI xác định email quan trọng và đưa đến đúng người ngay lập tức."
+            "title": "Xác định mức độ ưu tiên",
+            "description": "Phát hiện email quan trọng hoặc khẩn cấp để xử lý kịp thời."
           },
           "autoRouting": {
-            "title": "Định tuyến Tự động",
-            "description": "Chuyển email đến đúng đội nhóm hoặc phòng ban dựa trên nội dung và ngữ cảnh."
+            "title": "Định tuyến theo phòng ban",
+            "description": "Chuyển email đến đúng bộ phận dựa trên nội dung và vai trò người dùng."
           },
           "analyticsDashboard": {
-            "title": "Bảng điều khiển Phân tích",
-            "description": "Theo dõi lượng email, thời gian phản hồi và chỉ số hiệu suất đội ngũ."
+            "title": "Phân tích & giám sát",
+            "description": "Theo dõi lưu lượng email, thời gian xử lý và hiệu suất làm việc qua dashboard trực quan."
           }
         }
       },
       "smartInvoice": {
         "title": "Smart Invoice",
-        "tagline": "Bộ Giải pháp Hóa đơn Thông minh cho SAP",
-        "description": "Giảm 80% thời gian xử lý hóa đơn. Tự động hóa trích xuất, kiểm tra và quy trình phê duyệt với tích hợp SAP liền mạch.",
+        "tagline": "Tự động hóa Xử lý Hóa đơn tích hợp SAP",
+        "description": "Smart Invoice tự động trích xuất dữ liệu hóa đơn bằng AI/OCR, đối chiếu 3 chiều (Invoice–PO–GR) và ghi nhận trực tiếp vào SAP, đảm bảo tuân thủ quy định thuế và giảm mạnh thời gian xử lý thủ công.",
         "features": {
           "ocrExtraction": {
-            "title": "Trích xuất OCR",
-            "description": "Trích xuất dữ liệu từ hóa đơn với độ chính xác 99%+ nhờ công nghệ OCR tiên tiến."
+            "title": "Trích xuất dữ liệu bằng AI/OCR",
+            "description": "Tự động đọc và trích xuất thông tin từ hóa đơn với độ chính xác cao."
           },
           "sapIntegration": {
             "title": "Tích hợp SAP",
-            "description": "Tích hợp gốc với SAP cho luồng dữ liệu liền mạch và cập nhật thời gian thực."
+            "description": "Tự động ghi nhận và đồng bộ dữ liệu hóa đơn vào hệ thống SAP."
           },
           "smartValidation": {
-            "title": "Kiểm tra Thông minh",
-            "description": "Tự động kiểm tra dữ liệu hóa đơn với đơn mua hàng và hợp đồng."
+            "title": "Đối chiếu thông minh",
+            "description": "Tự động đối chiếu hóa đơn với PO và GR để phát hiện sai lệch."
           },
           "approvalWorkflows": {
-            "title": "Quy trình Phê duyệt",
-            "description": "Định tuyến và quy trình phê duyệt thông minh phù hợp với quy tắc kinh doanh của bạn."
+            "title": "Quy trình phê duyệt linh hoạt",
+            "description": "Thiết lập luồng phê duyệt theo quy tắc nghiệp vụ và cơ cấu tổ chức."
           }
         }
       }
     },
     "dataServicesSection": {
       "badge": "Dịch vụ Dữ liệu",
-      "title": "Giải pháp Dữ liệu Doanh nghiệp",
-      "subtitle": "Xây dựng nền tảng dữ liệu vững chắc với dịch vụ dữ liệu toàn diện. Từ quản trị đến tích hợp, chúng tôi giúp bạn khai thác tối đa tài sản dữ liệu."
+      "title": "Dịch vụ Nền tảng Dữ liệu Doanh nghiệp",
+      "subtitle": "Từ chiến lược, quản trị đến kiến trúc và tích hợp, chúng tôi giúp xây dựng nền tảng dữ liệu hiện đại sẵn sàng cho AI."
     },
     "dataServices": {
       "dataGovernance": {
         "title": "Quản trị Dữ liệu",
-        "description": "Thiết lập khung quản trị dữ liệu vững chắc với chính sách, chuẩn và kiểm soát để đảm bảo chất lượng, bảo mật và tuân thủ dữ liệu trong toàn tổ chức.",
+        "description": "Xây dựng khung quản trị dữ liệu toàn diện bao gồm chính sách, vai trò, quy trình và công cụ để đảm bảo dữ liệu tin cậy, bảo mật và tuân thủ.",
         "benefits": [
-          "Quản lý chất lượng dữ liệu",
-          "Quản lý siêu dữ liệu",
-          "Tuân thủ & bảo mật",
-          "Truy vết nguồn gốc dữ liệu"
+          "Khung tổ chức Data Owner, Data Steward",
+          "Chính sách và tiêu chuẩn dữ liệu",
+          "Quản lý chất lượng & lineage",
+          "Hỗ trợ tuân thủ và kiểm toán"
         ]
       },
       "dataLakehouse": {
-        "title": "Data Lakehouse",
-        "description": "Kiến trúc dữ liệu hiện đại kết hợp tính linh hoạt của data lake với độ tin cậy của kho dữ liệu cho phân tích thống nhất và khối lượng công việc AI.",
+        "title": "Kiến trúc Data Lakehouse",
+        "description": "Thiết kế và triển khai kiến trúc dữ liệu hiện đại kết hợp Data Lake và Data Warehouse, hỗ trợ phân tích nâng cao và AI/ML trên cùng một nền tảng.",
         "benefits": [
-          "Lớp lưu trữ thống nhất",
-          "Giao dịch ACID",
-          "Tối ưu chi phí",
-          "Áp dụng schema"
+          "Nền tảng lưu trữ hợp nhất",
+          "Hỗ trợ phân tích & AI quy mô lớn",
+          "Tối ưu chi phí hạ tầng",
+          "Sẵn sàng cho dữ liệu thời gian thực"
         ]
       },
       "dataIntegration": {
-        "title": "Tích hợp Dữ liệu",
-        "description": "Dịch vụ tích hợp dữ liệu liền mạch kết nối các hệ thống riêng lẻ, cho phép luồng dữ liệu thời gian thực và đảm bảo tính nhất quán dữ liệu trong doanh nghiệp.",
+        "title": "Tích hợp & Đồng bộ Dữ liệu",
+        "description": "Kết nối và đồng bộ dữ liệu từ nhiều hệ thống như ERP, CRM, ứng dụng nghiệp vụ và nguồn bên ngoài, đảm bảo luồng dữ liệu liên tục và nhất quán.",
         "benefits": [
           "Pipeline ETL/ELT",
-          "Streaming thời gian thực",
-          "Tích hợp API",
-          "Chuyển đổi dữ liệu"
+          "Tích hợp batch & real-time",
+          "Chuẩn hóa và chuyển đổi dữ liệu",
+          "Đảm bảo tính nhất quán toàn doanh nghiệp"
         ]
       }
     },
@@ -436,10 +462,10 @@
     }
   },
   "CTASection": {
-    "title": "Sẵn sàng xây dựng",
-    "titleHighlight": "giải pháp AI cho doanh nghiệp của bạn?",
+    "title": "Sẵn sàng khai thác sức mạnh",
+    "titleHighlight": "AI & Dữ liệu cho doanh nghiệp của bạn?",
     "requestDemo": "Đặt lịch demo",
-    "talkToSales": "Liên hệ bán hàng",
+    "talkToSales": "Liên hệ tư vấn",
     "imageAlt": "Minh họa sẵn sàng xây dựng"
   },
   "Navbar": {
