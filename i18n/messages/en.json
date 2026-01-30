@@ -30,6 +30,38 @@
     ]
   },
   "Footer": {
+    "Brand": {
+      "name": "CMC Consulting AI",
+      "description": "We are a team of experts who are passionate about helping businesses grow."
+    },
+    "Columns": {
+      "Product": {
+        "title": "Product",
+        "features": "Features",
+        "pricing": "Pricing",
+        "testimonials": "Testimonials",
+        "supportedLanguages": "Supported Languages"
+      },
+      "Solutions": {
+        "title": "Solutions",
+        "contentCreators": "Content Creators",
+        "businesses": "Businesses",
+        "education": "Education",
+        "enterprise": "Enterprise"
+      },
+      "Resources": {
+        "title": "Resources",
+        "blog": "Blog",
+        "translationGuides": "Translation Guides",
+        "support": "Support"
+      },
+      "Company": {
+        "title": "Company",
+        "aboutUs": "About Us",
+        "privacyPolicy": "Privacy Policy",
+        "termsConditions": "Terms & Conditions"
+      }
+    },
     "Copyright": "Copyright © {year} {name} All rights reserved.",
     "PrivacyPolicy": "Privacy Policy",
     "TermsOfService": "Terms of Service",
