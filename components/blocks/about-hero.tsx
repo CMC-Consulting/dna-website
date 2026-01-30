@@ -1,28 +1,17 @@
-﻿import { DashedLine } from "@/components/ui/dashed-line";
+"use client";
 
-const stats = [
-  {
-    value: "$20M+",
-    label: "Raised",
-  },
-  {
-    value: "95%",
-    label: "Client Satisfaction Rate",
-  },
-  {
-    value: "12B+",
-    label: "Annual revenue",
-  },
-  {
-    value: "100+",
-    label: "Customers",
-  },
-];
+import { useTranslations } from "next-intl";
 
-export function AboutHero() {
+import { DashedLine } from "@/components/ui/dashed-line";
+
+type StatItem = { value: string; label: string };
+
+export const AboutHero = () => {
+  const t = useTranslations("About.hero");
+  const stats = t.raw("stats") as StatItem[];
+
   return (
     <section className="relative w-full min-h-screen overflow-hidden bg-white dark:bg-gray-950 py-28 lg:py-52 px-4 sm:px-6 lg:px-8 flex items-center">
-      {/* Background gradient effect - matches hero/solutions pattern */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -68,17 +57,17 @@ export function AboutHero() {
         <div className="flex flex-col justify-between gap-12 md:gap-20 lg:flex-row lg:items-center lg:gap-24">
           <div className="flex-[1.5] space-y-6">
             <h1 className="font-display text-foreground text-4xl tracking-tight sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
-              Democratising
+              {t("headline1")}
               <br />
-              <span className="text-[#276df0]"> AI and Data solutions</span>
+              <span className="text-[#276df0]"> {t("headlineHighlight")}</span>
             </h1>
 
             <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed md:text-xl">
-              CMC Consulting AI specializes in delivering advanced AI and data services to companies and groups, empowering them with innovative tools to meet their operational needs.
+              {t("subtitle")}
             </p>
 
             <p className="text-muted-foreground hidden max-w-xl text-base leading-relaxed text-balance md:block lg:text-lg">
-              CMC Consulting AI is committed to delivering artificial intelligence and data-driven services to companies. Our goal is to support enterprises in realizing their objectives through innovative AI and data strategies.
+              {t("subtitle2")}
             </p>
           </div>
 
@@ -106,4 +95,4 @@ export function AboutHero() {
       </div>
     </section>
   );
-}
+};

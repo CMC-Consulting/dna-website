@@ -1,45 +1,41 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 
 const About = () => {
+  const t = useTranslations("About.content");
+  const teamParagraphs = t.raw("teamParagraphs") as string[];
+  const missionParagraphs = t.raw("missionParagraphs") as string[];
+
   return (
     <section className="w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-32">
       <div className="mx-auto max-w-7xl flex flex-col-reverse gap-8 md:gap-14 lg:flex-row lg:items-end">
-        {/* Images Left - Text Right */}
         <div className="flex flex-col gap-8 lg:gap-16 xl:gap-20">
           <ImageSection
             images={[
-              { src: "/about/1.webp", alt: "Team collaboration" },
-              { src: "/about/2.webp", alt: "Team workspace" },
+              { src: "/about/1.webp", alt: t("imageAlt.teamCollaboration") },
+              { src: "/about/2.webp", alt: t("imageAlt.teamWorkspace") },
             ]}
             className="xl:-translate-x-10"
           />
 
           <TextSection
-            title="The Team"
-            paragraphs={[
-              "We began developing CMC Consulting AI in 2024 and officially launched in 2025. Every AI model, data pipeline, and integration has been engineered from the ground up — free from technical debt or outdated legacy systems. We are purposefully designed to drive advancements in AI and data solutions for the next century.",
-              "We remain 100% founder and team-owned, profitable, and committed to maintaining a lean, agile team. In time, this page will evolve with more refinements, but our current priority is delivering exceptional AI and data tools for businesses and innovators."
-            ]}
+            title={t("teamTitle")}
+            paragraphs={teamParagraphs}
           />
         </div>
 
-        {/* Text Left - Images Right */}
         <div className="flex flex-col gap-8 lg:gap-16 xl:gap-20">
-          <TextSection
-            paragraphs={[
-              "At CMC Consulting AI, we help businesses unlock the true power of AI and data. Our mission is to transform complex data into clear, actionable intelligence that drives better decision-making, increases efficiency, and creates a real competitive advantage.",
-              "We are obsessed with delivering measurable results. By deeply understanding your business challenges, we design and implement tailored AI and data solutions that eliminate guesswork, reduce operational waste, and accelerate growth.",
-              "Your success is our success — which is why we’ve maintained a perfect customer retention rate since day one."
-            ]}
-          />
+          <TextSection paragraphs={missionParagraphs} />
           <ImageSection
             images={[
-              { src: "/about/3.webp", alt: "Modern workspace" },
-              { src: "/about/4.webp", alt: "Team collaboration" },
+              { src: "/about/3.webp", alt: t("imageAlt.modernWorkspace") },
+              { src: "/about/4.webp", alt: t("imageAlt.teamCollaboration2") },
             ]}
             className="hidden lg:flex xl:translate-x-10"
           />

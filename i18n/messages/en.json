@@ -244,7 +244,37 @@
   },
   "About": {
     "title": "About",
-    "description": "About DnA Solutions"
+    "description": "About CMC Consulting AI",
+    "hero": {
+      "headline1": "CMC Consulting AI",
+      "headlineHighlight": "Shaping the New Era of AI",
+      "subtitle": "CMC Consulting AI specializes in delivering advanced AI and data services to companies and groups, empowering them with innovative tools to meet their operational needs.",
+      "subtitle2": "CMC Consulting AI is committed to delivering artificial intelligence and data-driven services to companies. Our goal is to support enterprises in realizing their objectives through innovative AI and data strategies.",
+      "stats": [
+        { "value": "$20M+", "label": "Raised" },
+        { "value": "95%", "label": "Client Satisfaction Rate" },
+        { "value": "12B+", "label": "Annual revenue" },
+        { "value": "100+", "label": "Customers" }
+      ]
+    },
+    "content": {
+      "teamTitle": "The Team",
+      "teamParagraphs": [
+        "We began developing CMC Consulting AI in 2024 and officially launched in 2025. Every AI model, data pipeline, and integration has been engineered from the ground up — free from technical debt or outdated legacy systems. We are purposefully designed to drive advancements in AI and data solutions for the next century.",
+        "We remain 100% founder and team-owned, profitable, and committed to maintaining a lean, agile team. In time, this page will evolve with more refinements, but our current priority is delivering exceptional AI and data tools for businesses and innovators."
+      ],
+      "missionParagraphs": [
+        "At CMC Consulting AI, we help businesses unlock the true power of AI and data. Our mission is to transform complex data into clear, actionable intelligence that drives better decision-making, increases efficiency, and creates a real competitive advantage.",
+        "We are obsessed with delivering measurable results. By deeply understanding your business challenges, we design and implement tailored AI and data solutions that eliminate guesswork, reduce operational waste, and accelerate growth.",
+        "Your success is our success — which is why we've maintained a perfect customer retention rate since day one."
+      ],
+      "imageAlt": {
+        "teamCollaboration": "Team collaboration",
+        "teamWorkspace": "Team workspace",
+        "modernWorkspace": "Modern workspace",
+        "teamCollaboration2": "Team collaboration"
+      }
+    }
   },
   "TermsOfService": {
     "title": "Terms of Service",

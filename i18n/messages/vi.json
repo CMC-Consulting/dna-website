@@ -244,7 +244,37 @@
   },
   "About": {
     "title": "Giới thiệu",
-    "description": "Giới thiệu về trang web"
+    "description": "Giới thiệu về CMC Consulting AI",
+    "hero": {
+      "headline1": "CMC Consulting AI",
+      "headlineHighlight": "Định hình kỷ nguyên AI mới",
+      "subtitle": "CMC Consulting AI chuyên cung cấp dịch vụ AI và dữ liệu tiên tiến cho các công ty và tập đoàn, trang bị cho họ các công cụ sáng tạo để đáp ứng nhu cầu vận hành.",
+      "subtitle2": "CMC Consulting AI cam kết mang đến dịch vụ trí tuệ nhân tạo và dữ liệu cho các công ty. Mục tiêu của chúng tôi là hỗ trợ doanh nghiệp đạt được các mục tiêu thông qua chiến lược AI và dữ liệu sáng tạo.",
+      "stats": [
+        { "value": "$20M+", "label": "Huy động vốn" },
+        { "value": "95%", "label": "Tỷ lệ hài lòng khách hàng" },
+        { "value": "12B+", "label": "Doanh thu hàng năm" },
+        { "value": "100+", "label": "Khách hàng" }
+      ]
+    },
+    "content": {
+      "teamTitle": "Đội ngũ",
+      "teamParagraphs": [
+        "Chúng tôi bắt đầu phát triển CMC Consulting AI vào năm 2024 và chính thức ra mắt năm 2025. Toàn bộ các mô hình AI, luồng dữ liệu (pipeline) và các tích hợp đều được chúng tôi xây dựng mới hoàn toàn từ nền tảng cốt lõi — nói không với nợ kỹ thuật (technical debt) hay các hệ thống cũ kỹ, lạc hậu. Chúng tôi được định hình với mục tiêu thúc đẩy những bước tiến vượt bậc trong các giải pháp về AI và dữ liệu cho thế kỷ tiếp theo.",
+        "Chúng tôi tự hào là doanh nghiệp có lợi nhuận và thuộc sở hữu 100% bởi chính những người sáng lập cùng đội ngũ nhân viên, với cam kết duy trì một bộ máy tinh gọn và linh hoạt. Trang thông tin này sẽ dần được hoàn thiện theo thời gian, nhưng ngay lúc này, chúng tôi muốn dành trọn sự tập trung để cung cấp những công cụ AI và dữ liệu xuất sắc nhất cho các doanh nghiệp và những người làm đổi mới sáng tạo."
+      ],
+      "missionParagraphs": [
+        "Tại CMC Consulting AI, chúng tôi giúp doanh nghiệp khai thác sức mạnh thực sự của AI và dữ liệu. Sứ mệnh của chúng tôi là chuyển đổi dữ liệu phức tạp thành thông tin rõ ràng, có thể hành động, thúc đẩy ra quyết định tốt hơn, tăng hiệu quả và tạo lợi thế cạnh tranh thực sự.",
+        "Chúng tôi tập trung vào kết quả có thể đo lường. Bằng cách hiểu sâu thách thức kinh doanh của bạn, chúng tôi thiết kế và triển khai giải pháp AI và dữ liệu phù hợp, loại bỏ phỏng đoán, giảm lãng phí vận hành và thúc đẩy tăng trưởng.",
+        "Thành công của bạn là thành công của chúng tôi — đó là lý do chúng tôi duy trì tỷ lệ giữ chân khách hàng hoàn hảo từ ngày đầu."
+      ],
+      "imageAlt": {
+        "teamCollaboration": "Hợp tác đội ngũ",
+        "teamWorkspace": "Không gian làm việc đội ngũ",
+        "modernWorkspace": "Không gian làm việc hiện đại",
+        "teamCollaboration2": "Hợp tác đội ngũ"
+      }
+    }
   },
   "TermsOfService": {
     "title": "Điều khoản dịch vụ",
@@ -255,8 +285,8 @@
     "description": "Chính sách bảo mật"
   },
   "Showcase": {
-    "title": "Các sản phẩm xây dựng bằng Starter này",
-    "description": "Khám phá những sản phẩm và website ấn tượng được xây dựng bằng Next.js Starter này.",
+    "title": "Các sản phẩm xây dựng",
+    "description": "Khám phá những sản phẩm và website ấn tượng được xây dựng",
     "visitSite": "Truy cập website"
   },
   "Submission": {

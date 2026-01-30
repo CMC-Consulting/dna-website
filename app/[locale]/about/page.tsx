@@ -2,8 +2,32 @@ import About from "@/components/blocks/about";
 import { AboutHero } from "@/components/blocks/about-hero";
 import TeamSection from "@/components/contact/team";
 import CTASection from "@/components/cta-section";
+import { Locale, LOCALES } from "@/i18n/routing";
+import { constructMetadata } from "@/lib/metadata";
+import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
-export default function AboutPage() {
+type Params = Promise<{ locale: string }>;
+
+type MetadataProps = { params: Params };
+
+export async function generateMetadata({
+  params,
+}: MetadataProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "About" });
+
+  return constructMetadata({
+    page: "About",
+    title: t("title"),
+    description: t("description"),
+    locale: locale as Locale,
+    path: `/about`,
+    canonicalUrl: `/about`,
+  });
+}
+
+export default async function AboutPage(_props: { params: Params }) {
   return (
     <>
       <AboutHero />
@@ -12,4 +36,8 @@ export default function AboutPage() {
       <CTASection />
     </>
   );
+}
+
+export async function generateStaticParams() {
+  return LOCALES.map((locale) => ({ locale }));
 }
