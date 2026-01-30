@@ -496,8 +496,15 @@
       "errorMessage": "Đã xảy ra lỗi. Vui lòng thử lại."
     },
     "Team": {
-      "title": "Đội ngũ của chúng tôi",
-      "description": "Gặp gỡ những thành viên đội ngũ của chúng tôi"
+      "badge": "Đội ngũ",
+      "title": "Đội ngũ chuyên gia của chúng tôi",
+      "description": "Trong quá trình làm việc, chúng tôi thường xuyên trao đổi với khách hàng vì họ là người duy nhất có thể cảm nhận được một giải pháp mới có phù hợp hay không.",
+      "linktree": "Linktree",
+      "roles": {
+        "founderCEO": "Người sáng lập - CEO",
+        "aiEngineer": "Kỹ sư AI",
+        "fullstackEngineer": "Kỹ sư Fullstack"
+      }
     }
   }
 }

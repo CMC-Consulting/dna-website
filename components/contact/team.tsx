@@ -1,79 +1,93 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 import { Link } from '@/i18n/routing';
 
-const members = [
+type MemberRole = "founderCEO" | "aiEngineer" | "fullstackEngineer";
+
+const MEMBER_CONFIG: Array<{
+    name: string;
+    roleKey: MemberRole;
+    avatar: string;
+    link: string;
+}> = [
     {
         name: 'Daniel Pham',
-        role: 'Founder - CEO',
+        roleKey: 'founderCEO',
         avatar: '/teams/dien_pham.png',
         link: '#',
     },
     {
         name: 'Thanh Nguyen',
-        role: 'AI Engineer',
+        roleKey: 'aiEngineer',
         avatar: '/teams/thanh_nguyen.png',
         link: '#',
     },
     {
         name: 'Dat Chau',
-        role: 'Fullstack Engineer',
+        roleKey: 'fullstackEngineer',
         avatar: '/teams/dat_chau.jpg',
         link: '#',
     },
     {
         name: 'Hung Pham',
-        role: 'AI Engineer',
+        roleKey: 'aiEngineer',
         avatar: '/teams/hung_pham.png',
         link: '#',
     },
     {
         name: 'Chinh Pham',
-        role: 'Fullstack Engineer',
+        roleKey: 'fullstackEngineer',
         avatar: '/teams/dna-1.png',
         link: '#',
     },
     {
         name: 'Dat Le',
-        role: 'AI Engineer',
+        roleKey: 'aiEngineer',
         avatar: '/teams/dat_le.jpeg',
         link: '#',
     },
     {
         name: 'Cuong Le',
-        role: 'AI Engineer',
+        roleKey: 'aiEngineer',
         avatar: '/teams/dna-1.png',
         link: '#',
     },
     {
         name: 'Manh Duong',
-        role: 'AI Engineer',
+        roleKey: 'aiEngineer',
         avatar: '/teams/manh_duong.png',
         link: '#',
     },
     {
         name: 'Khai Pham',
-        role: 'AI Engineer',
+        roleKey: 'aiEngineer',
         avatar: '/teams/dna-1.png',
         link: '#',
     },
+];
 
-]
+const TeamSection = () => {
+    const t = useTranslations("Contact.Team");
 
-export default function TeamSection() {
+    const members = MEMBER_CONFIG.map((member) => ({
+        ...member,
+        role: t(`roles.${member.roleKey}`),
+    }));
+
     return (
         <section className="w-full bg-gray-50 dark:bg-transparent py-16 sm:py-20 lg:py-32">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                {/* Section Header */}
                 <div className="text-center mb-12 sm:mb-16">
                     <span className="text-muted-foreground text-sm font-medium uppercase tracking-wider">
-                        Team
+                        {t("badge")}
                     </span>
                     <h2 className="mt-3 text-balance text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-                        Our dream team
+                        {t("title")}
                     </h2>
                     <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-                        During the working process, we perform regular fitting with the
-                        client because he is the only person who can feel whether a new suit
-                        fits or not.
+                        {t("description")}
                     </p>
                 </div>
 
@@ -105,7 +119,7 @@ export default function TeamSection() {
                                         href={member.link}
                                         className="text-[#276df0] hover:text-[#276df0]/80 inline-block translate-y-8 text-sm tracking-wide opacity-0 transition-all duration-500 hover:underline group-hover:translate-y-0 group-hover:opacity-100"
                                     >
-                                        Linktree
+                                        {t("linktree")}
                                     </Link>
                                 </div>
                             </div>
@@ -115,4 +129,6 @@ export default function TeamSection() {
             </div>
         </section>
     );
-}
+};
+
+export default TeamSection;

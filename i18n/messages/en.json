@@ -496,8 +496,15 @@
       "errorMessage": "Something went wrong. Please try again."
     },
     "Team": {
-      "title": "Our Team",
-      "description": "Meet the people behind the magic."
+      "badge": "Team",
+      "title": "Our dream team",
+      "description": "During the working process, we perform regular fitting with the client because he is the only person who can feel whether a new suit fits or not.",
+      "linktree": "Linktree",
+      "roles": {
+        "founderCEO": "Founder - CEO",
+        "aiEngineer": "AI Engineer",
+        "fullstackEngineer": "Fullstack Engineer"
+      }
     }
   }
 }
