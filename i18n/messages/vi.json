@@ -253,23 +253,45 @@
       "dataGovernance": {
         "title": "Quản trị Dữ liệu",
         "description": "Thiết lập khung quản trị dữ liệu vững chắc với chính sách, chuẩn và kiểm soát để đảm bảo chất lượng, bảo mật và tuân thủ dữ liệu trong toàn tổ chức.",
-        "benefits": ["Quản lý chất lượng dữ liệu", "Quản lý siêu dữ liệu", "Tuân thủ & bảo mật", "Truy vết nguồn gốc dữ liệu"]
+        "benefits": [
+          "Quản lý chất lượng dữ liệu",
+          "Quản lý siêu dữ liệu",
+          "Tuân thủ & bảo mật",
+          "Truy vết nguồn gốc dữ liệu"
+        ]
       },
       "dataLakehouse": {
         "title": "Data Lakehouse",
         "description": "Kiến trúc dữ liệu hiện đại kết hợp tính linh hoạt của data lake với độ tin cậy của kho dữ liệu cho phân tích thống nhất và khối lượng công việc AI.",
-        "benefits": ["Lớp lưu trữ thống nhất", "Giao dịch ACID", "Tối ưu chi phí", "Áp dụng schema"]
+        "benefits": [
+          "Lớp lưu trữ thống nhất",
+          "Giao dịch ACID",
+          "Tối ưu chi phí",
+          "Áp dụng schema"
+        ]
       },
       "dataIntegration": {
         "title": "Tích hợp Dữ liệu",
         "description": "Dịch vụ tích hợp dữ liệu liền mạch kết nối các hệ thống riêng lẻ, cho phép luồng dữ liệu thời gian thực và đảm bảo tính nhất quán dữ liệu trong doanh nghiệp.",
-        "benefits": ["Pipeline ETL/ELT", "Streaming thời gian thực", "Tích hợp API", "Chuyển đổi dữ liệu"]
+        "benefits": [
+          "Pipeline ETL/ELT",
+          "Streaming thời gian thực",
+          "Tích hợp API",
+          "Chuyển đổi dữ liệu"
+        ]
       }
     },
     "cta": {
       "learnMoreGetStarted": "Tìm hiểu thêm & Bắt đầu",
       "getStarted": "Bắt đầu"
     }
+  },
+  "CTASection": {
+    "title": "Sẵn sàng xây dựng",
+    "titleHighlight": "giải pháp AI cho doanh nghiệp của bạn?",
+    "requestDemo": "Đặt lịch demo",
+    "talkToSales": "Liên hệ bán hàng",
+    "imageAlt": "Minh họa sẵn sàng xây dựng"
   },
   "Navbar": {
     "solutions": "Giải pháp",

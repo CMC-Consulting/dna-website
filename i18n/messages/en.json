@@ -253,23 +253,45 @@
       "dataGovernance": {
         "title": "Data Governance",
         "description": "Establish robust data governance frameworks with policies, standards, and controls to ensure data quality, security, and compliance across your organization.",
-        "benefits": ["Data quality management", "Metadata management", "Compliance & privacy", "Data lineage tracking"]
+        "benefits": [
+          "Data quality management",
+          "Metadata management",
+          "Compliance & privacy",
+          "Data lineage tracking"
+        ]
       },
       "dataLakehouse": {
         "title": "Data Lakehouse",
         "description": "Modern data architecture combining the flexibility of data lakes with the reliability of data warehouses for unified analytics and AI workloads.",
-        "benefits": ["Unified storage layer", "ACID transactions", "Cost optimization", "Schema enforcement"]
+        "benefits": [
+          "Unified storage layer",
+          "ACID transactions",
+          "Cost optimization",
+          "Schema enforcement"
+        ]
       },
       "dataIntegration": {
         "title": "Data Integration",
         "description": "Seamless data integration services connecting disparate systems, enabling real-time data flows, and ensuring data consistency across your enterprise.",
-        "benefits": ["ETL/ELT pipelines", "Real-time streaming", "API integration", "Data transformation"]
+        "benefits": [
+          "ETL/ELT pipelines",
+          "Real-time streaming",
+          "API integration",
+          "Data transformation"
+        ]
       }
     },
     "cta": {
       "learnMoreGetStarted": "Learn More & Get Started",
       "getStarted": "Get Started"
     }
+  },
+  "CTASection": {
+    "title": "Ready to build your business's",
+    "titleHighlight": "AI solution?",
+    "requestDemo": "Request demo",
+    "talkToSales": "Talk to sales",
+    "imageAlt": "Ready to build illustration"
   },
   "Navbar": {
     "solutions": "Solutions",

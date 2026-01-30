@@ -1,7 +1,11 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import MainButton from "./ui/main-button";
 
-function CTASection() {
+const CTASection = () => {
+  const t = useTranslations("CTASection");
   const titleId = "ready-to-build-title";
 
   return (
@@ -21,18 +25,18 @@ function CTASection() {
                   "text-balance text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-[#a3c4fa]",
                 )}
               >
-                Ready to build your business&apos;s{" "}
-                <span className="text-white">dream solution?</span>
+                {t("title")}{" "}
+                <span className="text-white">{t("titleHighlight")}</span>
               </h2>
 
               <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
                 <MainButton
-                  text="Request demo"
+                  text={t("requestDemo")}
                   size="small"
                   className="border-none rounded-[12px] bg-[#5a94f5]/40 hover:bg-[#5a94f5]/60"
                 />
                 <MainButton
-                  text="Talk to sales"
+                  text={t("talkToSales")}
                   size="small"
                   className="rounded-[12px] border border-[#EDEEF0] bg-white hover:bg-white/90 text-[#31373D]"
                 />
@@ -42,7 +46,7 @@ function CTASection() {
             <div className="w-full max-w-xs sm:max-w-sm md:max-w-xs lg:max-w-md shrink-0">
               <img
                 src="/ready_to_build.png"
-                alt="Ready to build illustration"
+                alt={t("imageAlt")}
                 className="w-full h-auto select-none"
                 loading="lazy"
               />
@@ -52,6 +56,6 @@ function CTASection() {
       </div>
     </section>
   );
-}
+};
 
 export default CTASection;
