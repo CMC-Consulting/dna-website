@@ -154,7 +154,122 @@
   },
   "Solutions": {
     "title": "Solutions",
-    "description": "Discover our suite of AI-powered products and enterprise data services designed to accelerate your digital transformation journey."
+    "description": "Discover our suite of AI-powered products and enterprise data services designed to accelerate your digital transformation journey.",
+    "hero": {
+      "badge": "AI & Data Solutions",
+      "headline": "Transform Your Business",
+      "headlineHighlight": "with AI & Data",
+      "subtitle": "Discover our suite of AI-powered products and enterprise data services designed to accelerate your digital transformation journey.",
+      "exploreAIProducts": "Explore AI Products",
+      "viewDataServices": "View Data Services"
+    },
+    "aiProductsSection": {
+      "badge": "AI Products",
+      "title": "Intelligent Automation Suite",
+      "subtitle": "Enterprise-ready AI products designed to automate workflows, enhance productivity, and drive business outcomes."
+    },
+    "badges": {
+      "flagship": "Flagship",
+      "popular": "Popular",
+      "enterprise": "Enterprise"
+    },
+    "products": {
+      "prismaAI": {
+        "title": "Prisma AI",
+        "tagline": "Your Intelligent Knowledge Assistant",
+        "description": "Transform how your team accesses and synthesizes information. Like NotebookLM, Prisma AI helps you extract insights from multiple documents through natural conversations.",
+        "features": {
+          "multiDocQA": {
+            "title": "Multi-Document Q&A",
+            "description": "Ask questions across multiple documents and get answers with source citations."
+          },
+          "knowledgeSynthesis": {
+            "title": "Knowledge Synthesis",
+            "description": "Automatically synthesize information from various sources into coherent insights."
+          },
+          "lightningFast": {
+            "title": "Lightning Fast",
+            "description": "Get instant answers powered by advanced RAG and vector search technology."
+          },
+          "enterpriseSecurity": {
+            "title": "Enterprise Security",
+            "description": "Your data stays secure with enterprise-grade encryption and access controls."
+          }
+        }
+      },
+      "smartEmail": {
+        "title": "Smart Email",
+        "tagline": "Intelligent Email Management",
+        "description": "Never miss important emails again. Our AI automatically classifies, prioritizes, and routes emails so your team can focus on what matters most.",
+        "features": {
+          "smartClassification": {
+            "title": "Smart Classification",
+            "description": "Automatically categorize emails by topic, urgency, and department."
+          },
+          "priorityDetection": {
+            "title": "Priority Detection",
+            "description": "AI identifies critical emails and surfaces them instantly to the right people."
+          },
+          "autoRouting": {
+            "title": "Auto-Routing",
+            "description": "Route emails to the right team or department based on content and context."
+          },
+          "analyticsDashboard": {
+            "title": "Analytics Dashboard",
+            "description": "Track email volumes, response times, and team performance metrics."
+          }
+        }
+      },
+      "smartInvoice": {
+        "title": "Smart Invoice",
+        "tagline": "Invoice Intelligence Suite for SAP",
+        "description": "Reduce invoice processing time by 80%. Automate extraction, validation, and approval workflows with seamless SAP integration.",
+        "features": {
+          "ocrExtraction": {
+            "title": "OCR Extraction",
+            "description": "Extract data from invoices with 99%+ accuracy using advanced OCR technology."
+          },
+          "sapIntegration": {
+            "title": "SAP Integration",
+            "description": "Native integration with SAP for seamless data flow and real-time updates."
+          },
+          "smartValidation": {
+            "title": "Smart Validation",
+            "description": "Automatically validate invoice data against purchase orders and contracts."
+          },
+          "approvalWorkflows": {
+            "title": "Approval Workflows",
+            "description": "Intelligent routing and approval workflows that adapt to your business rules."
+          }
+        }
+      }
+    },
+    "dataServicesSection": {
+      "badge": "Data Services",
+      "title": "Enterprise Data Solutions",
+      "subtitle": "Build a solid data foundation with our comprehensive data services. From governance to integration, we help you unlock the full potential of your data assets."
+    },
+    "dataServices": {
+      "dataGovernance": {
+        "title": "Data Governance",
+        "description": "Establish robust data governance frameworks with policies, standards, and controls to ensure data quality, security, and compliance across your organization.",
+        "benefits": ["Data quality management", "Metadata management", "Compliance & privacy", "Data lineage tracking"]
+      },
+      "dataLakehouse": {
+        "title": "Data Lakehouse",
+        "description": "Modern data architecture combining the flexibility of data lakes with the reliability of data warehouses for unified analytics and AI workloads.",
+        "benefits": ["Unified storage layer", "ACID transactions", "Cost optimization", "Schema enforcement"]
+      },
+      "dataIntegration": {
+        "title": "Data Integration",
+        "description": "Seamless data integration services connecting disparate systems, enabling real-time data flows, and ensuring data consistency across your enterprise.",
+        "benefits": ["ETL/ELT pipelines", "Real-time streaming", "API integration", "Data transformation"]
+      }
+    },
+    "cta": {
+      "learnMoreGetStarted": "Learn More & Get Started",
+      "getStarted": "Get Started"
+    }
   },
   "Navbar": {
     "solutions": "Solutions",

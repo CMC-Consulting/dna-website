@@ -154,7 +154,122 @@
   },
   "Solutions": {
     "title": "Giải pháp",
-    "description": "Khám phá bộ sản phẩm AI và dịch vụ dữ liệu doanh nghiệp được thiết kế để đẩy nhanh hành trình chuyển đổi số của bạn."
+    "description": "Khám phá bộ sản phẩm AI và dịch vụ dữ liệu doanh nghiệp được thiết kế để đẩy nhanh hành trình chuyển đổi số của bạn.",
+    "hero": {
+      "badge": "Giải pháp AI & Dữ liệu",
+      "headline": "Chuyển đổi Doanh nghiệp",
+      "headlineHighlight": "với AI & Dữ liệu",
+      "subtitle": "Khám phá bộ sản phẩm AI và dịch vụ dữ liệu doanh nghiệp được thiết kế để đẩy nhanh hành trình chuyển đổi số của bạn.",
+      "exploreAIProducts": "Khám phá Sản phẩm AI",
+      "viewDataServices": "Xem Dịch vụ Dữ liệu"
+    },
+    "aiProductsSection": {
+      "badge": "Sản phẩm AI",
+      "title": "Bộ Giải pháp Tự động hóa Thông minh",
+      "subtitle": "Sản phẩm AI sẵn sàng cho doanh nghiệp, tự động hóa quy trình, nâng cao năng suất và thúc đẩy kết quả kinh doanh."
+    },
+    "badges": {
+      "flagship": "Chủ lực",
+      "popular": "Phổ biến",
+      "enterprise": "Doanh nghiệp"
+    },
+    "products": {
+      "prismaAI": {
+        "title": "Prisma AI",
+        "tagline": "Trợ lý Tri thức Thông minh",
+        "description": "Thay đổi cách đội ngũ của bạn truy cập và tổng hợp thông tin. Giống NotebookLM, Prisma AI giúp bạn trích xuất thông tin từ nhiều tài liệu thông qua hội thoại tự nhiên.",
+        "features": {
+          "multiDocQA": {
+            "title": "Hỏi đáp Đa tài liệu",
+            "description": "Đặt câu hỏi xuyên suốt nhiều tài liệu và nhận câu trả lời kèm nguồn trích dẫn."
+          },
+          "knowledgeSynthesis": {
+            "title": "Tổng hợp Tri thức",
+            "description": "Tự động tổng hợp thông tin từ nhiều nguồn thành các insight mạch lạc."
+          },
+          "lightningFast": {
+            "title": "Cực kỳ Nhanh",
+            "description": "Nhận câu trả lời tức thì nhờ công nghệ RAG và tìm kiếm vector tiên tiến."
+          },
+          "enterpriseSecurity": {
+            "title": "Bảo mật Doanh nghiệp",
+            "description": "Dữ liệu của bạn được bảo vệ với mã hóa và kiểm soát truy cập cấp doanh nghiệp."
+          }
+        }
+      },
+      "smartEmail": {
+        "title": "Smart Email",
+        "tagline": "Quản lý Email Thông minh",
+        "description": "Không bỏ lỡ email quan trọng. AI tự động phân loại, ưu tiên và định tuyến email để đội ngũ tập trung vào điều quan trọng nhất.",
+        "features": {
+          "smartClassification": {
+            "title": "Phân loại Thông minh",
+            "description": "Tự động phân loại email theo chủ đề, mức độ khẩn cấp và phòng ban."
+          },
+          "priorityDetection": {
+            "title": "Phát hiện Ưu tiên",
+            "description": "AI xác định email quan trọng và đưa đến đúng người ngay lập tức."
+          },
+          "autoRouting": {
+            "title": "Định tuyến Tự động",
+            "description": "Chuyển email đến đúng đội nhóm hoặc phòng ban dựa trên nội dung và ngữ cảnh."
+          },
+          "analyticsDashboard": {
+            "title": "Bảng điều khiển Phân tích",
+            "description": "Theo dõi lượng email, thời gian phản hồi và chỉ số hiệu suất đội ngũ."
+          }
+        }
+      },
+      "smartInvoice": {
+        "title": "Smart Invoice",
+        "tagline": "Bộ Giải pháp Hóa đơn Thông minh cho SAP",
+        "description": "Giảm 80% thời gian xử lý hóa đơn. Tự động hóa trích xuất, kiểm tra và quy trình phê duyệt với tích hợp SAP liền mạch.",
+        "features": {
+          "ocrExtraction": {
+            "title": "Trích xuất OCR",
+            "description": "Trích xuất dữ liệu từ hóa đơn với độ chính xác 99%+ nhờ công nghệ OCR tiên tiến."
+          },
+          "sapIntegration": {
+            "title": "Tích hợp SAP",
+            "description": "Tích hợp gốc với SAP cho luồng dữ liệu liền mạch và cập nhật thời gian thực."
+          },
+          "smartValidation": {
+            "title": "Kiểm tra Thông minh",
+            "description": "Tự động kiểm tra dữ liệu hóa đơn với đơn mua hàng và hợp đồng."
+          },
+          "approvalWorkflows": {
+            "title": "Quy trình Phê duyệt",
+            "description": "Định tuyến và quy trình phê duyệt thông minh phù hợp với quy tắc kinh doanh của bạn."
+          }
+        }
+      }
+    },
+    "dataServicesSection": {
+      "badge": "Dịch vụ Dữ liệu",
+      "title": "Giải pháp Dữ liệu Doanh nghiệp",
+      "subtitle": "Xây dựng nền tảng dữ liệu vững chắc với dịch vụ dữ liệu toàn diện. Từ quản trị đến tích hợp, chúng tôi giúp bạn khai thác tối đa tài sản dữ liệu."
+    },
+    "dataServices": {
+      "dataGovernance": {
+        "title": "Quản trị Dữ liệu",
+        "description": "Thiết lập khung quản trị dữ liệu vững chắc với chính sách, chuẩn và kiểm soát để đảm bảo chất lượng, bảo mật và tuân thủ dữ liệu trong toàn tổ chức.",
+        "benefits": ["Quản lý chất lượng dữ liệu", "Quản lý siêu dữ liệu", "Tuân thủ & bảo mật", "Truy vết nguồn gốc dữ liệu"]
+      },
+      "dataLakehouse": {
+        "title": "Data Lakehouse",
+        "description": "Kiến trúc dữ liệu hiện đại kết hợp tính linh hoạt của data lake với độ tin cậy của kho dữ liệu cho phân tích thống nhất và khối lượng công việc AI.",
+        "benefits": ["Lớp lưu trữ thống nhất", "Giao dịch ACID", "Tối ưu chi phí", "Áp dụng schema"]
+      },
+      "dataIntegration": {
+        "title": "Tích hợp Dữ liệu",
+        "description": "Dịch vụ tích hợp dữ liệu liền mạch kết nối các hệ thống riêng lẻ, cho phép luồng dữ liệu thời gian thực và đảm bảo tính nhất quán dữ liệu trong doanh nghiệp.",
+        "benefits": ["Pipeline ETL/ELT", "Streaming thời gian thực", "Tích hợp API", "Chuyển đổi dữ liệu"]
+      }
+    },
+    "cta": {
+      "learnMoreGetStarted": "Tìm hiểu thêm & Bắt đầu",
+      "getStarted": "Bắt đầu"
+    }
   },
   "Navbar": {
     "solutions": "Giải pháp",
