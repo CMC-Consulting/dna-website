@@ -18,21 +18,21 @@ const aiProducts: AIFeatureItem[] = [
     title: "Prisma AI",
     description:
       "Your intelligent knowledge assistant. Like NotebookLM, Prisma AI synthesizes information from multiple documents, providing instant answers and deep insights through natural conversations. Extract knowledge, generate summaries, and get citations across all your enterprise documents.",
-    image: "/og.png",
+    image: "/prisma/Prisma - 2.png",
     imageAlt: "Prisma AI interface showing document Q&A and knowledge synthesis",
   },
   {
     title: "Smart Email",
     description:
       "Intelligent email classification system that automatically categorizes, prioritizes, and routes emails. Reduce inbox overload by up to 60% and ensure critical messages never get missed with AI-powered priority detection and smart routing workflows.",
-    image: "/og.png",
+    image: "/smartemail/Email Intelligence - 1.png",
     imageAlt: "Smart Email dashboard with email classification and priority detection",
   },
   {
     title: "Smart Invoice",
     description:
       "Invoice Intelligence Suite for SAP. Automate invoice processing from extraction to approval with seamless SAP integration. Reduce processing time by 80% with advanced OCR, automatic validation, and intelligent approval workflows.",
-    image: "/og.png",
+    image: "/smartinvoice/Invoice Product.png",
     imageAlt: "Smart Invoice interface showing OCR extraction and SAP integration",
   },
 ];

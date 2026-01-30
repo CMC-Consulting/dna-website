@@ -12,15 +12,15 @@ export default function DataServices() {
 
     const images = {
         'item-1': {
-            image: '/og.png',
+            image: '/dataservices/Data Governance & Management 3.png',
             alt: 'Data Governance dashboard',
         },
         'item-2': {
-            image: '/og.png',
+            image: '/dataservices/Data Governance & Management 2.png',
             alt: 'Data Lakehouse architecture',
         },
         'item-3': {
-            image: '/og.png',
+            image: '/dataservices/Data Governance & Management 4.png',
             alt: 'Data Integration pipelines',
         },
     }
@@ -73,8 +73,7 @@ export default function DataServices() {
                     </Accordion>
 
                     <div className="bg-background relative flex overflow-hidden rounded-3xl border p-2">
-                        <div className="w-15 absolute inset-0 right-0 ml-auto border-l bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_8px)]"></div>
-                        <div className="aspect-76/59 bg-background relative w-[calc(3/4*100%+3rem)] rounded-2xl">
+                        <div className="aspect-4/3 bg-background relative w-full">
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={`${activeItem}-id`}
@@ -82,10 +81,10 @@ export default function DataServices() {
                                     animate={{ opacity: 1, y: 0, scale: 1 }}
                                     exit={{ opacity: 0, y: 6, scale: 0.98 }}
                                     transition={{ duration: 0.2 }}
-                                    className="size-full overflow-hidden rounded-2xl border bg-zinc-900 shadow-md">
+                                    className="size-full overflow-hidden bg-zinc-900 shadow-md">
                                     <Image
                                         src={images[activeItem].image}
-                                        className="size-full object-cover object-left-top dark:mix-blend-lighten"
+                                        className="size-full object-cover object-center dark:mix-blend-lighten"
                                         alt={images[activeItem].alt}
                                         width={1207}
                                         height={929}
