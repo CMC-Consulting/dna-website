@@ -6,8 +6,8 @@ const stats = [
     label: "Raised",
   },
   {
-    value: "20K+",
-    label: "Companies",
+    value: "95%",
+    label: "Client Satisfaction Rate",
   },
   {
     value: "12B+",
@@ -70,19 +70,15 @@ export function AboutHero() {
             <h1 className="font-display text-foreground text-4xl tracking-tight sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
               Democratising
               <br />
-              <span className="text-[#276df0]">quality software</span>
+              <span className="text-[#276df0]"> AI and Data solutions</span>
             </h1>
 
             <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed md:text-xl">
-              CMC Consulting AI is a platform that helps businesses manage their projects
-              and teams with cutting-edge AI and data solutions.
+              CMC Consulting AI specializes in delivering advanced AI and data services to companies and groups, empowering them with innovative tools to meet their operational needs.
             </p>
 
             <p className="text-muted-foreground hidden max-w-xl text-base leading-relaxed text-balance md:block lg:text-lg">
-              At CMC Consulting AI, we are dedicated to transforming the way teams plan,
-              execute, and deliver projects. Our mission is to provide our customers
-              with an unbeatable edge over delays, inefficiencies, and disorganisation
-              through actionable insights and seamless collaboration.
+              CMC Consulting AI is committed to delivering artificial intelligence and data-driven services to companies. Our goal is to support enterprises in realizing their objectives through innovative AI and data strategies.
             </p>
           </div>
 

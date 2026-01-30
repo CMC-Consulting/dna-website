@@ -19,10 +19,10 @@ const About = () => {
           />
 
           <TextSection
-            title="The team"
+            title="The Team"
             paragraphs={[
-              "We started building CMC Consulting AI in 2024 and launched in 2025. Every endpoint has been designed from the ground up — with no technical debt or legacy systems. We are purpose-built to power project management innovation for the next hundred years.",
-              "We are 100% founder and team-owned, profitable, and we keep our team lean. Over time, this page will become more polished, but for now, we're focused on delivering for developers.",
+              "We began developing CMC Consulting AI in 2024 and officially launched in 2025. Every AI model, data pipeline, and integration has been engineered from the ground up — free from technical debt or outdated legacy systems. We are purposefully designed to drive advancements in AI and data solutions for the next century.",
+              "We remain 100% founder and team-owned, profitable, and committed to maintaining a lean, agile team. In time, this page will evolve with more refinements, but our current priority is delivering exceptional AI and data tools for businesses and innovators."
             ]}
           />
         </div>
@@ -31,8 +31,9 @@ const About = () => {
         <div className="flex flex-col gap-8 lg:gap-16 xl:gap-20">
           <TextSection
             paragraphs={[
-              "At CMC Consulting AI, we are dedicated to transforming the way teams plan, execute, and deliver projects. Our mission is to provide our customers with an unbeatable edge over delays, inefficiencies, and disorganisation through actionable insights and seamless collaboration. We'll stop at nothing to give you the tools you need to get every project across the finish line.",
-              "We're customer-obsessed — investing the time to understand every aspect of your workflow so that we can help you operate better than ever before. We're all in this together because your success is our success. In our history as a company, we've never lost a customer, because when your projects succeed, so do we.",
+              "At CMC Consulting AI, we help businesses unlock the true power of AI and data. Our mission is to transform complex data into clear, actionable intelligence that drives better decision-making, increases efficiency, and creates a real competitive advantage.",
+              "We are obsessed with delivering measurable results. By deeply understanding your business challenges, we design and implement tailored AI and data solutions that eliminate guesswork, reduce operational waste, and accelerate growth.",
+              "Your success is our success — which is why we’ve maintained a perfect customer retention rate since day one."
             ]}
           />
           <ImageSection
