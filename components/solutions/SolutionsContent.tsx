@@ -285,13 +285,22 @@ const ProductShowcase = ({
           })}
         </div>
 
-        <div className="flex justify-center pt-4">
+        <div className="flex justify-center gap-4 pt-4">
+          <Button
+            asChild
+            variant="outline"
+            className="px-6 py-3 text-sm font-semibold"
+          >
+            <Link href="/contact" aria-label={`Learn more about ${product.title}`}>
+              {t("cta.learnMore")}
+            </Link>
+          </Button>
           <Button
             asChild
             className="bg-[linear-gradient(135deg,#0f1e35,#276df0)] px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition hover:brightness-105"
           >
-            <Link href="/contact" aria-label={`Learn more about ${product.title}`}>
-              {t("cta.learnMoreGetStarted")}
+            <Link href="/contact" aria-label={`Get started with ${product.title}`}>
+              {t("cta.getStarted")}
               <ArrowRight className="ml-2 size-4" />
             </Link>
           </Button>

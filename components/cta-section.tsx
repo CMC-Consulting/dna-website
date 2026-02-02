@@ -1,7 +1,8 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 import MainButton from "./ui/main-button";
 
 const CTASection = () => {
@@ -30,16 +31,20 @@ const CTASection = () => {
               </h2>
 
               <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
-                <MainButton
-                  text={t("requestDemo")}
-                  size="small"
-                  className="border-none rounded-[12px] bg-[#5a94f5]/40 hover:bg-[#5a94f5]/60"
-                />
-                <MainButton
-                  text={t("talkToSales")}
-                  size="small"
-                  className="rounded-[12px] border border-[#EDEEF0] bg-white hover:bg-white/90 text-[#31373D]"
-                />
+                <Link href="/contact">
+                  <MainButton
+                    text={t("requestDemo")}
+                    size="small"
+                    className="border-none rounded-[12px] bg-[#5a94f5]/40 hover:bg-[#5a94f5]/60"
+                  />
+                </Link>
+                <Link href="/contact">
+                  <MainButton
+                    text={t("talkToSales")}
+                    size="small"
+                    className="rounded-[12px] border border-[#EDEEF0] bg-white hover:bg-white/90 text-[#31373D]"
+                  />
+                </Link>
               </div>
             </div>
 

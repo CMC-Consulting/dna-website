@@ -4,14 +4,14 @@ import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
-import { Link } from "@/i18n/routing";
 import Particles from "@/components/ui/particles";
+import { Link } from "@/i18n/routing";
 
 const Hero = () => {
   const t = useTranslations("Home.hero");
 
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-white dark:bg-gray-950 py-28 lg:py-52 px-4 sm:px-6 lg:px-8 flex items-center">
+    <section className="relative w-full min-h-screen overflow-hidden bg-white dark:bg-gray-950 py-24 sm:py-28 lg:py-40 xl:py-48 px-4 sm:px-6 lg:px-8 flex items-center">
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -32,23 +32,23 @@ const Hero = () => {
         refresh
       />
 
-      <div className="mx-auto max-w-7xl w-full relative z-10 grid gap-y-20 gap-x-12 lg:grid-cols-[1.4fr_1fr] lg:items-end">
-        <div className="space-y-10">
-          <h1 className="font-display text-foreground text-[clamp(48px,8vw,120px)] leading-[0.95] tracking-tight">
+      <div className="mx-auto max-w-7xl w-full relative z-10 grid gap-y-16 sm:gap-y-20 gap-x-10 lg:gap-x-16 lg:grid-cols-[1.5fr_1fr] lg:items-end">
+        <div className="flex flex-col gap-6 md:gap-8 lg:gap-10">
+          <h1 className="font-display text-foreground text-[clamp(40px,6.5vw,96px)] leading-[0.9] tracking-tight">
             {t("headline1")}
             <br />
             {t("headline2")}
           </h1>
-          <p className="text-muted-foreground max-w-3xl text-lg leading-relaxed md:text-xl">
+          <p className="text-muted-foreground max-w-3xl text-base md:text-lg md:leading-relaxed">
             {t("subtitle")}
           </p>
         </div>
 
-        <div className="space-y-6 rounded-2xl border border-border/60 bg-background/70 p-6 shadow-sm backdrop-blur md:p-8">
-          <p className="text-foreground text-lg leading-relaxed">
+        <div className="space-y-5 md:space-y-6 rounded-2xl border border-border/60 bg-background/80 p-6 md:p-8 lg:p-9 shadow-lg backdrop-blur">
+          <p className="text-foreground text-base md:text-lg leading-relaxed">
             {t("cardText")}
           </p>
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
             <Button
               asChild
               className="bg-[linear-gradient(135deg,#0f1e35,#276df0)] px-6 py-5 text-base font-semibold text-primary-foreground shadow-lg transition hover:brightness-105"

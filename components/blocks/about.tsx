@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/routing";
@@ -19,7 +19,7 @@ const About = () => {
           <ImageSection
             images={[
               { src: "/about/1.webp", alt: t("imageAlt.teamCollaboration") },
-              { src: "/about/2.webp", alt: t("imageAlt.teamWorkspace") },
+              { src: "/about/1.jpg", alt: t("imageAlt.teamWorkspace") },
             ]}
             className="xl:-translate-x-10"
           />
@@ -31,7 +31,10 @@ const About = () => {
         </div>
 
         <div className="flex flex-col gap-8 lg:gap-16 xl:gap-20">
-          <TextSection paragraphs={missionParagraphs} />
+          <TextSection
+            title={t("missionVisionTitle")}
+            paragraphs={missionParagraphs}
+          />
           <ImageSection
             images={[
               { src: "/about/3.webp", alt: t("imageAlt.modernWorkspace") },

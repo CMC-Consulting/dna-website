@@ -1,5 +1,6 @@
 import About from "@/components/blocks/about";
 import { AboutHero } from "@/components/blocks/about-hero";
+import { ParallaxImage } from "@/components/blocks/parallax-image";
 import TeamSection from "@/components/contact/team";
 import CTASection from "@/components/cta-section";
 import { Locale, LOCALES } from "@/i18n/routing";
@@ -32,6 +33,12 @@ export default async function AboutPage(_props: { params: Params }) {
     <>
       <AboutHero />
       <About />
+      <ParallaxImage
+        imageSrc="/about/cmcc.jpg"
+        imageAlt="CMC Consulting Office"
+        height="h-[400px] md:h-[500px] lg:h-[600px]"
+        overlayOpacity={0.2}
+      />
       <TeamSection />
       <CTASection />
     </>

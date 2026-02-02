@@ -147,12 +147,12 @@
     }
   },
   "Home": {
-    "title": "CMC Consulting Data & AI Solutions",
+    "title": "CMC Consulting AI & Data",
     "tagLine": "Giải pháp Dữ liệu & Trí tuệ Nhân tạo Doanh nghiệp",
     "description": "Chúng tôi là đội ngũ chuyên gia Dữ liệu và AI của CMC, đồng hành cùng doanh nghiệp xây dựng chiến lược dữ liệu, triển khai nền tảng công nghệ hiện đại và khai phá giá trị thực tiễn từ trí tuệ nhân tạo để tạo lợi thế cạnh tranh bền vững.",
     "hero": {
-      "headline1": "Hệ sinh thái Dữ liệu & AI Toàn diện",
-      "headline2": "Kết nối Tri thức – Tăng tốc Chuyển đổi Số",
+      "headline1": "Hệ sinh thái AI & Dữ liệu",
+      "headline2": "Tối ưu Tri thức, Tăng tốc Chuyển đổi",
       "subtitle": "Chúng tôi xây dựng nền tảng “trí tuệ số” cho doanh nghiệp bằng cách kết hợp kiến trúc dữ liệu hiện đại với AI ứng dụng thực tiễn. Từ quản trị dữ liệu, hợp nhất tri thức đến tự động hóa quy trình bằng AI, giải pháp của chúng tôi giúp tổ chức ra quyết định nhanh hơn, chính xác hơn và dựa trên dữ liệu tin cậy.",
       "cardText": "Trao quyền cho doanh nghiệp bằng nền tảng dữ liệu vững chắc và các giải pháp AI có khả năng mở rộng.",
       "getConsultation": "Đặt lịch tư vấn",
@@ -187,12 +187,18 @@
         "openIntegrable": {
           "title": "Mở & Dễ tích hợp",
           "description": "Kết nối linh hoạt với hệ thống và nền tảng sẵn có của doanh nghiệp.",
-          "bullets": ["API-first", "Tích hợp đa hệ thống"]
+          "bullets": [
+            "API-first",
+            "Tích hợp đa hệ thống"
+          ]
         },
         "outcomesDriven": {
           "title": "Hướng tới Kết quả",
           "description": "Mọi giải pháp đều gắn với chỉ số hiệu quả kinh doanh cụ thể.",
-          "bullets": ["Tối ưu chi phí vận hành", "Tăng năng suất nhân sự"]
+          "bullets": [
+            "Tối ưu chi phí vận hành",
+            "Tăng năng suất nhân sự"
+          ]
         }
       }
     },
@@ -287,7 +293,7 @@
     "description": "Giới thiệu về năng lực AI và Dữ liệu của CMC Consulting",
     "hero": {
       "headline1": "CMC Consulting AI & Data",
-      "headlineHighlight": "Đồng hành cùng doanh nghiệp trong kỷ nguyên trí tuệ nhân tạo",
+      "headlineHighlight": "Tối ưu Trí tuệ Doanh nghiệp",
       "subtitle": "CMC Consulting cung cấp dịch vụ tư vấn, xây dựng chiến lược và triển khai các giải pháp AI & Dữ liệu toàn diện, giúp doanh nghiệp khai thác giá trị thực sự từ dữ liệu.",
       "subtitle2": "Chúng tôi kết hợp tư duy chiến lược, năng lực công nghệ và kinh nghiệm triển khai thực tế để thiết kế các nền tảng dữ liệu hiện đại, sẵn sàng cho AI, phân tích nâng cao và chuyển đổi số bền vững.",
       "stats": [
@@ -310,6 +316,7 @@
       ]
     },
     "content": {
+      "missionVisionTitle": "Sứ mệnh và tầm nhìn",
       "teamTitle": "Đội ngũ",
       "teamParagraphs": [
         "Đội ngũ CMC Consulting quy tụ các chuyên gia về dữ liệu, AI, kiến trúc hệ thống và chuyển đổi số, với kinh nghiệm triển khai các chương trình dữ liệu quy mô lớn cho doanh nghiệp trong nhiều lĩnh vực. Chúng tôi không chỉ tư vấn chiến lược mà còn trực tiếp thiết kế và xây dựng các nền tảng dữ liệu hiện đại như Data Lake, Lakehouse và kiến trúc tích hợp dữ liệu doanh nghiệp.",
@@ -483,7 +490,7 @@
       }
     },
     "cta": {
-      "learnMoreGetStarted": "Tìm hiểu thêm & Bắt đầu",
+      "learnMore": "Tìm hiểu thêm",
       "getStarted": "Bắt đầu"
     }
   },
@@ -557,7 +564,7 @@
       "roles": {
         "founderCEO": "Người sáng lập - Giám đốc giải pháp Data & AI",
         "aiEngineer": "Kỹ sư AI",
-        "fullstackEngineer": "Kỹ sư Fullstack"
+        "fullstackEngineer": "Kỹ sư Phần mềm"
       }
     }
   }

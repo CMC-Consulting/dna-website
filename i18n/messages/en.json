@@ -147,16 +147,16 @@
     }
   },
   "Home": {
-    "title": "DnA Solutions",
+    "title": "CMC Consulting AI",
     "tagLine": "AI and Data Solutions",
     "description": "We are a team of AI and data experts from CMC Corporation who are passionate about helping businesses leverage the power of AI and data to achieve their goals.",
     "hero": {
-      "headline1": "Empowering",
-      "headline2": "Global Businesses",
-      "subtitle": "From startups to multinational corporations, we deliver scalable, reliable, and cost-effective AI and data services to address your unique challenges.",
-      "cardText": "Transform your business with expert engineering, seamless migrations, and innovative digital AI solutions.",
-      "getConsultation": "Get a consultation",
-      "exploreProducts": "Explore Products"
+      "headline1": "Comprehensive Data & AI Ecosystem",
+      "headline2": "Connecting Knowledge – Accelerating Digital Transformation",
+      "subtitle": "We build a 'digital intelligence' foundation for enterprises by merging modern data architecture with practical AI. From data governance and knowledge unification to AI-driven automation, our solutions enable faster, more accurate decision-making based on trusted data.",
+      "cardText": "Empowering enterprises with a robust data foundation and scalable AI solutions.",
+      "getConsultation": "Book a Consultation",
+      "exploreProducts": "Explore Solutions"
     },
     "logoCloud": {
       "title": "Trusted Partner of Leading Enterprises",
@@ -169,22 +169,35 @@
         "aiFirst": {
           "title": "AI-First",
           "description": "Build with modern AI capabilities from day one.",
-          "bullets": ["Agentic AI", "RAG", "Multimodal"]
+          "bullets": [
+            "Agentic AI",
+            "RAG",
+            "Multimodal"
+          ]
         },
         "enterpriseReady": {
           "title": "Enterprise-Ready",
           "description": "Built for real-world enterprise constraints.",
-          "bullets": ["Security", "Governance", "Privacy"]
+          "bullets": [
+            "Security",
+            "Governance",
+            "Privacy"
+          ]
         },
         "openIntegrable": {
           "title": "Open & Integrable",
           "description": "Fits into your stack and ships everywhere.",
-          "bullets": ["API-first", "Embed anywhere"]
+          "bullets": [
+            "API-first",
+            "Embed anywhere"
+          ]
         },
         "outcomesDriven": {
           "title": "Outcomes-Driven",
           "description": "Optimized for measurable business results.",
-          "bullets": ["Focus on business impact"]
+          "bullets": [
+            "Focus on business impact"
+          ]
         }
       }
     },
@@ -283,13 +296,26 @@
       "subtitle": "CMC Consulting AI specializes in delivering advanced AI and data services to companies and groups, empowering them with innovative tools to meet their operational needs.",
       "subtitle2": "CMC Consulting AI is committed to delivering artificial intelligence and data-driven services to companies. Our goal is to support enterprises in realizing their objectives through innovative AI and data strategies.",
       "stats": [
-        { "value": "$20M+", "label": "Raised" },
-        { "value": "95%", "label": "Client Satisfaction Rate" },
-        { "value": "12B+", "label": "Annual revenue" },
-        { "value": "100+", "label": "Customers" }
+        {
+          "value": "End-to-End",
+          "label": "Data & AI Strategy"
+        },
+        {
+          "value": "Enterprise",
+          "label": "Governance & Security Standards"
+        },
+        {
+          "value": "Modern",
+          "label": "Lakehouse & Cloud Architecture"
+        },
+        {
+          "value": "AI-Ready",
+          "label": "GenAI-Ready Foundation"
+        }
       ]
     },
     "content": {
+      "missionVisionTitle": "Mission and Vision",
       "teamTitle": "The Team",
       "teamParagraphs": [
         "We began developing CMC Consulting AI in 2024 and officially launched in 2025. Every AI model, data pipeline, and integration has been engineered from the ground up — free from technical debt or outdated legacy systems. We are purposefully designed to drive advancements in AI and data solutions for the next century.",
@@ -463,7 +489,7 @@
       }
     },
     "cta": {
-      "learnMoreGetStarted": "Learn More & Get Started",
+      "learnMore": "Learn More",
       "getStarted": "Get Started"
     }
   },
