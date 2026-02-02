@@ -30,19 +30,20 @@ export function FeaturedPostsCarousel({
   if (relatedPosts.length === 0) return null;
 
   return (
-    <section className="mt-16 pt-12 border-t border-border">
-      <div className="mb-8 flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+    <section className="mt-10 min-w-0 overflow-hidden border-t border-border pt-8 sm:mt-16 sm:pt-12">
+      <div className="mb-6 flex min-w-0 flex-col gap-4 sm:mb-8 sm:flex-row sm:items-center sm:justify-between">
+        <div className="min-w-0">
+          <h2 className="truncate text-xl font-bold tracking-tight text-foreground sm:text-2xl md:text-3xl">
             More Articles
           </h2>
-          <p className="mt-2 text-muted-foreground">
+          <p className="mt-1.5 text-sm text-muted-foreground sm:mt-2">
             Continue reading with these related posts
           </p>
         </div>
         <I18nLink
           href="/blog"
-          className="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+          className="hidden shrink-0 items-center gap-2 text-sm font-medium text-primary hover:underline sm:inline-flex"
+          aria-label="View all blog posts"
         >
           View all posts
           <ArrowRight className="size-4" />
@@ -53,23 +54,24 @@ export function FeaturedPostsCarousel({
         opts={{
           align: "start",
           loop: relatedPosts.length > 3,
+          containScroll: "trimSnaps",
         }}
-        className="w-full"
+        className="w-full min-w-0"
       >
-        <CarouselContent className="-ml-4">
+        <CarouselContent className="ml-0 sm:-ml-4">
           {relatedPosts.map((post) => {
             const primaryTag = post.tags?.split(",")[0]?.trim();
 
             return (
               <CarouselItem
                 key={post.slug}
-                className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
+                className="min-w-0 basis-full pl-0 pr-3 sm:pl-4 sm:pr-0 md:basis-1/2 lg:basis-1/3"
               >
-                <article className="group flex flex-col overflow-hidden rounded-2xl border border-border/40 bg-background transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 h-full">
+                <article className="group flex min-w-0 flex-col overflow-hidden rounded-xl border border-border/40 bg-background transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 h-full sm:rounded-2xl">
                   <I18nLink
                     href={`/blog${post.slug}`}
                     prefetch={false}
-                    className="relative aspect-[16/10] overflow-hidden bg-muted"
+                    className="relative aspect-[16/10] min-h-0 overflow-hidden bg-muted"
                   >
                     <Image
                       src={post.image || "/placeholder.svg"}
@@ -85,24 +87,24 @@ export function FeaturedPostsCarousel({
                     )}
                   </I18nLink>
 
-                  <div className="flex flex-1 flex-col p-5">
-                    <div className="mb-3 flex items-center gap-2 text-xs text-muted-foreground">
-                      <Calendar className="size-3.5" />
-                      <span>{dayjs(post.date).format("MMM D, YYYY")}</span>
+                  <div className="flex min-w-0 flex-1 flex-col p-3 sm:p-5">
+                    <div className="mb-2 flex items-center gap-2 text-xs text-muted-foreground sm:mb-3">
+                      <Calendar className="size-3.5 shrink-0" />
+                      <span className="truncate">{dayjs(post.date).format("MMM D, YYYY")}</span>
                     </div>
 
                     <I18nLink
                       href={`/blog${post.slug}`}
                       prefetch={false}
-                      className="flex-1"
+                      className="min-w-0 flex-1"
                     >
-                      <h3 className="mb-2 text-base font-semibold leading-snug text-foreground transition-colors group-hover:text-primary line-clamp-2">
+                      <h3 className="mb-1.5 line-clamp-2 text-sm font-semibold leading-snug text-foreground transition-colors group-hover:text-primary sm:mb-2 sm:text-base">
                         {post.title}
                       </h3>
                     </I18nLink>
 
                     {post.description && (
-                      <p className="text-sm leading-relaxed text-muted-foreground line-clamp-2">
+                      <p className="line-clamp-2 text-xs leading-relaxed text-muted-foreground sm:text-sm">
                         {post.description}
                       </p>
                     )}
@@ -112,16 +114,17 @@ export function FeaturedPostsCarousel({
             );
           })}
         </CarouselContent>
-        <CarouselPrevious className="-left-4 hidden md:flex" />
-        <CarouselNext className="-right-4 hidden md:flex" />
+        <CarouselPrevious className="-left-2 hidden md:flex md:-left-4" />
+        <CarouselNext className="-right-2 hidden md:flex md:-right-4" />
       </Carousel>
 
       <I18nLink
         href="/blog"
-        className="mt-6 inline-flex sm:hidden items-center gap-2 text-sm font-medium text-primary hover:underline"
+        className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline sm:mt-6 sm:hidden"
+        aria-label="View all blog posts"
       >
         View all posts
-        <ArrowRight className="size-4" />
+        <ArrowRight className="size-4 shrink-0" />
       </I18nLink>
     </section>
   );

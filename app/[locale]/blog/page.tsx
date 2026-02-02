@@ -54,7 +54,7 @@ export default async function Page({ params }: { params: Params }) {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative mt-8 md:mt-20 overflow-hidden border-b border-border/40 bg-gradient-to-b from-muted/50 to-background w-screen left-1/2 -translate-x-1/2">
+      <section className="relative mt-20 md:mt-32 overflow-hidden border-b border-border/40 bg-gradient-to-b from-muted/50 to-background w-screen left-1/2 -translate-x-1/2">
         {/* Background Pattern */}
         <div className="absolute inset-0 -z-10">
           <div

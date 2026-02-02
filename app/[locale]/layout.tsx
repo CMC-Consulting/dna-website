@@ -44,6 +44,8 @@ export async function generateMetadata({
 }
 
 export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: siteConfig.themeColors,
 };
 
@@ -85,7 +87,7 @@ export default async function LocaleLayout({
               {messages.LanguageDetection && <LanguageDetectionAlert />}
               <Navbar />
 
-              <main className="flex-1 flex flex-col items-center">
+              <main className="flex flex-1 flex-col items-center w-full min-w-0 overflow-x-hidden">
                 {children}
               </main>
 
