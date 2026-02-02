@@ -12,61 +12,61 @@ const MEMBER_CONFIG: Array<{
     avatar: string;
     link: string;
 }> = [
-    {
-        name: 'Daniel Pham',
-        roleKey: 'founderCEO',
-        avatar: '/teams/dien_pham.png',
-        link: '#',
-    },
-    {
-        name: 'Thanh Nguyen',
-        roleKey: 'aiEngineer',
-        avatar: '/teams/thanh_nguyen.png',
-        link: '#',
-    },
-    {
-        name: 'Dat Chau',
-        roleKey: 'fullstackEngineer',
-        avatar: '/teams/dat_chau.jpg',
-        link: '#',
-    },
-    {
-        name: 'Hung Pham',
-        roleKey: 'aiEngineer',
-        avatar: '/teams/hung_pham.png',
-        link: '#',
-    },
-    {
-        name: 'Chinh Pham',
-        roleKey: 'fullstackEngineer',
-        avatar: '/teams/dna-1.png',
-        link: '#',
-    },
-    {
-        name: 'Dat Le',
-        roleKey: 'aiEngineer',
-        avatar: '/teams/dat_le.jpeg',
-        link: '#',
-    },
-    {
-        name: 'Cuong Le',
-        roleKey: 'aiEngineer',
-        avatar: '/teams/dna-1.png',
-        link: '#',
-    },
-    {
-        name: 'Manh Duong',
-        roleKey: 'aiEngineer',
-        avatar: '/teams/manh_duong.png',
-        link: '#',
-    },
-    {
-        name: 'Khai Pham',
-        roleKey: 'aiEngineer',
-        avatar: '/teams/dna-1.png',
-        link: '#',
-    },
-];
+        {
+            name: 'Daniel Pham',
+            roleKey: 'founderCEO',
+            avatar: '/teams/dien_pham.jpg',
+            link: '#',
+        },
+        {
+            name: 'Thanh Nguyen',
+            roleKey: 'aiEngineer',
+            avatar: '/teams/thanh_nguyen.jpg',
+            link: '#',
+        },
+        {
+            name: 'Dat Chau',
+            roleKey: 'fullstackEngineer',
+            avatar: '/teams/dat_chau.jpg',
+            link: '#',
+        },
+        {
+            name: 'Hung Pham',
+            roleKey: 'aiEngineer',
+            avatar: '/teams/hung_pham.jpg',
+            link: '#',
+        },
+        {
+            name: 'Chinh Pham',
+            roleKey: 'fullstackEngineer',
+            avatar: '/teams/chinh_pham.jpg',
+            link: '#',
+        },
+        {
+            name: 'Dat Le',
+            roleKey: 'aiEngineer',
+            avatar: '/teams/dat_le.jpg',
+            link: '#',
+        },
+        {
+            name: 'Cuong Le',
+            roleKey: 'aiEngineer',
+            avatar: '/teams/cuong_le.jpg',
+            link: '#',
+        },
+        {
+            name: 'Manh Duong',
+            roleKey: 'aiEngineer',
+            avatar: '/teams/manh_duong.jpg',
+            link: '#',
+        },
+        {
+            name: 'Khai Pham',
+            roleKey: 'aiEngineer',
+            avatar: '/teams/khai_pham.jpg',
+            link: '#',
+        },
+    ];
 
 const TeamSection = () => {
     const t = useTranslations("Contact.Team");

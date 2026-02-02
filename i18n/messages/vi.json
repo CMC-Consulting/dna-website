@@ -187,12 +187,18 @@
         "openIntegrable": {
           "title": "Mở & Dễ tích hợp",
           "description": "Kết nối linh hoạt với hệ thống và nền tảng sẵn có của doanh nghiệp.",
-          "bullets": ["API-first", "Tích hợp đa hệ thống"]
+          "bullets": [
+            "API-first",
+            "Tích hợp đa hệ thống"
+          ]
         },
         "outcomesDriven": {
           "title": "Hướng tới Kết quả",
           "description": "Mọi giải pháp đều gắn với chỉ số hiệu quả kinh doanh cụ thể.",
-          "bullets": ["Tối ưu chi phí vận hành", "Tăng năng suất nhân sự"]
+          "bullets": [
+            "Tối ưu chi phí vận hành",
+            "Tăng năng suất nhân sự"
+          ]
         }
       }
     },
@@ -555,7 +561,7 @@
       "description": "Trong quá trình làm việc, chúng tôi thường xuyên trao đổi với khách hàng vì họ là người duy nhất có thể cảm nhận được một giải pháp mới có phù hợp hay không.",
       "linktree": "Linktree",
       "roles": {
-        "founderCEO": "Người sáng lập - CEO",
+        "founderCEO": "Người sáng lập - Giám đốc giải pháp Data & AI",
         "aiEngineer": "Kỹ sư AI",
         "fullstackEngineer": "Kỹ sư Fullstack"
       }
