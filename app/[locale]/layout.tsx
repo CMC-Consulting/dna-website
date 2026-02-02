@@ -80,8 +80,9 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider
             attribute="class"
-            defaultTheme={siteConfig.defaultNextTheme}
-            enableSystem
+            defaultTheme="light"
+            forcedTheme="light"
+            enableSystem={false}
           >
             <SmoothScrollProvider>
               {messages.LanguageDetection && <LanguageDetectionAlert />}

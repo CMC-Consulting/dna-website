@@ -28,11 +28,8 @@ export const siteConfig: SiteConfig = {
     github: GITHUB_URL,
     email: EMAIL_URL
   },
-  themeColors: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
-  defaultNextTheme: 'system', // next-theme option: system | dark | light
+  themeColors: [{ media: '(prefers-color-scheme: light)', color: 'white' }],
+  defaultNextTheme: 'light', // forced to light only
   icons: {
     icon: "/favicon.ico",
     shortcut: "/logo.png",
