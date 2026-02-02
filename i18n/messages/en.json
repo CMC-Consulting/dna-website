@@ -518,6 +518,8 @@
       "namePlaceholder": "Your name",
       "emailLabel": "Email",
       "emailPlaceholder": "your@email.com",
+      "phoneLabel": "Phone",
+      "phonePlaceholder": "+1 234 567 8900",
       "subjectLabel": "Subject",
       "subjectPlaceholder": "What's this about?",
       "messageLabel": "Message",

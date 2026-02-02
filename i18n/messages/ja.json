@@ -183,6 +183,8 @@
       "namePlaceholder": "お名前を入力",
       "emailLabel": "メールアドレス",
       "emailPlaceholder": "your@email.com",
+      "phoneLabel": "電話番号",
+      "phonePlaceholder": "+81 90 1234 5678",
       "subjectLabel": "件名",
       "subjectPlaceholder": "件名を入力",
       "messageLabel": "メッセージ",

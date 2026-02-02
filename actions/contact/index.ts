@@ -2,8 +2,8 @@
 
 import { siteConfig } from '@/config/site';
 import { ContactNotificationEmail } from '@/emails/contact-notification';
-import { checkRateLimit } from '@/lib/rateLimit';
 import { normalizeEmail, validateEmail } from '@/lib/email';
+import { checkRateLimit } from '@/lib/rateLimit';
 import { sendEmail } from '../resend';
 
 export async function submitContact(formData: FormData) {
@@ -12,6 +12,7 @@ export async function submitContact(formData: FormData) {
 
     const name = formData.get('name') as string;
     const email = formData.get('email') as string;
+    const phone = (formData.get('phone') as string)?.trim() || undefined;
     const subject = formData.get('subject') as string;
     const message = formData.get('message') as string;
 
@@ -76,6 +77,7 @@ export async function submitContact(formData: FormData) {
       reactProps: {
         name,
         email: normalizedEmail,
+        phone,
         subject,
         message,
         submittedAt,

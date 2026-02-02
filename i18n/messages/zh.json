@@ -183,6 +183,8 @@
       "namePlaceholder": "您的姓名",
       "emailLabel": "邮箱",
       "emailPlaceholder": "your@email.com",
+      "phoneLabel": "电话",
+      "phonePlaceholder": "+86 123 4567 8900",
       "subjectLabel": "主题",
       "subjectPlaceholder": "这是关于什么的？",
       "messageLabel": "消息",

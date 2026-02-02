@@ -4,6 +4,7 @@ import * as React from "react";
 interface ContactNotificationEmailProps {
   name: string;
   email: string;
+  phone?: string;
   subject: string;
   message: string;
   submittedAt: string;
@@ -77,7 +78,7 @@ const styles = {
 
 export const ContactNotificationEmail: React.FC<
   Readonly<ContactNotificationEmailProps>
-> = ({ name, email, subject, message, submittedAt }) => (
+> = ({ name, email, phone, subject, message, submittedAt }) => (
   <div style={styles.container}>
     <div style={styles.card}>
       <h1 style={styles.headerTitle}>New Contact Form Submission</h1>
@@ -95,6 +96,12 @@ export const ContactNotificationEmail: React.FC<
             </a>
           </p>
         </div>
+        {phone ? (
+          <div style={{ marginBottom: "16px" }}>
+            <p style={styles.infoLabel}>Phone</p>
+            <p style={styles.infoValue}>{phone}</p>
+          </div>
+        ) : null}
         <div style={{ marginBottom: "16px" }}>
           <p style={styles.infoLabel}>Subject</p>
           <p style={styles.infoValue}>{subject}</p>

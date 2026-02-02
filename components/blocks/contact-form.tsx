@@ -87,6 +87,25 @@ export const ContactForm = () => {
 
       <div>
         <label
+          htmlFor="phone"
+          className="block text-sm font-medium mb-2"
+        >
+          {t("phoneLabel")}
+        </label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          disabled={status === "loading"}
+          autoComplete="tel"
+          className="w-full px-4 py-3 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          placeholder={t("phonePlaceholder")}
+          aria-label={t("phonePlaceholder")}
+        />
+      </div>
+
+      <div>
+        <label
           htmlFor="subject"
           className="block text-sm font-medium mb-2"
         >

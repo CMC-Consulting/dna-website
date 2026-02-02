@@ -538,6 +538,8 @@
       "namePlaceholder": "Tên của bạn",
       "emailLabel": "Email",
       "emailPlaceholder": "email@example.com",
+      "phoneLabel": "Số điện thoại",
+      "phonePlaceholder": "+84 123 456 789",
       "subjectLabel": "Chủ đề",
       "subjectPlaceholder": "Tiêu đề",
       "messageLabel": "Tin nhắn",
