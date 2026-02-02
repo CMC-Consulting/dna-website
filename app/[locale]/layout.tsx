@@ -4,6 +4,7 @@ import PlausibleAnalytics from "@/app/PlausibleAnalytics";
 import Footer from "@/components/footer/Footer";
 import { Navbar } from "@/components/header/Navbar";
 import { LanguageDetectionAlert } from "@/components/LanguageDetectionAlert";
+import { ScrollToTopOnNavigate } from "@/components/ScrollToTopOnNavigate";
 import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import { TailwindIndicator } from "@/components/TailwindIndicator";
 import { siteConfig } from "@/config/site";
@@ -85,6 +86,7 @@ export default async function LocaleLayout({
             enableSystem={false}
           >
             <SmoothScrollProvider>
+              <ScrollToTopOnNavigate />
               {messages.LanguageDetection && <LanguageDetectionAlert />}
               <Navbar />
 
