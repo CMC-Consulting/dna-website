@@ -160,7 +160,7 @@
     },
     "logoCloud": {
       "title": "Đối tác tin cậy của nhiều Doanh nghiệp Lớn",
-      "subtitle": "Chúng tôi đồng hành cùng tổ chức trong hành trình khai thác dữ liệu và ứng dụng AI hiệu quả"
+      "subtitle": "Chúng tôi đồng hành cùng nhiều doanh nghiệp và tổ chức trong hành trình khai thác dữ liệu và ứng dụng AI hiệu quả"
     },
     "whyUs": {
       "title": "Vì sao chọn chúng tôi",
@@ -187,18 +187,12 @@
         "openIntegrable": {
           "title": "Mở & Dễ tích hợp",
           "description": "Kết nối linh hoạt với hệ thống và nền tảng sẵn có của doanh nghiệp.",
-          "bullets": [
-            "API-first",
-            "Tích hợp đa hệ thống"
-          ]
+          "bullets": ["API-first", "Tích hợp đa hệ thống"]
         },
         "outcomesDriven": {
           "title": "Hướng tới Kết quả",
           "description": "Mọi giải pháp đều gắn với chỉ số hiệu quả kinh doanh cụ thể.",
-          "bullets": [
-            "Tối ưu chi phí vận hành",
-            "Tăng năng suất nhân sự"
-          ]
+          "bullets": ["Tối ưu chi phí vận hành", "Tăng năng suất nhân sự"]
         }
       }
     },
