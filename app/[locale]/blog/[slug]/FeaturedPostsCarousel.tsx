@@ -30,20 +30,19 @@ export function FeaturedPostsCarousel({
   if (relatedPosts.length === 0) return null;
 
   return (
-    <section className="mt-10 min-w-0 overflow-hidden border-t border-border pt-8 sm:mt-16 sm:pt-12">
-      <div className="mb-6 flex min-w-0 flex-col gap-4 sm:mb-8 sm:flex-row sm:items-center sm:justify-between">
-        <div className="min-w-0">
-          <h2 className="truncate text-xl font-bold tracking-tight text-foreground sm:text-2xl md:text-3xl">
+    <section className="mt-16 pt-12 border-t border-border">
+      <div className="mb-8 flex items-center justify-between">
+        <div>
+          <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
             More Articles
           </h2>
-          <p className="mt-1.5 text-sm text-muted-foreground sm:mt-2">
+          <p className="mt-2 text-muted-foreground">
             Continue reading with these related posts
           </p>
         </div>
         <I18nLink
           href="/blog"
-          className="hidden shrink-0 items-center gap-2 text-sm font-medium text-primary hover:underline sm:inline-flex"
-          aria-label="View all blog posts"
+          className="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
         >
           View all posts
           <ArrowRight className="size-4" />
@@ -114,8 +113,8 @@ export function FeaturedPostsCarousel({
             );
           })}
         </CarouselContent>
-        <CarouselPrevious className="-left-2 hidden md:flex md:-left-4" />
-        <CarouselNext className="-right-2 hidden md:flex md:-right-4" />
+        <CarouselPrevious className="-left-4 hidden md:flex" />
+        <CarouselNext className="-right-4 hidden md:flex" />
       </Carousel>
 
       <I18nLink
