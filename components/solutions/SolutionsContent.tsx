@@ -361,9 +361,9 @@ export default function SolutionsContent() {
       description: t("products.prismaAI.description"),
       badge: t("badges.flagship"),
       badgeColor: "flagship",
-      imageFront: "/prisma/Prisma -1.png",
-      imageBack: "/prisma/Primsa -6.png",
-      imageBackLight: "/prisma/Prisma -7.png",
+      imageFront: "/prisma/Prisma - 1.png",
+      imageBack: "/prisma/Primsa - 6.png",
+      imageBackLight: "/prisma/Prisma - 7.png",
       features: PRISMA_FEATURES.map(({ key, icon }) => ({
         icon,
         title: t(`products.prismaAI.features.${key}.title`),
