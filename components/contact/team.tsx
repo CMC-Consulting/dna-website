@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 
 import { Link } from '@/i18n/routing';
 
-type MemberRole = "founderCEO" | "aiEngineer" | "fullstackEngineer";
+type MemberRole = "founderCEO" | "aiEngineer" | "fullstackEngineer" | "accountmanager";
 
 const MEMBER_CONFIG: Array<{
     name: string;
@@ -68,7 +68,7 @@ const MEMBER_CONFIG: Array<{
         },
         {
             name: 'Duc Luu',
-            roleKey: 'AccountManager',
+            roleKey: 'accountmanager',
             avatar: '/teams/duc_luu.jpg',
             link: '#',
         },
