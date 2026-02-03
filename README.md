@@ -181,6 +181,53 @@ To show images **in the post body** (not only the featured image in frontmatter)
 
 **Summary:** Place files in `public/blog/` (or another folder under `public/`), then reference them in the post with paths starting with `/` (e.g. `/blog/diagram.png`).
 
+### Add a YouTube video to a blog post
+
+You can embed a YouTube video directly in the `.mdx` content (the **body**, below the `---` frontmatter).
+
+1. **Get the YouTube video ID**
+
+   - Example URL: `https://www.youtube.com/watch?v=ABC123XYZ`
+   - The **video ID** is the part after `v=`, here it is `ABC123XYZ`.
+
+2. **Option 1 (recommended) — full-width, 16:9, responsive iframe**
+
+   Add this to your `.mdx` file:
+
+   ```mdx
+   <div className="relative w-full aspect-video my-6">
+     <iframe
+       src="https://www.youtube.com/embed/ABC123XYZ"
+       title="Video title"
+       loading="lazy"
+       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+       allowFullScreen
+       className="absolute inset-0 h-full w-full rounded-xl border-0"
+     />
+   </div>
+   ```
+
+   - Replace `ABC123XYZ` with your own video ID.
+   - `aspect-video` keeps the video at a 16:9 ratio on all screen sizes.
+
+3. **Option 2 — simple iframe (no wrapper)**
+
+   ```mdx
+   <iframe
+     src="https://www.youtube.com/embed/ABC123XYZ"
+     width="560"
+     height="315"
+     title="YouTube video player"
+     frameBorder="0"
+     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+     allowFullScreen
+   />
+   ```
+
+   - This approach is simpler but less responsive than Option 1.
+
+> **Tip:** Place the iframe snippet where you want the video to appear in the post, right below the related text or heading.
+
 ### Multilingual posts
 
 To have the same post in multiple languages, add one `.mdx` per locale with the same `slug` (and translated `title`/`description`/body), e.g.:
