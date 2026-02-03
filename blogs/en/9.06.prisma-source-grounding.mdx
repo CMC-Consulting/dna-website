@@ -1,0 +1,86 @@
+---
+title: "What is Source Grounding and How Does It Work?"
+slug: /prisma-source-grounding
+image: /blog/9.06.jpg
+tags: Source-Grounding , RAG , PrismaAI , AIBaoMat , RetrievalAugmentedGeneration, AIChoDoanhNghiep, CMCPrisma, PrivateAI, AIKhongAoGiac
+date: 2026-02-02
+visible: published
+pin: false
+---
+
+In the era of generative AI, large language models (LLMs) have transformed how we access information. However, standard LLMs often suffer from “hallucinations” — producing responses that sound plausible but are actually incorrect or fabricated — because their knowledge is limited to training data and they have no direct access to your organization’s internal, up-to-date, or sensitive information.
+
+**Source Grounding** (also known as retrieval-augmented generation – RAG) solves this problem by fully “anchoring” AI outputs to verifiable data sources provided by the user. Instead of relying only on the model’s internal parameters, the system retrieves relevant context from your documents and uses that exact content to generate answers with clear citations.
+
+At **CMC Consulting**, we have built **Prisma** as a fully source-grounded AI platform, designed specifically for Vietnamese enterprises — especially in industries with high security and compliance requirements such as banking, insurance, manufacturing, and finance.
+
+**Why is Source Grounding important for enterprises?**
+
+Traditional LLMs are trained on massive public datasets, but they cannot “know” your internal reports, regulatory circulars, historical R&D data, or customer records unless that information is directly provided. Fine-tuning models on private data also carries risks: sensitive information can become permanently embedded in the model and potentially exposed in future inferences or when the model is shared.
+
+Source Grounding addresses this by keeping knowledge external and temporary:
+
+- Your data is not permanently embedded into the model.  
+- Every answer is tightly linked to specific sources you control.  
+- Hallucinations are drastically reduced because the AI is constrained to only use retrieved content.  
+- Absolute data sovereignty: With on-premise deployment, your data never leaves your infrastructure.  
+
+This is especially critical in Vietnam, where the Cybersecurity Law and sector regulations (for example, State Bank circulars) require strict control over personal and business data.
+
+**How does Source Grounding work? The core pipeline**
+
+Source Grounding follows a clear pipeline, commonly known as RAG:
+
+1. **Data Ingestion & Indexing**
+
+Users upload various sources: PDFs, Word, Excel, audio/video transcripts, Notion pages, Confluence, or links from integrated tools (OneDrive, SharePoint, Google Drive, Jira, etc.).
+
+Prisma automatically processes them using intelligent chunking (splitting documents into meaningful segments) and creates high-quality embeddings. These vector embeddings are securely stored in a vector database optimized for semantic search.
+
+2. **Query-Time Retrieval**
+
+When you ask a question, Prisma embeds the query and performs similarity search (cosine similarity) to retrieve the most relevant data chunks from your sources.
+
+Advanced reranking ensures the highest-quality results are prioritized. Prisma supports hybrid search (keyword + semantic) to handle technical content or Vietnamese language effectively.
+
+<img src="/blog/9.06-1.jpg" alt="Description of the image" width={800} height={600} />
+
+3. **Prompt Augmentation & Constraints**
+
+The retrieved data chunks are inserted into the LLM prompt along with strict instructions:
+
+- “Only answer based on the provided sources.”  
+- “Accurately cite the source (page, section, file name).”  
+- “If no relevant information is found, respond with ‘No information found in the sources.’”  
+
+This forces the model to strictly adhere to the grounded content.
+
+4. **Answer Generation with Citations**
+
+The selected LLM (OpenAI, Grok, Google, DeepSeek… — Prisma is vendor-neutral) generates the response. Every piece of information includes inline citations pointing back to the original source.
+
+Prisma also supports multimodal capabilities: summarizing videos, extracting insights from charts/images, or creating audio overviews/podcasts from text.
+
+5. **On-Premise / Self-Hosted Deployment**
+
+Unlike public cloud tools, Prisma runs entirely on your own servers. Data never leaves your environment, ensuring compliance and eliminating the risk of information leakage.
+
+**Key benefits of Prisma’s Source Grounding approach**
+
+- **Near-zero hallucinations**: Answers are tightly bound to uploaded sources, with transparent citations for easy verification.  
+- **Maximum security**: Self-hosted deployment keeps sensitive data (financial reports, insurance records, manufacturing formulas, etc.) inside your internal firewall.  
+- **High accuracy in specialized domains**: Prisma excels at handling Vietnamese banking circulars, insurance procedures, manufacturing R&D history, or credit analysis — areas where general LLMs often struggle.  
+- **Flexible and scalable**: Supports many formats, integrates smoothly (Slack, Teams, Jira, Gmail), and produces advanced outputs (mind maps, reports, podcasts).  
+- **No vendor lock-in**: You are free to choose the LLM model that best fits your needs.  
+
+**Real-world impact for Vietnamese enterprises**
+
+Prisma has helped banks reduce insurance claim processing time from days to minutes by grounding AI in contract terms and medical records. In manufacturing, engineers can query 20 years of experimental data without manual searching. Insurance agents instantly receive product quotes that comply with the latest regulations.
+
+In short, Prisma turns your internal knowledge base into a conversational “digital brain” — secure, accurate, and fully under your control.
+
+Are you ready to experience source-grounded AI that respects your data sovereignty?
+
+Contact the CMC Consulting team today for a personalized Prisma demo.
+
+**Tags:** #SourceGrounding #RAG #PrismaAI #AIBaoMat #RetrievalAugmentedGeneration #AIChoDoanhNghiep #CMCPrisma #PrivateAI #AIKhongAoGiac
