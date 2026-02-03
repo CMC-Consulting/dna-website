@@ -66,6 +66,12 @@ const MEMBER_CONFIG: Array<{
             avatar: '/teams/khai_pham.jpg',
             link: '#',
         },
+        {
+            name: 'Duc Luu',
+            roleKey: 'AccountManager',
+            avatar: '/teams/duc_luu.jpg',
+            link: '#',
+        },
     ];
 
 const TeamSection = () => {
