@@ -1,0 +1,94 @@
+---
+title: "Source Grounding là gì và nó hoạt động như thế nào?"
+slug: /prisma-source-grounding
+image: /blog/9.06.jpg
+tags: Source-Grounding , RAG , PrismaAI , AIBaoMat , RetrievalAugmentedGeneration, AIChoDoanhNghiep, CMCPrisma, PrivateAI, AIKhongAoGiac
+date: 2026-02-02
+visible: published
+pin: false
+---
+
+Trong kỷ nguyên AI tạo sinh, các mô hình ngôn ngữ lớn (LLM) đã thay đổi cách chúng ta tiếp cận thông tin. Tuy nhiên, các LLM thông thường thường gặp vấn đề “ảo giác” (hallucinations) – đưa ra thông tin nghe có vẻ hợp lý nhưng thực tế sai lệch hoặc bịa đặt – vì kiến thức của chúng bị giới hạn trong dữ liệu huấn luyện và không có quyền truy cập vào thông tin nội bộ, cập nhật hoặc nhạy cảm của tổ chức bạn.
+
+**Source Grounding** (hay còn gọi là retrieval-augmented generation – RAG) giải quyết vấn đề này bằng cách “neo” hoàn toàn đầu ra của AI vào các nguồn dữ liệu có thể kiểm chứng mà người dùng cung cấp. Thay vì chỉ dựa vào tham số nội tại của mô hình, hệ thống sẽ tìm kiếm ngữ cảnh liên quan từ tài liệu của bạn và sử dụng chính xác nội dung đó để tạo câu trả lời kèm trích dẫn rõ ràng.
+
+Tại **CMC Consulting**, chúng tôi đã xây dựng **Prisma** như một nền tảng AI hoàn toàn source-grounded, được thiết kế riêng cho doanh nghiệp Việt Nam – đặc biệt trong các lĩnh vực có yêu cầu bảo mật và tuân thủ cao như ngân hàng, bảo hiểm, sản xuất và tài chính.
+
+**Tại sao Source Grounding lại quan trọng với doanh nghiệp?**
+
+Các LLM truyền thống được huấn luyện trên dữ liệu công khai khổng lồ, nhưng chúng không thể “biết” được báo cáo nội bộ, thông tư quy định, dữ liệu R&D lịch sử hay hồ sơ khách hàng của bạn trừ khi được cung cấp trực tiếp. Việc fine-tune mô hình trên dữ liệu riêng tư lại tiềm ẩn rủi ro: thông tin nhạy cảm có thể bị nhúng vĩnh viễn vào mô hình và lộ ra trong các lần suy luận sau hoặc khi chia sẻ mô hình.
+
+Source Grounding khắc phục bằng cách giữ kiến thức bên ngoài và tạm thời:
+
+\- Không nhúng vĩnh viễn dữ liệu của bạn vào mô hình.
+
+\- Mọi câu trả lời đều gắn chặt với nguồn cụ thể bạn kiểm soát.
+
+\- Giảm gần như triệt để ảo giác nhờ ràng buộc AI chỉ dùng nội dung đã truy xuất.
+
+\- Bảo vệ chủ quyền dữ liệu tuyệt đối: Với triển khai on-premise, dữ liệu không bao giờ rời khỏi hạ tầng của bạn.
+
+Điều này đặc biệt quan trọng tại Việt Nam, nơi Luật An ninh mạng và các quy định ngành (ví dụ: Thông tư Ngân hàng Nhà nước) yêu cầu kiểm soát nghiêm ngặt dữ liệu cá nhân và kinh doanh.
+
+**Source Grounding hoạt động như thế nào? Quy trình cốt lõi**
+
+Source Grounding theo một pipeline rõ ràng, thường được gọi là RAG:
+
+1\. **Thu thập và lập chỉ mục dữ liệu (Ingestion & Indexing)**
+
+Người dùng upload đa dạng nguồn: PDF, Word, Excel, transcript audio/video, trang Notion, Confluence, hoặc liên kết từ các công cụ tích hợp (OneDrive, SharePoint, Google Drive, Jira…).
+
+Prisma tự động xử lý bằng kỹ thuật chunking thông minh (cắt tài liệu thành các đoạn có ý nghĩa) và tạo embedding chất lượng cao. Các vector embedding được lưu trữ an toàn trong vector database tối ưu cho tìm kiếm ngữ nghĩa.
+
+2\. **Truy xuất theo truy vấn (Retrieval)**
+
+Khi bạn đặt câu hỏi, Prisma embed câu hỏi và thực hiện tìm kiếm tương đồng (cosine similarity) để lấy ra các đoạn dữ liệu liên quan nhất từ nguồn của bạn.
+
+Công nghệ reranking nâng cao đảm bảo kết quả chất lượng cao nhất được ưu tiên. Prisma hỗ trợ hybrid search (kết hợp từ khóa + ngữ nghĩa) để xử lý tốt nội dung kỹ thuật hoặc tiếng Việt.
+
+<img src="/blog/9.06-1.jpg" alt="Description of the image" width={800} height={600} />
+3\. **Tăng cường prompt và ràng buộc (Augmentation)**
+
+Các đoạn dữ liệu được chèn vào prompt của LLM kèm hướng dẫn nghiêm ngặt:
+
+\- “Chỉ trả lời dựa trên nguồn được cung cấp.”
+
+\- “Trích dẫn chính xác nguồn (trang, phần, tên file).”
+
+\- “Nếu không tìm thấy thông tin liên quan, trả lời ‘Không có thông tin trong nguồn’.”
+
+Điều này buộc mô hình phải tuân thủ tuyệt đối nguồn gốc.
+
+4\. **Tạo câu trả lời kèm trích dẫn (Generation with Citations)**
+
+LLM được chọn (OpenAI, Grok, Google, Deepseek… – Prisma không khóa nhà cung cấp) sinh ra phản hồi. Mọi thông tin đều được gắn trích dẫn inline quay về nguồn gốc.
+
+Prisma còn hỗ trợ đa phương thức: tóm tắt video, trích xuất insight từ biểu đồ/hình ảnh, hoặc tạo audio overview/podcast từ văn bản.
+
+5\. **Triển khai On-premise / Self-hosted**
+
+Khác với các công cụ cloud công khai, Prisma chạy hoàn toàn trên máy chủ của bạn. Dữ liệu không bao giờ truyền ra ngoài, đảm bảo tuân thủ và không có rủi ro lộ thông tin.
+
+**Lợi ích nổi bật của cách triển khai Source Grounding trong Prisma**
+
+\- **Gần như không có ảo giác**: Câu trả lời bị ràng buộc chặt chẽ vào nguồn bạn upload, kèm trích dẫn minh bạch để kiểm chứng dễ dàng.
+
+\- **Bảo mật tuyệt đối**: Triển khai tự lưu trữ giữ nguyên dữ liệu nhạy cảm (báo cáo tài chính, hồ sơ bảo hiểm, công thức sản xuất…) trong tường lửa nội bộ.
+
+\- **Độ chính xác cao trong lĩnh vực chuyên sâu**: Prisma vượt trội khi xử lý thông tư ngân hàng Việt Nam, quy trình bảo hiểm, lịch sử R&D sản xuất hay phân tích tín dụng – nơi LLM thông thường thường yếu.
+
+\- **Linh hoạt và mở rộng**: Hỗ trợ nhiều định dạng, tích hợp mượt mà (Slack, Teams, Jira, Gmail), đầu ra nâng cao (mindmap, báo cáo, podcast).
+
+\- **Không bị khóa nhà cung cấp**: Bạn tự do chọn mô hình LLM phù hợp nhất.
+
+**Tác động thực tế tại doanh nghiệp Việt Nam**
+
+Prisma đã giúp các ngân hàng rút ngắn thời gian xử lý bồi thường từ vài ngày xuống vài phút bằng cách neo AI vào điều khoản hợp đồng và hồ sơ y tế. Trong sản xuất, kỹ sư truy vấn dữ liệu thử nghiệm 20 năm mà không cần tìm kiếm thủ công. Đại lý bảo hiểm nhận ngay báo giá sản phẩm chuẩn quy định mới nhất.
+
+Tóm lại, Prisma biến kho tri thức nội bộ của bạn thành một “bộ não số” có khả năng trò chuyện – an toàn, chính xác và hoàn toàn do bạn kiểm soát.
+
+Bạn sẵn sàng trải nghiệm AI source-grounded tôn trọng chủ quyền dữ liệu của mình?
+
+Liên hệ đội ngũ CMC Consulting ngay hôm nay để được demo Prisma cá nhân hóa.
+
+**Tags:** #SourceGrounding #RAG #PrismaAI #AIBaoMat #RetrievalAugmentedGeneration #AIChoDoanhNghiep #CMCPrisma #PrivateAI #AIKhongAoGiac
