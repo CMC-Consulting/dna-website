@@ -1,50 +1,25 @@
 "use client";
 
-import { submitContact } from "@/actions/contact";
 import { Button } from "@/components/ui/button";
-import {
-  AlertCircleIcon,
-  CheckCircleIcon,
-  Loader2,
-  Send,
-} from "lucide-react";
+import { useForm, ValidationError } from "@formspree/react";
+import { AlertCircleIcon, CheckCircleIcon, Loader2, Send } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
 
 export const ContactForm = () => {
-  const [status, setStatus] = useState<
-    "idle" | "loading" | "success" | "error"
-  >("idle");
-  const [errorMessage, setErrorMessage] = useState("");
-
   const t = useTranslations("Contact.Form");
+  const formspreeFormId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID as string;
+  const [state, handleSubmit] = useForm(formspreeFormId);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    try {
-      setStatus("loading");
-      setErrorMessage("");
-
-      const result = await submitContact(formData);
-
-      if (!result.success) {
-        throw new Error(result.error || t("errorMessage"));
-      }
-
-      setStatus("success");
-      form.reset();
-      setTimeout(() => setStatus("idle"), 5000);
-    } catch (error) {
-      setStatus("error");
-      setErrorMessage(
-        error instanceof Error ? error.message : t("errorMessage")
-      );
-      setTimeout(() => setStatus("idle"), 5000);
-    }
-  };
+  if (state.succeeded) {
+    return (
+      <div className="space-y-4">
+        <div className="flex items-start gap-2 text-green-600 text-sm bg-green-50 dark:bg-green-900/20 px-4 py-3 rounded-lg border border-green-200 dark:border-green-800">
+          <CheckCircleIcon className="w-5 h-5 flex-shrink-0 mt-0.5" />
+          <span>{t("successMessage")}</span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -61,7 +36,7 @@ export const ContactForm = () => {
             id="name"
             name="name"
             required
-            disabled={status === "loading"}
+            disabled={state.submitting}
             className="w-full px-4 py-3 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             placeholder={t("namePlaceholder")}
           />
@@ -78,9 +53,14 @@ export const ContactForm = () => {
             id="email"
             name="email"
             required
-            disabled={status === "loading"}
+            disabled={state.submitting}
             className="w-full px-4 py-3 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             placeholder={t("emailPlaceholder")}
+          />
+          <ValidationError
+            prefix="Email"
+            field="email"
+            errors={state.errors}
           />
         </div>
       </div>
@@ -96,7 +76,7 @@ export const ContactForm = () => {
           type="tel"
           id="phone"
           name="phone"
-          disabled={status === "loading"}
+          disabled={state.submitting}
           autoComplete="tel"
           className="w-full px-4 py-3 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           placeholder={t("phonePlaceholder")}
@@ -116,7 +96,7 @@ export const ContactForm = () => {
           id="subject"
           name="subject"
           required
-          disabled={status === "loading"}
+          disabled={state.submitting}
           className="w-full px-4 py-3 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           placeholder={t("subjectPlaceholder")}
         />
@@ -134,18 +114,23 @@ export const ContactForm = () => {
           name="message"
           rows={6}
           required
-          disabled={status === "loading"}
+          disabled={state.submitting}
           className="w-full px-4 py-3 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
           placeholder={t("messagePlaceholder")}
+        />
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={state.errors}
         />
       </div>
 
       <Button
         type="submit"
-        disabled={status === "loading"}
+        disabled={state.submitting}
         className="w-full sm:w-auto"
       >
-        {status === "loading" ? (
+        {state.submitting ? (
           <span className="flex items-center gap-2">
             <Loader2 className="w-4 h-4 animate-spin" />
             {t("submitting")}
@@ -158,17 +143,10 @@ export const ContactForm = () => {
         )}
       </Button>
 
-      {status === "success" && (
-        <div className="flex items-start gap-2 text-green-600 text-sm bg-green-50 dark:bg-green-900/20 px-4 py-3 rounded-lg border border-green-200 dark:border-green-800">
-          <CheckCircleIcon className="w-5 h-5 flex-shrink-0 mt-0.5" />
-          <span>{t("successMessage")}</span>
-        </div>
-      )}
-
-      {status === "error" && (
+      {Array.isArray(state.errors) && state.errors.length > 0 && (
         <div className="flex items-start gap-2 text-red-600 text-sm bg-red-50 dark:bg-red-900/20 px-4 py-3 rounded-lg border border-red-200 dark:border-red-800">
           <AlertCircleIcon className="w-5 h-5 flex-shrink-0 mt-0.5" />
-          <span className="break-words">{errorMessage}</span>
+          <span className="break-words">{t("errorMessage")}</span>
         </div>
       )}
     </form>
