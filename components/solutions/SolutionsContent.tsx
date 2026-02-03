@@ -519,8 +519,17 @@ export default function SolutionsContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-center"
+              className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
+              <Button
+                asChild
+                variant="outline"
+                className="px-6 py-5 text-base font-semibold"
+              >
+                <Link href="/contact" aria-label={t("cta.learnMore")}>
+                  {t("cta.learnMore")}
+                </Link>
+              </Button>
               <Button
                 asChild
                 className="bg-[linear-gradient(135deg,#0f1e35,#276df0)] px-6 py-5 text-base font-semibold text-primary-foreground shadow-lg transition hover:brightness-105"
