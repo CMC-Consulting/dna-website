@@ -526,7 +526,7 @@ export default function SolutionsContent() {
                 variant="outline"
                 className="px-6 py-5 text-base font-semibold"
               >
-                <Link href="/contact" aria-label={t("cta.learnMore")}>
+                <Link href="/blog/tag/data-services" aria-label={t("cta.learnMore")}>
                   {t("cta.learnMore")}
                 </Link>
               </Button>

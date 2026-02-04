@@ -64,3 +64,29 @@ export async function getPosts(locale: string = DEFAULT_LOCALE): Promise<{ posts
     posts: allPosts,
   };
 }
+
+export async function getPostsByTag(
+  locale: string = DEFAULT_LOCALE,
+  tag: string
+): Promise<{ posts: BlogPost[] }> {
+  const { posts } = await getPosts(locale);
+  const normalizedTag = tag.toLowerCase();
+
+  const filteredPosts = posts.filter((post) => {
+    if (!post.tags) return false;
+    const postTags = post.tags.split(',').map((t) => t.trim().toLowerCase());
+    return postTags.includes(normalizedTag);
+  });
+
+  return { posts: filteredPosts };
+}
+
+export async function getAllTags(locale: string = DEFAULT_LOCALE): Promise<string[]> {
+  const { posts } = await getPosts(locale);
+
+  const allTags = posts
+    .filter((post) => post.tags)
+    .flatMap((post) => post.tags!.split(',').map((t) => t.trim().toLowerCase()));
+
+  return [...new Set(allTags)];
+}

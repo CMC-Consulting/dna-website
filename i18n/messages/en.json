@@ -287,6 +287,27 @@
     "title": "Insights & Resources",
     "description": "Explore expert perspectives on SAP, AI, and data solutions. Our team shares practical insights, industry trends, and strategic guidance to help you navigate digital transformation and unlock the full potential of your enterprise systems."
   },
+  "BlogTag": {
+    "title": "Articles about {tag}",
+    "description": "All articles related to {tag}",
+    "backToBlog": "Back to Blog",
+    "articlesCount": "{count} articles",
+    "noArticles": "No articles yet",
+    "noArticlesDescription": "There are no articles on this topic yet. Check back soon.",
+    "tags": {
+      "data-services": "Data Services",
+      "data-governance": "Data Governance",
+      "data-lakehouse": "Data Lakehouse Architecture",
+      "data-integration": "Data Integration",
+      "data-pipelines": "Data Pipelines",
+      "ai": "Artificial Intelligence",
+      "generative-ai": "Generative AI",
+      "sap": "SAP",
+      "enterprise": "Enterprise",
+      "automation": "Automation",
+      "llm": "Large Language Models"
+    }
+  },
   "About": {
     "title": "About",
     "description": "About CMC Consulting AI",

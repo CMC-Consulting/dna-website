@@ -288,6 +288,27 @@
     "title": "Bài viết blog",
     "description": "Chia sẻ kiến thức, xu hướng và kinh nghiệm triển khai AI & Dữ liệu trong doanh nghiệp"
   },
+  "BlogTag": {
+    "title": "Bài viết về {tag}",
+    "description": "Tất cả bài viết liên quan đến {tag}",
+    "backToBlog": "Quay lại Blog",
+    "articlesCount": "{count} bài viết",
+    "noArticles": "Chưa có bài viết",
+    "noArticlesDescription": "Hiện tại chưa có bài viết nào về chủ đề này. Hãy quay lại sau.",
+    "tags": {
+      "data-services": "Dịch vụ Dữ liệu",
+      "data-governance": "Quản trị Dữ liệu",
+      "data-lakehouse": "Kiến trúc Data Lakehouse",
+      "data-integration": "Tích hợp Dữ liệu",
+      "data-pipelines": "Pipeline Dữ liệu",
+      "ai": "Trí tuệ Nhân tạo",
+      "generative-ai": "AI Tạo sinh",
+      "sap": "SAP",
+      "enterprise": "Doanh nghiệp",
+      "automation": "Tự động hóa",
+      "llm": "Mô hình Ngôn ngữ Lớn"
+    }
+  },
   "About": {
     "title": "Giới thiệu",
     "description": "Giới thiệu về năng lực AI và Dữ liệu của CMC Consulting",
