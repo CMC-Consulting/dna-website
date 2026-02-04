@@ -164,12 +164,15 @@ export async function generateStaticParams() {
     }
   }
 
-  // Also add predefined important tags for data services
+  // Also add predefined important tags for products and services
   const predefinedTags = [
     "data-services",
     "data-governance",
     "data-lakehouse",
     "data-integration",
+    "prisma-ai",
+    "smart-email",
+    "smart-invoice",
   ];
   for (const locale of LOCALES) {
     for (const tag of predefinedTags) {

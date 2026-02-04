@@ -306,7 +306,10 @@
       "sap": "SAP",
       "enterprise": "Doanh nghiệp",
       "automation": "Tự động hóa",
-      "llm": "Mô hình Ngôn ngữ Lớn"
+      "llm": "Mô hình Ngôn ngữ Lớn",
+      "prisma-ai": "Prisma AI",
+      "smart-email": "Smart Email",
+      "smart-invoice": "Smart Invoice"
     }
   },
   "About": {

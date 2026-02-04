@@ -305,7 +305,10 @@
       "sap": "SAP",
       "enterprise": "Enterprise",
       "automation": "Automation",
-      "llm": "Large Language Models"
+      "llm": "Large Language Models",
+      "prisma-ai": "Prisma AI",
+      "smart-email": "Smart Email",
+      "smart-invoice": "Smart Invoice"
     }
   },
   "About": {

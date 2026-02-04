@@ -291,7 +291,7 @@ const ProductShowcase = ({
             variant="outline"
             className="px-6 py-3 text-sm font-semibold"
           >
-            <Link href="/contact" aria-label={`Learn more about ${product.title}`}>
+            <Link href={`/blog/tag/${product.id}`} aria-label={`Learn more about ${product.title}`}>
               {t("cta.learnMore")}
             </Link>
           </Button>
