@@ -587,7 +587,8 @@
       "roles": {
         "founderCEO": "Founder - CEO",
         "aiEngineer": "AI Engineer",
-        "fullstackEngineer": "Fullstack Engineer"
+        "fullstackEngineer": "Fullstack Engineer",
+        "accountmanager": "Account Manager"
       }
     }
   }

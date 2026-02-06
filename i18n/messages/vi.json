@@ -588,7 +588,8 @@
       "roles": {
         "founderCEO": "Người sáng lập - Giám đốc giải pháp Data & AI",
         "aiEngineer": "Kỹ sư AI",
-        "fullstackEngineer": "Kỹ sư Phần mềm"
+        "fullstackEngineer": "Kỹ sư Phần mềm",
+        "accountmanager": "Chuyên viên kinh doanh"
       }
     }
   }
