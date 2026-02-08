@@ -32,32 +32,27 @@
   "Footer": {
     "Brand": {
       "name": "CMCC AI",
-      "description": "Chúng tôi là đội ngũ chuyên gia Dữ liệu và AI của CMC Consulting, đồng hành cùng doanh nghiệp xây dựng chiến lược dữ liệu và giải pháp AI."
+      "description": "Chúng tôi là đội ngũ chuyên gia Dữ liệu và AI của CMC Corporation, đồng hành cùng doanh nghiệp khai thác sức mạnh của AI và dữ liệu để đạt được mục tiêu kinh doanh."
     },
     "Columns": {
       "Product": {
-        "title": "Sản phẩm",
-        "features": "Tính năng",
-        "pricing": "Bảng giá",
-        "testimonials": "Khách hàng nói gì",
-        "supportedLanguages": "Ngôn ngữ hỗ trợ"
+        "title": "Sản phẩm"
       },
       "Solutions": {
         "title": "Giải pháp",
-        "contentCreators": "Nhà sáng tạo nội dung",
-        "businesses": "Doanh nghiệp",
-        "education": "Giáo dục",
-        "enterprise": "Tổ chức lớn"
+        "allSolutions": "Tất cả Giải pháp",
+        "aiProducts": "Sản phẩm AI",
+        "dataServices": "Dịch vụ Dữ liệu"
       },
       "Resources": {
         "title": "Tài nguyên",
-        "blog": "Blog",
-        "translationGuides": "Hướng dẫn dịch",
+        "blog": "Bài viết Công nghệ",
         "support": "Hỗ trợ"
       },
       "Company": {
         "title": "Công ty",
         "aboutUs": "Về chúng tôi",
+        "contact": "Liên hệ",
         "privacyPolicy": "Chính sách bảo mật",
         "termsConditions": "Điều khoản & Điều kiện"
       }
@@ -586,5 +581,18 @@
         "accountmanager": "Chuyên viên kinh doanh"
       }
     }
+  },
+  "BlogCTA": {
+    "badge": "Cập nhật mới nhất",
+    "title": "Đừng bỏ lỡ những bài viết mới nhất",
+    "description": "Đăng ký nhận bản tin để nhận những thông tin mới nhất về AI, kỹ thuật dữ liệu và công nghệ trực tiếp qua email.",
+    "placeholder": "Nhập địa chỉ email của bạn",
+    "subscribe": "Đăng ký",
+    "subscribing": "Đang đăng ký...",
+    "successMessage": "Đăng ký thành công! Vui lòng kiểm tra email xác nhận.",
+    "defaultErrorMessage": "Vui lòng nhập địa chỉ email hợp lệ",
+    "errorMessage": "Đăng ký thất bại",
+    "errorMessage2": "Đăng ký thất bại. Vui lòng thử lại sau.",
+    "privacyNote": "Chúng tôi tôn trọng quyền riêng tư của bạn. Hủy đăng ký bất cứ lúc nào."
   }
 }

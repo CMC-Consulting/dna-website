@@ -1,3 +1,4 @@
+import { BlogCTA } from "@/components/blog/BlogCTA";
 import { Callout } from "@/components/mdx/Callout";
 import MDXComponents from "@/components/mdx/MDXComponents";
 import { Link as I18nLink, Locale, LOCALES } from "@/i18n/routing";
@@ -154,6 +155,9 @@ export default async function BlogPage({ params }: { params: Params }) {
 
         {/* Featured Posts Carousel */}
         <FeaturedPostsCarousel posts={posts} currentSlug={post.slug} />
+
+        {/* CTA */}
+        <BlogCTA />
 
         {/* Footer */}
         <footer className="mt-10 pt-6 border-t border-border sm:mt-16 sm:pt-8">
