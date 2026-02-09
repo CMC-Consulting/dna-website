@@ -1,0 +1,53 @@
+---
+title: "Smart Email Agent - Microservices Architecture on Azure Kubernetes Service (AKS)"
+slug: /smart-email-agent-microservices-architecture
+image: /blog/9.11.jpg
+tags: smart-email-agent, microservices, AKS, Azue, Cloud, CMCConsulting, Data, AI
+date: 2026-01-30
+visible: published
+pin: false
+---
+**Microservices Architecture on Azure Kubernetes Service (AKS): Ensuring Operation and Scalability**
+
+To build an email information processing system capable of handling large enterprise scale, **Smart Email Agent** is designed based on a modern **Microservices** architecture, deployed on the **Azure Kubernetes Service (AKS)** platform. This is the technological "heart" that helps the system operate stably, flexibly, and always ready to scale according to data needs.
+
+**1. Why Microservices on AKS?**
+
+Unlike monolithic architectures, our solution breaks down functions into independent services. Using AKS offers significant technical advantages:
+
+• **Fault Isolation:** If one service (e.g., Summary Service) fails, other services like Search or Labeling continue to function normally, ensuring the system doesn't completely fail.
+
+• **Flexible Horizontal Scalability:** The system can automatically increase resources for an overloaded service (such as when tens of thousands of emails need to be shut down simultaneously) without scaling the entire platform.
+
+• **Independent Deployment:** The technical team can update or upgrade individual AI modules without disrupting the user experience.
+
+<img src="/blog/9.11-1.jpg" alt="Image Description" width={800} Height={600} />
+**2\. Service Core Analysis in the System**
+
+**Search Service (Search Service) – Metadata and Vector Combination:** The Search Service acts as a powerful API endpoint, combining **structured queries** on the Cosmos DB and **semantic queries** via vector embeddings. By separating the search service, we optimize the response speed of complex user queries without putting pressure on the service's input data processing.
+
+**Summarization Service (Summarization Service) – High-Performance Asynchronous Processing:** This service is designed to process using a **queue-based asynchronous processing** mechanism. When emails are downloaded from the Microsoft Graph API, they are placed into the Azure Service Bus. The Summary Service will "consume" these messages from the queue and call the Azure OpenAI model to extract core information. This approach ensures the system can handle extremely large volumes of archived emails (high throughput) without performing other time-consuming tasks.
+
+**3. Enterprise Transport and Monitoring**
+
+To ensure transparency and performance, the microservices architecture on AKS is deeply integrated with the Azure ecosystem:
+
+• **Azure API Gateway:** Acts as a single gateway, coordinating and routing requests from the Web Portal to the correct microservice securely.
+
+• **Azure Monitor & Application Insights:** Monitors the health of each container, logs analytics, and detects anomalies early during AI classification or summarization.
+
+• **Secure Layer Network:** Microservices connect to the Cosmos DB database via **private endpoints**, ensuring email data is never exposed on the public internet.
+
+**4. Conclusion**
+
+Choosing AKS as your microservices development platform not only helps Smart Email Agent achieve optimal performance but also builds a solid foundation for businesses to integrate more advanced data analytics architectures in the future.
+
+--------------------------------------------------------------------------------
+
+**Interested in applying modern AI architecture to your business?**
+
+Let our experts discuss in more detail how to optimize your cloud infrastructure for your data challenges. We provide a **Proof of Concept (PoC)** development declaration to help you test the power of microservices architecture directly on a real system.
+
+👉 **[CONTACT OUR TECHNICAL TEAM FOR DETAILED PROPOSAL]** Discover how we transform traditional email infrastructure into a high-performance, AI-driven system.
+
+**Join CMC Consulting in leading the technology revolution in data management!**

@@ -1,0 +1,58 @@
+---
+title: "Tìm kiếm ngữ nghĩa (Semantic Search) với Vector Embeddings và Cosmos DB"
+slug: /smart-email-semantic-search-vector-embedding
+image: /blog/9.18.jpg
+tags: smart-email, semantic-search, vector-embedding,openai, context, cmc-consulting, llm, gpt, prompt
+date: 2026-02-02
+visible: published
+pin: false
+---
+
+Trong các hệ thống quản lý truyền thống, việc tìm kiếm thường dựa trên việc khớp từng từ khóa (Keyword Matching), điều này dễ dẫn đến việc bỏ sót thông tin nếu người dùng không nhớ chính xác thuật ngữ trong email. **Smart Email Agent** vượt qua rào cản này bằng cách ứng dụng **Tìm kiếm ngữ nghĩa**, cho phép hệ thống hiểu được ý định và ngữ cảnh đằng sau mỗi câu hỏi của người dùng. 
+
+**1\. Chuyển đổi văn bản thành "Ngôn ngữ toán học" (Vector Embeddings)** 
+
+Cốt lõi của công nghệ này là quá trình chuyển đổi các nội dung email phi cấu trúc thành các **Vector Embeddings**. 
+
+• **Mô hình nhúng (Embedding Model):** Hệ thống sử dụng mô hình tiên tiến của Azure OpenAI (ví dụ: text-embedding-ada-002) để biến văn bản thành các dãy số đa chiều (dense vectors). 
+
+• **Đại diện cho ý nghĩa:** Các vector này không chỉ đại diện cho mặt chữ mà còn đại diện về mặt toán học cho **ý nghĩa thực sự** của đoạn văn. Những email có nội dung tương đồng về mặt ngữ cảnh sẽ có các tọa độ vector nằm gần nhau trong không gian đa chiều. 
+<img src="/blog/9.18-1.jpg" alt="Description of the image" width={800} height={600} />   
+**2\. Lưu trữ và truy xuất trên Azure Cosmos DB** 
+
+Sau khi được tạo ra, các vector này cần một hạ tầng lưu trữ chuyên biệt để có thể tìm kiếm với tốc độ cực nhanh. 
+
+• **Vector Index chuyên dụng:** Dữ liệu vector được lưu trữ trong một container riêng biệt gọi là **Vector Index Container** bên trong Cosmos DB. 
+
+• **Tối ưu hóa tìm kiếm:** Thay vì tìm kiếm theo hàng (row-by-row), hệ thống thực hiện **tìm kiếm tương đồng vector (vector similarity search)**. Khi người dùng đặt câu hỏi bằng ngôn ngữ tự nhiên, câu hỏi đó cũng đượcchuyển thành một vector, và hệ thống sẽ nhanh chóng xác định các email có vector "gần" với vector câu hỏi nhất. 
+
+**3\. Quy trình vận hành thực tế (Workflow)** 
+
+Hệ thống xử lý việc tìm kiếm ngữ nghĩa thông qua một luồng công việc tự động và bất đồng bộ: 
+
+1\. **Giai đoạn làm giàu dữ liệu:** Khi email mới được thu thập, **Summarization Service** sẽ gửi nội dung đến mô hình Azure OpenAI để tạo ra vector embedding tương ứng. 
+
+2\. **Giai đoạn lưu trữ:** Cả nội dung email gốc, bản tóm tắt và vector embedding đều được lưu trữ đồng bộ vào Cosmos DB. 
+
+3\. **Giai đoạn truy vấn:** Khi người dùng nhập truy vấn (ví dụ: "Tàu nào chở gạo bị chậm?"), **Search Service** sẽ gọi mô hình Embedding để chuyển câu hỏi thành vector và thực hiện đối soát trên Vector Index để trả về kếtquả chính xác về mặt ngữ cảnh. 
+
+<img src="/blog/9.18-2.jpg" alt="Description of the image" width={800} height={600} />   
+**4\. Lợi ích đột phá cho doanh nghiệp** 
+
+Việc kết hợp Vector Embeddings và Cosmos DB mang lại sự thay đổi toàn diện trong cách khám phá thông tin: 
+
+• **Tìm kiếm theo ý hiểu:** Bạn có thể tìm thấy thông tin ngay cả khi không sử dụng chính xác từ ngữ có trong email. 
+
+• **Hiệu suất vượt trội:** Khả năng truy xuất nhanh chóng trên quy mô dữ liệu lớn nhờ cấu trúc phân tán của Cosmos DB. 
+
+• **Kết hợp linh hoạt:** Hệ thống có thể thực hiện **Truy vấn hỗn hợp (Hybrid Query)** – kết hợp giữa lọc theo metadata (như ngày, tên tàu) và tìm kiếm theo ngữ nghĩa để đưa ra kết quả chính xác nhất. 
+
+\--------------------------------------------------------------------------------  
+
+**Bạn muốn hiện đại hóa cách thức tìm kiếm dữ liệu trong doanh nghiệp?** 
+
+Công nghệ Tìm kiếm ngữ nghĩa với Vector Embeddings chính là tương lai của quản trị tri thức. Hãy để chúng tôi giúp bạn xây dựng một hệ thống không chỉ "lưu trữ" mà còn thực sự "hiểu" dữ liệu của bạn! 
+
+👉 **\[ĐĂNG KÝ TƯ VẤN KỸ THUẬT VỀ SEMANTIC SEARCH\]** _CMC Consulting sẽ trực tiếp trình bày cách giải pháp này hoạt động trên dữ liệu thực tế của bạn và chứng minh hiệu quả tìm kiếm vượt trội._. 
+
+**Liên hệ với chúng tôi để sở hữu giải pháp tìm kiếm AI hàng đầu ngay hôm nay!**
