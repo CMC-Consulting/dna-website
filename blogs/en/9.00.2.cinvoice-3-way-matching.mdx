@@ -1,0 +1,62 @@
+---
+title: "Solving the tax compliance problem: Automated invoice verification with the General Department of Taxation (GDT) via the C.Invoice platform"
+slug: /cinvoice-3-way-matching
+image: /blog/9.001-1.jpg
+tags: smart-invoice, xu-ly-hoa-don, 3-way-matching, invoice, erp, sap
+date: 2026-01-30
+visible: published
+pin: false
+---
+**1. Challenges in Tax Administration and the Transition to Electronic Invoices in Vietnam**
+
+In the context of the digital economy, the transition to electronic invoices in Vietnam is not just a technological trend but has become a strict compliance requirement. The issuance of **Official Letter 1152/TCT-CS (2023)** plays a strategic role, establishing XML format as the only legitimate data structure, and simultaneously requiring businesses to establish a multi-tiered verification process with the General Department of Taxation (GDT) and sustainably store data for at least 10 years.
+
+From an ERP management perspective, the traditional invoice processing process is becoming the biggest "bottleneck" in the financial value chain. The "pain points" that businesses are facing include:
+
+- **Operational bottlenecks:** The large volume of invoices processed manually causes delays in the entire payment and cash flow management system.
+
+- **Compliance and Data Risks:** Manual data entry errors lead to inaccurate tax information, potentially resulting in penalties or denial of tax deductions by the tax authorities.
+
+- **Impact on Supplier Relationships (DPO):** Extended payment cycles due to complex reconciliation processes reduce the company's credibility with strategic partners.
+
+- **Lack of Centralized Monitoring:** The lack of a real-time dashboard makes it difficult for financial leaders to accurately assess the compliance status of entities and suppliers.
+
+**2. C.Invoice: Intelligent Middleware Connecting GDT Data and the SAP Ecosystem**
+
+**C.Invoice** is not simply a document processing tool; it acts as a strategic middleware layer connecting unstructured data streams from the General Department of Taxation (GDT) to the tightly structured data of the SAP ERP system. As a component of CMC Consulting's **SAP AI Agents** ecosystem, C.Invoice applies AI and OCR to transform processes from "human-based" to "data-based".
+
+C.Invoice's data extraction mechanism achieves an accuracy of over **95%**, automatically mapping non-standardized product descriptions from suppliers to standardized Material Codes in SAP.
+
+Comparison of Invoice Processing Processes:
+
+| Criteria | Traditional Process | Process vs. C.Invoice |
+| ------------------- | ---------------------------------------- | --------------------------------------- |
+| Processing Mechanism | Manual Input | Automation via AI/OCR in 5 minutes |
+| Tax Verification | Discrete Verification on the GDT Portal | 100% Real-Time Verification with GDT |
+| Matching | Manual 3-way match | Intelligent Automated Fuzzy Matching |
+| ERP Recording | Manual recording, prone to data errors | Automated posting via API, instant feedback |
+| Accuracy | Depends on personnel skill | 98%+ for matching operations |
+
+**3. "Audit-Readiness as a Service": Ensuring absolute legal compliance with the General Department of Taxation**
+
+In the digital age, invoice verification is not only for payment but also for preparing for future tax audits. C.Invoice provides **"Audit-Readiness"** through a multi-layered protection mechanism:
+
+- **Invoice Status Verification:** Directly check on the GDT portal to ensure the invoice is valid and has not been illegally canceled or modified.
+
+- **Taxpayer Status Verification:** The system automatically alerts if the supplier is in tax arrears, violating the law, or is in a state of absconding, helping businesses proactively prevent financial risks.
+
+- **Technical Integrity:** Verify digital signatures and XML formatting to ensure documents are not tampered with after issuance.
+
+- **Digital Audit Proof:** The system automatically **saves screenshots of search results with timestamps**. This is a key feature that shifts the "burden of proof" for businesses with tax authorities, ensuring legal records are always perfect and transparent.
+
+**4.** 3-Way Matching and SAP Automation**
+
+The true power of C.Invoice lies in its deep integration with the SAP purchasing process. The system uses a **Fuzzy Matching** algorithm to perform reconciliation between Invoices, Purchase Orders (PO), and Goods Receipts (GR), even when there are differences in the language used in the supplier's invoice descriptions.
+
+**Flexible and Configurable Business Rules:**
+
+- **Value Tolerance:** Allows configuring tolerances for price (default ±2%) and quantity (default ±5%) to automatically handle small discrepancies within acceptable limits.
+
+- **Duplicate Control:** Automatically prevents duplicate invoices from being issued to the same supplier.
+
+- **Real-time API Integration:** After successful reconciliation, the system directly posts the **Post Invoice Receipt** to SAP. A key difference is that C.Invoice will retrieve and display the **SAP Document Number** directly on the interface, as a final confirmation of successful reconciliation.

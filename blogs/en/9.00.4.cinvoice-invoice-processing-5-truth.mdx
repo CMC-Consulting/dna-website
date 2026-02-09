@@ -1,0 +1,76 @@
+---
+title: "5 Surprising Facts About an Electronic Invoice: The Journey Behind the Numbers"
+slug: /cinvoice-invoice-processing-5-truth
+image: /blog/9.00.jpg
+tags: smart-invoice, 3-way-matching, invoice, erp, sap, xu-ly-hoa-don
+date: 2026-01-21
+visible: published
+pin: false
+---
+Most of us are familiar with receiving electronic invoices via email as a familiar PDF file. It seems simple, but behind each file lies an incredibly complex and intelligent automation process. Let's explore five surprising facts hidden behind the processing process that you may never have known.
+
+**Five Revelations About Automated Invoice Processing**
+
+**1. The PDF You Receive Is Not the Real Invoice**
+
+This may sound unbelievable, but the PDF file you usually see is only a visual "representation" of the invoice. In Vietnam, the truly legally valid document is a different accompanying file: the XML file. According to Circular 1152/TCT-CS of 2023, this is the original document recognized by the tax authorities.
+
+"XML is the legally valid document, while PDF is only a representation."
+
+This counterintuitive fact means that all verification, validation, and storage processes are centered on the XML file to ensure integrity and validity, while the PDF file only serves to make the information easier for humans to read.
+
+**2. Every Invoice Must Pass a Comprehensive 'Health Check'**
+
+Before being accepted, each electronic invoice must undergo a series of rigorous automated checks. The system scans every detail to ensure everything is absolutely accurate. Some examples of these checks include:
+
+- **Buyer Information Verification:** The system verifies whether your tax identification number, company name, and address match the registered information.
+
+- **Number Matching:** The total amount before tax, tax amount, and total payment amount must match between the total invoice and the total of each item (the system allows for very small discrepancies, only a few tens to over one hundred dong).
+
+- **Integrity Verification:** The system checks the validity of the digital signature and, more importantly, ensures that the invoice has not been altered after issuance.
+
+Any serious errors, such as an incorrect buyer's tax identification number or the detection of an altered invoice, will cause the system to automatically **"Reject"** immediately. This is not just about catching spelling errors; it's the first line of defense against potential payment errors and fraud, ensuring that the company only pays for what is valid.
+
+**3. The System Not Only Verifies Invoices But Also 'Scrutinizes' the Suppliers_**
+
+The verification process doesn't stop at the invoice itself. The system goes a step further: it verifies the supplier (the seller). Using the seller's tax identification number, the system automatically searches the General Department of Taxation's portal to verify key points:
+
+- Is the supplier currently operating?
+
+- Are they on the list of businesses with tax risks, tax debts, or even those that have absconded?
+
+This step transforms the system from a simple invoice processing tool into a proactive risk management tool. It automatically alerts suppliers to potential problems before a payment is processed, helping businesses avoid legally or financially complex transactions with unreliable partners.
+
+**4. Invoice Reconciliation is a Sophisticated 'Scoring Game'**
+
+When needing to reconcile invoices with purchase orders (POs), the system doesn't perform a rigid 1-to-1 comparison. Instead, it uses an intelligent "scoring system" to find the best match between the product lines on the invoice and the purchase order (PO). Three main factors are scored:
+
+- **Product Name:** Scored based on the percentage of textual similarity (e.g., 90% similarity earns 0.9 points).
+
+- **Quantity:** Scores are not based on matching the quantity, but on a more important question: "Has the company actually received this shipment?" The system awards 1 point if a corresponding Goods Receipt has been recorded for the order, and 0 points if not. This ensures the company only pays for what has arrived at the warehouse.
+
+- **Unit Price:** 1 point if the unit price matches exactly, 0 points if different.
+
+This flexible approach allows the system to find the optimal matching pair, even when the product names on the invoice and the purchase order are not 100% identical – a very common problem in practice.
+
+**5. Invoice Data Protected by Multiple Layers of 'Fortress-Level' Security**
+
+Given the sensitive nature of financial data, security is paramount. A modern invoice processing system employs multiple layers of robust protection, similar to a digital fortress:
+
+- **Data Encryption:** All invoice data is encrypted using the AES-256 algorithm, one of the strongest encryption standards currently available.
+
+- **Two-Factor Authentication (2FA):** Users are required to authenticate an additional step via email when logging in, preventing unauthorized access even if their password is compromised.
+
+- **Secure Storage:** Data is stored in leading global cloud services such as AWS (S3) and Google (GCS), ensuring stability and physical security.
+
+- **Strict Access Control:** Even internal staff have access limited to the minimum necessary for their work. Every access action or data modification is recorded for verification.
+
+<img src="/blog/9.00-1.jpg" alt="Description of the image" width={800} height={600} />
+
+**Conclusion: A New Perspective on a Familiar Document**
+
+Clearly, an electronic invoice is not just a simple payment document. It is the final product of a complex technological process, designed to ensure accuracy, legal compliance, and absolute security. The next time you receive an electronic invoice, will you still see it as a simple file?
+
+Please **leave your information** (email / phone number / department you are interested in) in the comments below or contact us directly via the form on the website: [**ai.cmcconsulting.vn**](http://ai.cmcconsulting.vn) (or email: [contact@cmc.com.vn](mailto:contact@cmc.com.vn)).
+
+We will contact you within 24 hours to schedule a demo of **C.Invoice Experience** – a solution that helps accountants automatically detect, process, and prevent duplicate invoices in seconds, ensuring financial compliance and transparency!
