@@ -1,81 +1,37 @@
-"use client";
-
 import { ArrowRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/routing";
+import { getPosts } from "@/lib/getBlogs";
+
+type BlogSectionProps = {
+  locale: string;
+};
 
 type BlogPost = {
   id: string;
   title: string;
   excerpt: string;
-  author: string;
-  authorRole: string;
-  authorImage: string;
   image: string;
   slug: string;
-  featured?: boolean;
 };
 
-const BLOG_POST_IDS = ["1", "2", "3", "4", "5"] as const;
-const BLOG_POST_CONFIG: Record<
-  string,
-  { slug: string; image: string; authorImage: string; featured: boolean }
-> = {
-  "1": {
-    slug: "generative-ai-sap-enterprise-workflows",
-    image: "/blog/1.jpg",
-    authorImage: "/testimonials/amy-chase.webp",
-    featured: true,
-  },
-  "2": {
-    slug: "real-time-data-pipelines-sap-ai",
-    image: "/blog/2.jpg",
-    authorImage: "/testimonials/jonas-kotara.webp",
-    featured: false,
-  },
-  "3": {
-    slug: "ai-powered-business-intelligence",
-    image: "/blog/3.jpg",
-    authorImage: "/testimonials/kevin-yam.webp",
-    featured: false,
-  },
-  "4": {
-    slug: "sap-data-migration-cloud-strategy",
-    image: "/blog/4.jpg",
-    authorImage: "/testimonials/kundo-marta.webp",
-    featured: false,
-  },
-  "5": {
-    slug: "modern-data-architecture-enterprise",
-    image: "/blog/5.jpg",
-    authorImage: "/testimonials/amy-chase.webp",
-    featured: false,
-  },
-};
+export const BlogSection = async ({ locale }: BlogSectionProps) => {
+  const t = await getTranslations({ locale, namespace: "Home.blogSection" });
+  const { posts } = await getPosts(locale);
 
-export const BlogSection = () => {
-  const t = useTranslations("Home.blogSection");
+  const blogPosts: BlogPost[] = posts.map((post) => ({
+    id: post.slug,
+    title: post.title,
+    excerpt: post.description ?? "",
+    image: post.image || "/blog/1.jpg",
+    slug: post.slug,
+  }));
 
-  const blogPosts: BlogPost[] = BLOG_POST_IDS.map((id) => {
-    const config = BLOG_POST_CONFIG[id];
-    return {
-      id,
-      title: t(`posts.${id}.title`),
-      excerpt: t(`posts.${id}.excerpt`),
-      author: t(`posts.${id}.author`),
-      authorRole: t(`posts.${id}.authorRole`),
-      authorImage: config.authorImage,
-      image: config.image,
-      slug: config.slug,
-      featured: config.featured,
-    };
-  });
-
-  const featuredPost = blogPosts.find((post) => post.featured);
-  const regularPosts = blogPosts.filter((post) => !post.featured);
+  const featuredPost = blogPosts[0];
+  const regularPosts = blogPosts.slice(1, 5);
 
   return (
     <section className="bg-gray-50 w-full relative py-16 sm:py-20 lg:py-28">
@@ -206,7 +162,7 @@ export const BlogSection = () => {
           {featuredPost && (
             <div className="flex flex-col">
               <Link
-                href={`/blog/${featuredPost.slug}`}
+                href={`/blog${featuredPost.slug}`}
                 className="group relative mb-6 aspect-[4/3] overflow-hidden rounded-2xl bg-muted"
               >
                 <Image
@@ -216,25 +172,16 @@ export const BlogSection = () => {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </Link>
-              <Link href={`/blog/${featuredPost.slug}`}>
+              <Link href={`/blog${featuredPost.slug}`}>
                 <h3 className="mb-4 text-2xl font-bold leading-tight text-foreground transition-colors hover:text-primary md:text-3xl">
                   {featuredPost.title}
                 </h3>
               </Link>
-              <div className="mt-auto flex items-center gap-3">
-                <div className="relative size-10 overflow-hidden rounded-full">
-                  <Image
-                    src={featuredPost.authorImage}
-                    alt={featuredPost.author}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-foreground">{featuredPost.author}</p>
-                  <p className="text-sm text-muted-foreground">{featuredPost.authorRole}</p>
-                </div>
-              </div>
+              {featuredPost.excerpt && (
+                <p className="mt-2 text-base text-muted-foreground md:text-lg">
+                  {featuredPost.excerpt}
+                </p>
+              )}
             </div>
           )}
 
@@ -243,7 +190,7 @@ export const BlogSection = () => {
             {regularPosts.map((post) => (
               <Link
                 key={post.id}
-                href={`/blog/${post.slug}`}
+                href={`/blog${post.slug}`}
                 className="group flex items-center gap-5 py-5 first:pt-0 last:pb-0"
               >
                 <div className="relative size-16 shrink-0 overflow-hidden rounded-lg bg-muted md:size-20">

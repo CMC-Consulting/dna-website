@@ -6,7 +6,11 @@ import Hero from "@/components/hero";
 import LogoCloud from "@/components/logo-cloud";
 import { WhyUs } from "@/components/why-us";
 
-export default function HomeComponent() {
+type HomeComponentProps = {
+  locale: string;
+};
+
+export default function HomeComponent({ locale }: HomeComponentProps) {
   return (
     <>
       <Hero />
@@ -15,7 +19,7 @@ export default function HomeComponent() {
       <AIFeature />
       <DataServices />
       {/* <Testimonials /> */}
-      <BlogSection />
+      <BlogSection locale={locale} />
       <CTASection />
     </>
   );
