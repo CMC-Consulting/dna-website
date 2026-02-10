@@ -4,9 +4,6 @@ import { useState } from "react";
 
 import { ChevronRight } from "lucide-react";
 
-import { Link, usePathname } from "@/i18n/routing";
-
-import Icons from "@/components/global/icons";
 import { LanguageSwitcher } from "@/components/header/LanguageSwitcher";
 import MainButton from "@/components/ui/main-button";
 import {
@@ -17,8 +14,10 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { Link, usePathname } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export const Navbar = () => {
   const t = useTranslations("Navbar");
@@ -63,7 +62,14 @@ export const Navbar = () => {
     >
       <div className="flex items-center justify-between px-6 py-3">
         <Link href="/" className="flex shrink-0 items-center gap-2 text-[#276df0]">
-          <Icons.icon className="w-auto h-5 font-bold" />
+          <Image
+            src="/logos/logo.png"
+            alt="CMC Consulting AI"
+            width={20}
+            height={20}
+            className="h-5 w-auto"
+            priority
+          />
           <span className="text-base md:text-lg font-bold">
             CMC Consulting AI
           </span>

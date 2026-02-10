@@ -31,7 +31,7 @@
   },
   "Footer": {
     "Brand": {
-      "name": "CMC Consulting AI",
+      "name": "CMCC AI",
       "description": "Chúng tôi là đội ngũ chuyên gia Dữ liệu và AI của CMC Consulting, đồng hành cùng doanh nghiệp xây dựng chiến lược dữ liệu và giải pháp AI."
     },
     "Columns": {
@@ -187,18 +187,12 @@
         "openIntegrable": {
           "title": "Mở & Dễ tích hợp",
           "description": "Kết nối linh hoạt với hệ thống và nền tảng sẵn có của doanh nghiệp.",
-          "bullets": [
-            "API-first",
-            "Tích hợp đa hệ thống"
-          ]
+          "bullets": ["API-first", "Tích hợp đa hệ thống"]
         },
         "outcomesDriven": {
           "title": "Hướng tới Kết quả",
           "description": "Mọi giải pháp đều gắn với chỉ số hiệu quả kinh doanh cụ thể.",
-          "bullets": [
-            "Tối ưu chi phí vận hành",
-            "Tăng năng suất nhân sự"
-          ]
+          "bullets": ["Tối ưu chi phí vận hành", "Tăng năng suất nhân sự"]
         }
       }
     },

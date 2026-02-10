@@ -31,7 +31,7 @@
   },
   "Footer": {
     "Brand": {
-      "name": "CMC Consulting AI",
+      "name": "CMCC AI",
       "description": "We are a team of experts who are passionate about helping businesses grow."
     },
     "Columns": {
@@ -169,35 +169,22 @@
         "aiFirst": {
           "title": "AI-First",
           "description": "Build with modern AI capabilities from day one.",
-          "bullets": [
-            "Agentic AI",
-            "RAG",
-            "Multimodal"
-          ]
+          "bullets": ["Agentic AI", "RAG", "Multimodal"]
         },
         "enterpriseReady": {
           "title": "Enterprise-Ready",
           "description": "Built for real-world enterprise constraints.",
-          "bullets": [
-            "Security",
-            "Governance",
-            "Privacy"
-          ]
+          "bullets": ["Security", "Governance", "Privacy"]
         },
         "openIntegrable": {
           "title": "Open & Integrable",
           "description": "Fits into your stack and ships everywhere.",
-          "bullets": [
-            "API-first",
-            "Embed anywhere"
-          ]
+          "bullets": ["API-first", "Embed anywhere"]
         },
         "outcomesDriven": {
           "title": "Outcomes-Driven",
           "description": "Optimized for measurable business results.",
-          "bullets": [
-            "Focus on business impact"
-          ]
+          "bullets": ["Focus on business impact"]
         }
       }
     },

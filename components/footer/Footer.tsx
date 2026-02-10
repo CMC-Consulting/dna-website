@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 
 import { Link } from "@/i18n/routing";
-import Icons from "../global/icons";
+import Image from "next/image";
 
 type FooterLinkGroup = {
   title: string;
@@ -30,7 +30,13 @@ const Footer = () => {
           <div className="w-full h-full">
             <div className="flex flex-col items-start justify-start md:max-w-[200px]">
               <div className="flex items-center gap-2 text-[#276df0]">
-                <Icons.icon className="w-auto h-5" />
+                <Image
+                  src="/logos/logo.png"
+                  alt={brandName}
+                  width={20}
+                  height={20}
+                  className="h-5 w-auto"
+                />
                 <span className="text-2xl md:text-lg font-bold">
                   {brandName}
                 </span>
