@@ -15,6 +15,19 @@ AI tạo sinh đã vượt ra khỏi các ứng dụng tiêu dùng để đi và
 
 ## Các Ứng Dụng Chính của AI Tạo Sinh trong SAP
 
+<Mermaid
+  chart={`
+graph LR
+    A[Microsoft Graph API] -->|Webhook / Poll| B[Ingestion Layer]
+    B -->|Message Queue| C[Processing Worker]
+    C -->|AI Inference| D[Azure OpenAI]
+    C -->|Encrypt + Persist| E[Cosmos DB]
+    F[Client Application] -->|REST| G[Serving Layer - FastAPI]
+    G -->|Hybrid Search| E
+    G -->|Auth| H[Azure AD]
+`}
+/>
+
 ### Tạo Tài Liệu Thông Minh
 
 AI tạo sinh tự động hóa việc tạo tài liệu kinh doanh:
@@ -30,12 +43,12 @@ AI tạo sinh tự động hóa việc tạo tài liệu kinh doanh:
 
 Trợ lý AI tích hợp của SAP biến đổi cách người dùng tương tác với hệ thống:
 
-| Khả Năng | Ví Dụ Sử Dụng |
-|----------|---------------|
+| Khả Năng                   | Ví Dụ Sử Dụng                                  |
+| -------------------------- | ---------------------------------------------- |
 | Truy Vấn Ngôn Ngữ Tự Nhiên | "Cho tôi xem các hóa đơn quá hạn từ quý trước" |
-| Hướng Dẫn Quy Trình | "Làm thế nào để tạo ghi chú tín dụng?" |
-| Phân Tích Dữ Liệu | "Điều gì đang làm tăng chi phí mua sắm?" |
-| Tự Động Hóa Tác Vụ | "Tạo đơn đặt hàng cho văn phòng phẩm" |
+| Hướng Dẫn Quy Trình        | "Làm thế nào để tạo ghi chú tín dụng?"         |
+| Phân Tích Dữ Liệu          | "Điều gì đang làm tăng chi phí mua sắm?"       |
+| Tự Động Hóa Tác Vụ         | "Tạo đơn đặt hàng cho văn phòng phẩm"          |
 
 ### Tạo Code và Phát Triển
 
@@ -126,6 +139,7 @@ Sử dụng AI tạo sinh cho mô tả sản phẩm:
 ### 1. Bắt Đầu với Các Trường Hợp Giá Trị Cao, Rủi Ro Thấp
 
 Bắt đầu ở nơi AI tăng giá trị mà không có rủi ro quan trọng:
+
 - Tài liệu nội bộ
 - Bản nháp giao tiếp (có đánh giá của con người)
 - Đề xuất code (được nhà phát triển xác nhận)
@@ -133,6 +147,7 @@ Bắt đầu ở nơi AI tăng giá trị mà không có rủi ro quan trọng:
 ### 2. Thiết Lập Khung Quản Trị
 
 Trước khi mở rộng, xác định:
+
 - Chính sách sử dụng chấp nhận được
 - Quy trình xử lý dữ liệu
 - Quy trình đảm bảo chất lượng
@@ -141,6 +156,7 @@ Trước khi mở rộng, xác định:
 ### 3. Đào Tạo Đội Ngũ
 
 Thành công đòi hỏi sự chấp nhận của người dùng:
+
 - Workshop về kỹ thuật viết prompt
 - Thực hành tốt nhất cho tương tác AI
 - Hiểu các giới hạn của AI
@@ -148,6 +164,7 @@ Thành công đòi hỏi sự chấp nhận của người dùng:
 ### 4. Đo Lường và Lặp Lại
 
 Theo dõi các chỉ số có ý nghĩa:
+
 - Thời gian tiết kiệm cho mỗi tác vụ
 - Chất lượng đầu ra AI
 - Điểm hài lòng của người dùng
@@ -168,4 +185,4 @@ Hành trình đến AI tạo sinh trong SAP bắt đầu với việc hiểu cá
 
 ---
 
-*Sẵn sàng khám phá AI tạo sinh cho môi trường SAP của bạn? Đội ngũ của chúng tôi có thể giúp bạn xác định các trường hợp sử dụng có tác động cao và xây dựng lộ trình triển khai.*
+_Sẵn sàng khám phá AI tạo sinh cho môi trường SAP của bạn? Đội ngũ của chúng tôi có thể giúp bạn xác định các trường hợp sử dụng có tác động cao và xây dựng lộ trình triển khai._

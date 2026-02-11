@@ -2,6 +2,7 @@ import { Aside } from "@/components/mdx/Aside";
 import { Callout } from "@/components/mdx/Callout";
 import { MdxCard } from "@/components/mdx/MdxCard";
 import React, { ReactNode } from "react";
+import { Mermaid } from "./MermaidClient";
 
 interface HeadingProps {
   level: 1 | 2 | 3 | 4 | 5 | 6;
@@ -120,6 +121,9 @@ const MDXComponents: MDXComponentsProps = {
   Aside,
   Callout,
   Card: MdxCard,
+  Mermaid,
+  // mdx-mermaid remark plugin emits a lowercase <mermaid /> element for ```mermaid fences
+  mermaid: Mermaid,
 };
 
 export default MDXComponents;

@@ -1,0 +1,84 @@
+---
+title: "Mermaid Diagram Example"
+description: "How to use Mermaid diagrams in your blog posts"
+slug: /mermaid-example
+tags: mermaid,diagrams,tutorial
+date: 2026-02-11
+visible: draft
+pin: false
+---
+
+## Introduction
+
+This is an example of how to use Mermaid diagrams in your MDX blog posts.
+
+## Using Mermaid Component
+
+To add a Mermaid diagram, use the `<Mermaid>` component with the `chart` prop:
+
+<Mermaid chart={`
+graph LR
+    A[Microsoft Graph API] -->|Webhook / Poll| B[Ingestion Layer]
+    B -->|Message Queue| C[Processing Worker]
+    C -->|AI Inference| D[Azure OpenAI]
+    C -->|Encrypt + Persist| E[Cosmos DB]
+    F[Client Application] -->|REST| G[Serving Layer - FastAPI]
+    G -->|Hybrid Search| E
+    G -->|Auth| H[Azure AD]
+`} />
+
+## Flowchart Example
+
+<Mermaid chart={`
+graph TD
+    A[Start] --> B{Is it working?}
+    B -->|Yes| C[Great!]
+    B -->|No| D[Debug]
+    D --> A
+`} />
+
+## Sequence Diagram Example
+
+<Mermaid chart={`
+sequenceDiagram
+    participant User
+    participant App
+    participant API
+    participant Database
+    
+    User->>App: Request data
+    App->>API: Fetch data
+    API->>Database: Query
+    Database-->>API: Return results
+    API-->>App: Send data
+    App-->>User: Display results
+`} />
+
+## Class Diagram Example
+
+<Mermaid chart={`
+classDiagram
+    class Animal {
+        +String name
+        +int age
+        +makeSound()
+    }
+    class Dog {
+        +String breed
+        +bark()
+    }
+    class Cat {
+        +String color
+        +meow()
+    }
+    Animal <|-- Dog
+    Animal <|-- Cat
+`} />
+
+## Tips
+
+- Always wrap your Mermaid code in the `<Mermaid chart={\`...\`} />` component
+- Use backticks (`) to wrap the chart definition
+- Make sure there are no syntax errors in your Mermaid code
+- You can test your Mermaid diagrams at [mermaid.live](https://mermaid.live)
+

@@ -7,6 +7,7 @@ import { constructMetadata } from "@/lib/metadata";
 import { BlogPost } from "@/types/blog";
 import dayjs from "dayjs";
 import { ArrowLeft, Calendar, Clock, Tag } from "lucide-react";
+import mdxMermaid from "mdx-mermaid";
 import { Metadata } from "next";
 import { MDXRemote } from "next-mdx-remote-client/rsc";
 import Image from "next/image";
@@ -16,7 +17,10 @@ import { FeaturedPostsCarousel } from "./FeaturedPostsCarousel";
 
 const mdxOptions = {
   mdxOptions: {
-    remarkPlugins: [remarkGfm],
+    // Support both:
+    // 1) <Mermaid chart={`...`} /> component usage
+    // 2) ```mermaid code fences (transformed by mdx-mermaid remark plugin)
+    remarkPlugins: [remarkGfm, mdxMermaid],
   },
 };
 
