@@ -63,6 +63,41 @@ export const ContactForm = () => {
             errors={state.errors}
           />
         </div>
+
+        <div>
+          <label
+            htmlFor="company"
+            className="block text-sm font-medium mb-2"
+          >
+            {t("companyLabel")}
+          </label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+            disabled={state.submitting}
+            autoComplete="organization"
+            className="w-full px-4 py-3 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            placeholder={t("companyPlaceholder")}
+          />
+        </div>
+        <div>
+          <label
+            htmlFor="position"
+            className="block text-sm font-medium mb-2"
+          >
+            {t("positionLabel")}
+          </label>
+          <input
+            type="text"
+            id="position"
+            name="position"
+            disabled={state.submitting}
+            autoComplete="organization-title"
+            className="w-full px-4 py-3 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            placeholder={t("positionPlaceholder")}
+          />
+        </div>
       </div>
 
       <div>
