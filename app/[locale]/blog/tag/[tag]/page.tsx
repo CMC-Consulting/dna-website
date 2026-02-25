@@ -2,9 +2,9 @@ import { BlogCard } from "@/app/[locale]/blog/BlogCard";
 import { InfiniteScrollPosts } from "@/app/[locale]/blog/InfiniteScrollPosts";
 import { Button } from "@/components/ui/button";
 import { Link, Locale, LOCALES } from "@/i18n/routing";
-import { getPostsByTag, getAllTags } from "@/lib/getBlogs";
+import { getAllTags, getPostsByTag } from "@/lib/getBlogs";
 import { constructMetadata } from "@/lib/metadata";
-import { BookOpen, ArrowLeft, Tag } from "lucide-react";
+import { ArrowLeft, BookOpen, Tag } from "lucide-react";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
@@ -45,7 +45,7 @@ export default async function TagPage({ params }: { params: Params }) {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative mt-20 md:mt-32 overflow-hidden border-b border-border/40 bg-gradient-to-b from-muted/50 to-background w-screen left-1/2 -translate-x-1/2">
+      <section className="relative overflow-hidden border-b border-border/40 bg-gradient-to-b from-muted/50 to-background w-screen left-1/2 -translate-x-1/2">
         <div className="absolute inset-0 -z-10">
           <div
             className="absolute inset-0 opacity-30"
@@ -57,22 +57,22 @@ export default async function TagPage({ params }: { params: Params }) {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         </div>
 
-        <div className="w-full px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-12">
-          <div className="mx-auto max-w-3xl text-center">
+        <div className="w-full  mt-20 md:mt-32  px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-12">
+          <div className="mx-auto max-w-4xl text-center">
             {/* Back Link */}
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-6 transition-colors"
+              className="group inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-6 transition-colors"
             >
-              <ArrowLeft className="size-4" />
+              <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-0.5" />
               {t("backToBlog")}
             </Link>
 
             {/* Tag Badge */}
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Tag className="size-5 text-primary" />
-              <span className="text-sm font-medium text-primary uppercase tracking-wider">
-                {tagName}
+            <div className="mb-5 flex flex-wrap items-center justify-center gap-3">
+              <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+                <Tag className="size-4" />
+                <span className="max-w-[min(60vw,420px)] truncate">{tagName}</span>
               </span>
             </div>
 
@@ -81,13 +81,20 @@ export default async function TagPage({ params }: { params: Params }) {
               {t("title", { tag: tagName })}
             </h1>
 
+            {/* Description */}
+            <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground sm:text-xl">
+              {t("description", { tag: tagName })}
+            </p>
+
             {/* Stats */}
-            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-              <BookOpen className="size-5 text-primary" />
-              <span>
-                <strong className="text-foreground">{posts.length}</strong>{" "}
-                {t("articlesCount", { count: posts.length })}
-              </span>
+            <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-muted-foreground">
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-4 py-2 backdrop-blur">
+                <BookOpen className="size-4 text-primary" />
+                <span>
+                  <strong className="text-foreground">{posts.length}</strong>{" "}
+                  {t("articlesCount", { count: posts.length })}
+                </span>
+              </div>
             </div>
           </div>
         </div>
