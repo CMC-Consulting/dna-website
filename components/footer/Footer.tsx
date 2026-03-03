@@ -9,6 +9,7 @@ const Footer = () => {
   const t = useTranslations("Footer");
   const year = new Date().getFullYear();
   const brandName = t("Brand.name");
+  const companyWebsite = "https://cmcconsulting.vn/";
 
   return (
     <footer className="w-full bg-background border-t border-border/60 py-16 sm:py-20 lg:py-24">
@@ -167,7 +168,7 @@ const Footer = () => {
                 <ul className="mt-4 text-sm text-muted-foreground space-y-4">
                   <li>
                     <Link
-                      href="https://cmcconsulting.vn/"
+                      href={companyWebsite}
                       className="hover:text-foreground transition-all duration-300"
                     >
                       {t("Columns.Company.aboutUs")}
