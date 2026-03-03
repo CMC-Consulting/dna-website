@@ -31,8 +31,8 @@
   },
   "Footer": {
     "Brand": {
-      "name": "CMCC AI",
-      "description": "We are a team of AI and data experts from CMC Corporation, passionate about helping businesses leverage the power of AI and data to achieve their goals."
+      "name": "DATA & AI SERVICES",
+      "description": "We are a team of AI and Data experts from CMC Consulting, passionate about helping businesses leverage the power of AI and data to achieve their goals."
     },
     "Columns": {
       "Product": {
@@ -144,7 +144,7 @@
   "Home": {
     "title": "CMC Consulting AI",
     "tagLine": "AI and Data Solutions",
-    "description": "We are a team of AI and data experts from CMC Corporation who are passionate about helping businesses leverage the power of AI and data to achieve their goals.",
+    "description": "We are a team of AI and Data experts from CMC Consulting who are passionate about helping businesses leverage the power of AI and data to achieve their goals.",
     "hero": {
       "headline1": "Unified AI & Data",
       "headline2": "Scale Knowledge, drive transformation",

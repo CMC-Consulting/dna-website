@@ -15,7 +15,7 @@ export const siteConfig: SiteConfig = {
   name: "DnA Solutions",
   tagLine: 'AI and Data Solutions',
   description:
-    "We are a team of AI and data experts from CMC Corporation who are passionate about helping businesses leverage the power of AI and data to achieve their goals.",
+    "We are a team of AI and data experts from CMC Consulting who are passionate about helping businesses leverage the power of AI and data to achieve their goals.",
   url: BASE_URL,
   authors: [
     {

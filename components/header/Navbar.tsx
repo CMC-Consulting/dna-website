@@ -14,6 +14,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { Separator } from "@/components/ui/separator";
 import { Link, usePathname } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
@@ -64,14 +65,15 @@ export const Navbar = () => {
         <Link href="/" className="flex shrink-0 items-center gap-2 text-[#276df0]">
           <Image
             src="/logos/logo.png"
-            alt="CMC Consulting AI"
-            width={20}
-            height={20}
-            className="h-5 w-auto"
+            alt="DATA & AI SERVICES"
+            width={160}
+            height={40}
+            className="h-8 w-auto"
             priority
           />
-          <span className="text-base md:text-lg font-bold">
-            CMC Consulting AI
+          <Separator orientation="vertical" className="h-8 w-px" />
+          <span className="text-base md:text-lg font-bold text-[#038DD3]">
+            DATA & AI SERVICES
           </span>
         </Link>
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { Separator } from "@/components/ui/separator";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -19,13 +20,15 @@ const Footer = () => {
               <Link href="/" className="flex items-center gap-2 text-[#276df0]">
                 <Image
                   src="/logos/logo.png"
-                  alt={brandName}
-                  width={20}
-                  height={20}
-                  className="h-5 w-auto"
+                  alt="DATA & AI SERVICES"
+                  width={160}
+                  height={40}
+                  className="h-8 w-auto"
+                  priority
                 />
-                <span className="text-2xl md:text-lg font-bold">
-                  {brandName}
+                <Separator orientation="vertical" className="h-8 w-px" />
+                <span className="text-2xl md:text-lg font-bold text-[#038DD3]">
+                 DATA & AI
                 </span>
               </Link>
               <p className="text-muted-foreground mt-4 text-sm text-start">
@@ -164,7 +167,7 @@ const Footer = () => {
                 <ul className="mt-4 text-sm text-muted-foreground space-y-4">
                   <li>
                     <Link
-                      href="/about"
+                      href="https://cmcconsulting.vn/"
                       className="hover:text-foreground transition-all duration-300"
                     >
                       {t("Columns.Company.aboutUs")}
@@ -203,7 +206,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-border/60">
           <p className="text-sm text-muted-foreground text-center">
-            {t("Copyright", { year, name: brandName })}
+           Copyright © {year} All rights reserved.
           </p>
         </div>
       </div>
