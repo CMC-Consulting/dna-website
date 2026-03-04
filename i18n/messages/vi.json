@@ -533,10 +533,11 @@
     "info": {
       "office": {
         "title": "Văn phòng công ty",
-        "address": "Tòa CMC, 11 Duy Tân\nHà Nội, Việt Nam"
+        "hanoi": "Trụ sở Hà Nội: Tầng 8, CMC Tower, số 11 Duy Tân, Phường Cầu Giấy, Hà Nội",
+        "hcmc": "Văn phòng TP. Hồ Chí Minh: Tòa nhà CMC Creative Space, Đường số 19 KCX Tân Thuận, Phường Tân Thuận, TP. HCM"
       },
       "email": {
-        "title": "Gửi email cho chúng tôi",
+        "title": "Liên hệ với chúng tôi",
         "careers": {
           "label": "Tuyển dụng",
           "email": "hr.cmcconsulting@cmc.com.vn"
@@ -544,7 +545,8 @@
         "press": {
           "label": "Thư điện tử",
           "email": "cmc@cmcconsulting.com"
-        }
+        },
+        "hotline": "Hotline: 024 71001568"
       },
       "social": {
         "title": "Theo dõi chúng tôi"

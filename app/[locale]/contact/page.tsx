@@ -1,5 +1,5 @@
 import { ContactForm } from "@/components/blocks/contact-form";
-import TeamSection from "@/components/contact/team";
+// import TeamSection from "@/components/contact/team";
 import CTASection from "@/components/cta-section";
 import { DashedLine } from "@/components/ui/dashed-line";
 import { Link, Locale, LOCALES } from "@/i18n/routing";
@@ -40,16 +40,21 @@ export default async function Contact({ params }: { params: Params }) {
     {
       title: t("info.office.title"),
       content: (
-        <p className="text-muted-foreground mt-3">
-          {t("info.office.address")}
-        </p>
+        <div className="text-muted-foreground mt-3 space-y-1">
+          <p>
+            • {t("info.office.hanoi")}
+          </p>
+          <p>
+            • {t("info.office.hcmc")}
+          </p>
+        </div>
       ),
     },
     {
       title: t("info.email.title"),
       content: (
-        <div className="mt-3">
-          <div>
+        <div className="mt-3 space-y-2">
+          <div className="">
             <p className="">{t("info.email.careers.label")}</p>
             <Link
               href={`mailto:${t("info.email.careers.email")}`}
@@ -58,7 +63,7 @@ export default async function Contact({ params }: { params: Params }) {
               {t("info.email.careers.email")}
             </Link>
           </div>
-          <div className="mt-1">
+          <div className="">
             <p className="">{t("info.email.press.label")}</p>
             <Link
               href={`mailto:${t("info.email.press.email")}`}
@@ -67,6 +72,7 @@ export default async function Contact({ params }: { params: Params }) {
               {t("info.email.press.email")}
             </Link>
           </div>
+          <p className="text-base">{t("info.email.hotline")}</p>
         </div>
       ),
     },
@@ -122,7 +128,7 @@ export default async function Contact({ params }: { params: Params }) {
 
         <DashedLine className="my-12" />
       </div>
-      <TeamSection />
+      {/* <TeamSection /> */}
       <CTASection />
     </section>
   );

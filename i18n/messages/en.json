@@ -525,7 +525,8 @@
     "info": {
       "office": {
         "title": "Corporate Office",
-        "address": "CMC Tower, 11 Duy Tan Str\nHanoi, Vietnam"
+        "hanoi": "Head Office (Hanoi): 8th Floor, CMC Tower, 11 Duy Tan Street, Cau Giay District, Hanoi",
+        "hcmc": "Ho Chi Minh City Office: CMC Creative Space Building, Street No. 19, Tan Thuan Export Processing Zone, Tan Thuan Ward, Ho Chi Minh City"
       },
       "email": {
         "title": "Email us",
@@ -536,7 +537,8 @@
         "press": {
           "label": "Email",
           "email": "cmcc@cmccconsulting.com"
-        }
+        },
+        "hotline": "Hotline: +84 24 7100 1568"
       },
       "social": {
         "title": "Follow us"
