@@ -207,7 +207,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-border/60">
           <p className="text-sm text-muted-foreground text-center">
-           Copyright © {year} CMC Consulting. All rights reserved.
+           ©{year} CMC Consulting. All rights reserved.
           </p>
         </div>
       </div>

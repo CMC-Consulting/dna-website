@@ -90,7 +90,7 @@ export default async function LocaleLayout({
               {messages.LanguageDetection && <LanguageDetectionAlert />}
               <Navbar />
 
-              <main className="flex flex-1 flex-col items-center w-full min-w-0 overflow-x-hidden">
+              <main className="flex flex-1 flex-col items-center w-full min-w-0 overflow-x-clip">
                 {children}
               </main>
 
