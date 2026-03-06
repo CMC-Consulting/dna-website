@@ -204,8 +204,10 @@
       }
     },
     "dataServices": {
+      "badge": "DATA SERVICES",
       "title": "Enterprise Data Services",
       "subtitle": "Build a solid data foundation with our comprehensive data services. From governance to integration, we help you unlock the full potential of your data assets.",
+      "cta": "Explore Data Services",
       "items": {
         "governance": {
           "title": "Data Governance",

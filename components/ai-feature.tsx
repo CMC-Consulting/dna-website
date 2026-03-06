@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
-import { Brain, FileText, Mail, type LucideIcon } from "lucide-react";
+import { ArrowRight, Brain, FileText, Mail, type LucideIcon } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
@@ -130,9 +130,15 @@ const AIFeature = ({ className = "" }: { className?: string }) => {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90"
+                  className="group rounded-full bg-[#276df0] px-6 py-5 text-base font-semibold text-white shadow-md transition hover:bg-[#1e5bc7] hover:shadow-lg"
                 >
-                  <Link href="/solutions">{t("exploreSolutions")}</Link>
+                  <Link
+                    href="/solutions"
+                    className="inline-flex items-center gap-2"
+                  >
+                    {t("exploreSolutions")}
+                    <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" />
+                  </Link>
                 </Button>
               </div>
             </div>

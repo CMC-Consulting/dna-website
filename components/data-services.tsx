@@ -1,90 +1,124 @@
 "use client";
 
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { BorderBeam } from "@/components/ui/border-beam";
-import { Database, Layers, Shield } from "lucide-react";
-import { AnimatePresence, motion } from "motion/react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "@/i18n/routing";
+import { ArrowRight, Database, Layers, Shield, type LucideIcon } from "lucide-react";
+import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import { useState } from "react";
 
-type ImageKey = "item-1" | "item-2" | "item-3";
+type DataServiceKey = "governance" | "lakehouse" | "integration";
 
-const DATA_ITEM_KEYS: { value: ImageKey; key: "governance" | "lakehouse" | "integration" }[] = [
-  { value: "item-1", key: "governance" },
-  { value: "item-2", key: "lakehouse" },
-  { value: "item-3", key: "integration" },
+type DataServiceItem = {
+  key: DataServiceKey;
+  icon: LucideIcon;
+};
+
+const DATA_SERVICE_ITEMS: DataServiceItem[] = [
+  { key: "governance", icon: Shield },
+  { key: "lakehouse", icon: Database },
+  { key: "integration", icon: Layers },
 ];
 
 const DataServices = () => {
   const t = useTranslations("Home.dataServices");
-  const [activeItem, setActiveItem] = useState<ImageKey>("item-1");
-
-  const images: Record<ImageKey, { image: string; alt: string }> = {
-    "item-1": { image: "/og.png", alt: t("items.governance.imageAlt") },
-    "item-2": { image: "/og.png", alt: t("items.lakehouse.imageAlt") },
-    "item-3": { image: "/og.png", alt: t("items.integration.imageAlt") },
-  };
 
   return (
     <section className="w-full bg-background py-16 sm:py-20 lg:py-48">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-balance text-4xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-foreground">
-            {t("title")}
-          </h2>
-          <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t("subtitle")}
-          </p>
-        </div>
-
-        <div className="grid gap-12 md:grid-cols-2 lg:gap-20">
-          <Accordion
-            type="single"
-            value={activeItem}
-            onValueChange={(value) => setActiveItem(value as ImageKey)}
-            className="w-full"
+        <motion.div
+          initial={{ y: -10, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.8,
+            ease: [0.21, 0.47, 0.32, 0.98],
+          }}
+          className="mb-12 flex flex-col items-center justify-center gap-4 text-center sm:mb-16"
+        >
+          {/* <Badge
+            variant="outline"
+            className="h-auto px-3 py-1 text-sm font-semibold uppercase tracking-wider"
           >
-            {DATA_ITEM_KEYS.map(({ value, key }) => (
-              <AccordionItem key={value} value={value}>
-                <AccordionTrigger>
-                  <div className="flex items-center gap-2 text-base">
-                    {key === "governance" && <Shield className="size-4" />}
-                    {key === "lakehouse" && <Database className="size-4" />}
-                    {key === "integration" && <Layers className="size-4" />}
-                    {t(`items.${key}.title`)}
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent>{t(`items.${key}.content`)}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+            {t("badge")}
+          </Badge> */}
+          <Badge variant={"outline"} className="px-3 py-1 h-auto text-sm bg-muted text-foreground border-border/60 rounded-full">
+            {t("badge")}
+          </Badge>
+          <h2 className="text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+            {t("title")}
+          </h2>          
+        </motion.div>
 
-          <div className="bg-background relative flex overflow-hidden rounded-3xl border p-2">
-            <div className="w-15 absolute inset-0 right-0 ml-auto border-l bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_8px)]"></div>
-            <div className="aspect-76/59 bg-background relative w-[calc(3/4*100%+3rem)] rounded-2xl">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={`${activeItem}-id`}
-                  initial={{ opacity: 0, y: 6, scale: 0.98 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 6, scale: 0.98 }}
-                  transition={{ duration: 0.2 }}
-                  className="size-full overflow-hidden rounded-2xl border bg-zinc-900 shadow-md"
-                >
-                  <Image
-                    src={images[activeItem].image}
-                    className="size-full object-cover object-left-top dark:mix-blend-lighten"
-                    alt={images[activeItem].alt}
-                    width={1207}
-                    height={929}
-                  />
-                </motion.div>
-              </AnimatePresence>
-            </div>
-            <BorderBeam duration={15} size={250} borderWidth={1.5} />
-          </div>
-        </div>
+        <motion.div
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {DATA_SERVICE_ITEMS.map(({ key, icon: Icon }) => (
+            <motion.div
+              key={key}
+              variants={{
+                hidden: { opacity: 0, y: 30, filter: "blur(4px)" },
+                show: { opacity: 1, y: 0, filter: "blur(0px)" },
+              }}
+              transition={{
+                duration: 0.8,
+                ease: [0.21, 0.47, 0.32, 0.98],
+              }}
+            >
+              <Card className="h-full border border-border border-t-4 border-t-transparent py-10 transition-all duration-300 hover:border-t-primary hover:border-primary/50 hover:shadow-lg">
+                <CardContent className="flex flex-col gap-6 px-8">
+                  <Icon className="h-8 w-8 text-primary" strokeWidth={1.2} />
+                  <div className="flex flex-col gap-3">
+                    <h3 className="text-xl font-semibold">
+                      {t(`items.${key}.title`)}
+                    </h3>
+                    <p className="text-base font-normal text-muted-foreground">
+                      {t(`items.${key}.content`)}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.8,
+            ease: [0.21, 0.47, 0.32, 0.98],
+          }}
+          className="mt-12 flex justify-center sm:mt-16"
+        >
+          <Button
+            asChild
+            size="lg"
+            className="group rounded-full bg-[#276df0] px-6 py-5 text-base font-semibold text-white shadow-md transition hover:bg-[#1e5bc7] hover:shadow-lg"
+          >
+            <Link
+              href="/solutions#data-services"
+              className="inline-flex items-center gap-2"
+            >
+              {t("cta")}
+              <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" />
+            </Link>
+          </Button>
+        </motion.div>
       </div>
     </section>
   );

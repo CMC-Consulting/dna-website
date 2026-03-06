@@ -212,8 +212,10 @@
       }
     },
     "dataServices": {
+      "badge": "DỊCH VỤ DỮ LIỆU",
       "title": "Dịch vụ Dữ liệu & AI Doanh nghiệp",
       "subtitle": "Chúng tôi cung cấp dịch vụ tư vấn và triển khai toàn diện từ chiến lược dữ liệu đến nền tảng công nghệ, giúp doanh nghiệp xây dựng năng lực dữ liệu vững chắc để phục vụ phân tích và AI.",
+      "cta": "Khám phá Dịch vụ Dữ liệu",
       "items": {
         "governance": {
           "title": "Quản trị Dữ liệu",
@@ -507,7 +509,7 @@
   "CTASection": {
     "title": "Sẵn sàng khai thác sức mạnh",
     "titleHighlight": "AI & Dữ liệu cho doanh nghiệp của bạn?",
-    "requestDemo": "Đặt lịch demo",
+    "requestDemo": "Đặt lịch Demo",
     "talkToSales": "Liên hệ tư vấn",
     "imageAlt": "Minh họa sẵn sàng xây dựng"
   },
@@ -522,7 +524,7 @@
     "aboutUs": "Về chúng tôi",
     "techInsights": "Bài viết Công nghệ",
     "contact": "Liên hệ",
-    "bookDemo": "Đặt lịch demo"
+    "bookDemo": "Đặt lịch Demo"
   },
   "Contact": {
     "title": "Liên hệ chúng tôi",
