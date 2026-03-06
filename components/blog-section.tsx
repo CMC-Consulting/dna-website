@@ -16,19 +16,62 @@ type BlogPost = {
   excerpt: string;
   image: string;
   slug: string;
+  dateTime: string;
+  date: string;
 };
 
 export const BlogSection = async ({ locale }: BlogSectionProps) => {
   const t = await getTranslations({ locale, namespace: "Home.blogSection" });
   const { posts } = await getPosts(locale);
+  const metaLabel = locale === "vi" ? "Tin tức" : "Tech Insights";
+  const dateFormatter = new Intl.DateTimeFormat(locale === "vi" ? "vi-VN" : "en-US", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+  const parsePostDate = (dateValue?: string | Date) => {
+    if (!dateValue) {
+      return null;
+    }
 
-  const blogPosts: BlogPost[] = posts.map((post) => ({
-    id: post.slug,
-    title: post.title,
-    excerpt: post.description ?? "",
-    image: post.image || "/blog/1.jpg",
-    slug: post.slug,
-  }));
+    if (dateValue instanceof Date) {
+      if (Number.isNaN(dateValue.getTime())) {
+        return null;
+      }
+
+      return dateValue;
+    }
+
+    const trimmedValue = dateValue.trim();
+
+    if (/^\d{4}-\d{2}-\d{2}$/.test(trimmedValue)) {
+      const [year, month, day] = trimmedValue.split("-").map(Number);
+      return new Date(Date.UTC(year, month - 1, day));
+    }
+
+    const parsedDate = new Date(trimmedValue);
+
+    if (Number.isNaN(parsedDate.getTime())) {
+      return null;
+    }
+
+    return parsedDate;
+  };
+
+  const blogPosts: BlogPost[] = posts.map((post) => {
+    const parsedDate = parsePostDate(post.date);
+
+    return {
+      id: post.slug,
+      title: post.title,
+      excerpt: post.description ?? "",
+      image: post.image || "/blog/1.jpg",
+      slug: post.slug,
+      dateTime: parsedDate ? parsedDate.toISOString() : "",
+      date: parsedDate ? dateFormatter.format(parsedDate) : "",
+    };
+  });
 
   const featuredPost = blogPosts[0];
   const regularPosts = blogPosts.slice(1, 5);
@@ -163,7 +206,7 @@ export const BlogSection = async ({ locale }: BlogSectionProps) => {
             <div className="flex flex-col">
               <Link
                 href={`/blog${featuredPost.slug}`}
-                className="group relative mb-6 aspect-[4/3] overflow-hidden rounded-2xl bg-muted"
+                className="group relative mb-6 aspect-video overflow-hidden rounded-2xl bg-muted"
               >
                 <Image
                   src={featuredPost.image}
@@ -173,7 +216,18 @@ export const BlogSection = async ({ locale }: BlogSectionProps) => {
                 />
               </Link>
               <Link href={`/blog${featuredPost.slug}`}>
-                <h3 className="mb-4 text-2xl font-bold leading-tight text-foreground transition-colors hover:text-primary md:text-3xl">
+                <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm font-medium">
+                  <span className="text-muted-foreground">{metaLabel}</span>
+                  {featuredPost.date && (
+                    <>
+                      <span aria-hidden="true" className="text-border">•</span>
+                      <time dateTime={featuredPost.dateTime} className="text-[#276df0]">
+                        {featuredPost.date}
+                      </time>
+                    </>
+                  )}
+                </div>
+                <h3 className="mb-4 text-2xl font-bold leading-[1.25] text-foreground transition-colors hover:text-primary md:text-3xl">
                   {featuredPost.title}
                 </h3>
               </Link>
@@ -191,9 +245,9 @@ export const BlogSection = async ({ locale }: BlogSectionProps) => {
               <Link
                 key={post.id}
                 href={`/blog${post.slug}`}
-                className="group flex items-center gap-5 py-5 first:pt-0 last:pb-0"
+                className="group flex items-start gap-5 py-5 first:pt-0 last:pb-0"
               >
-                <div className="relative size-16 shrink-0 overflow-hidden rounded-lg bg-muted md:size-20">
+                <div className="relative aspect-video w-28 shrink-0 overflow-hidden rounded-xl bg-muted md:w-40">
                   <Image
                     src={post.image}
                     alt={post.title}
@@ -201,9 +255,22 @@ export const BlogSection = async ({ locale }: BlogSectionProps) => {
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
-                <p className="text-base font-medium leading-snug text-foreground transition-colors group-hover:text-primary md:text-lg">
-                  {post.title}
-                </p>
+                <div className="min-w-0 flex-1">
+                  <div className="mb-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-medium uppercase tracking-[0.18em]">
+                    <span className="text-muted-foreground">{metaLabel}</span>
+                    {post.date && (
+                      <>
+                        <span aria-hidden="true" className="text-border">•</span>
+                        <time dateTime={post.dateTime} className="text-[#276df0]">
+                          {post.date}
+                        </time>
+                      </>
+                    )}
+                  </div>
+                  <p className="text-base font-medium leading-7 text-foreground transition-colors group-hover:text-primary md:text-lg">
+                    {post.title}
+                  </p>
+                </div>
               </Link>
             ))}
           </div>
