@@ -199,18 +199,15 @@
       "products": {
         "prismaAI": {
           "title": "Prisma AI",
-          "description": "Nền tảng trợ lý tri thức doanh nghiệp giúp tổng hợp, tìm kiếm và trò chuyện với toàn bộ tài liệu nội bộ một cách an toàn. Prisma AI kết hợp mô hình RAG với AI Agents để cung cấp câu trả lời có trích dẫn nguồn, tạo báo cáo, sơ đồ tư duy, podcast và nhiều định dạng nội dung khác từ kho tri thức của tổ chức. Triển khai trong môi trường riêng giúp đảm bảo bảo mật dữ liệu tuyệt đối. ",
-          "imageAlt": "Giao diện Prisma AI với hỏi đáp tài liệu và tổng hợp tri thức doanh nghiệp"
+          "description": "Nền tảng trợ lý tri thức doanh nghiệp giúp tổng hợp, tìm kiếm và trò chuyện với toàn bộ tài liệu nội bộ một cách an toàn. Prisma AI kết hợp mô hình RAG với AI Agents để cung cấp câu trả lời có trích dẫn nguồn, tạo báo cáo, sơ đồ tư duy, podcast và nhiều định dạng nội dung khác từ kho tri thức của tổ chức. Triển khai trong môi trường riêng giúp đảm bảo bảo mật dữ liệu tuyệt đối. "
         },
         "smartEmail": {
           "title": "Smart Email",
-          "description": "Giải pháp phân loại và tóm tắt email ứng dụng AI, tích hợp trực tiếp với Microsoft 365. Hệ thống tự động gắn nhãn, ưu tiên email, tạo tóm tắt nội dung và hỗ trợ tìm kiếm ngữ nghĩa. Cơ chế phản hồi từ người dùng giúp mô hình AI liên tục học hỏi và nâng cao độ chính xác, đồng thời đảm bảo kiểm soát truy cập và giám sát đầy đủ theo tiêu chuẩn doanh nghiệp.",
-          "imageAlt": "Bảng điều khiển Smart Email với phân loại, tìm kiếm và tóm tắt email bằng AI"
+          "description": "Giải pháp phân loại và tóm tắt email ứng dụng AI, tích hợp trực tiếp với Microsoft 365. Hệ thống tự động gắn nhãn, ưu tiên email, tạo tóm tắt nội dung và hỗ trợ tìm kiếm ngữ nghĩa. Cơ chế phản hồi từ người dùng giúp mô hình AI liên tục học hỏi và nâng cao độ chính xác, đồng thời đảm bảo kiểm soát truy cập và giám sát đầy đủ theo tiêu chuẩn doanh nghiệp."
         },
         "smartInvoice": {
           "title": "Smart Invoice",
-          "description": "Giải pháp xử lý hóa đơn tự động tích hợp SAP, sử dụng AI và OCR để trích xuất dữ liệu, xác thực với cơ quan thuế và thực hiện đối chiếu 3 chiều (Invoice–PO–GR). Hệ thống giúp giảm mạnh xử lý thủ công, tăng độ chính xác, đảm bảo tuân thủ quy định thuế Việt Nam và cung cấp đầy đủ dấu vết kiểm toán cho doanh nghiệp.",
-          "imageAlt": "Giao diện Smart Invoice với trích xuất dữ liệu hóa đơn và đối chiếu tự động"
+          "description": "Giải pháp xử lý hóa đơn tự động tích hợp SAP, sử dụng AI và OCR để trích xuất dữ liệu, xác thực với cơ quan thuế và thực hiện đối chiếu 3 chiều (Invoice–PO–GR). Hệ thống giúp giảm mạnh xử lý thủ công, tăng độ chính xác, đảm bảo tuân thủ quy định thuế Việt Nam và cung cấp đầy đủ dấu vết kiểm toán cho doanh nghiệp."
         }
       }
     },
