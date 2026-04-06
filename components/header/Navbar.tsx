@@ -63,14 +63,25 @@ export const Navbar = () => {
     >
       <div className="flex items-center justify-between px-6 py-3">
         <Link href="/" className="flex shrink-0 items-center gap-2 text-[#276df0]">
+          {/* logo Desktop */}
           <Image
             src="/logos/logo.png"
             alt="DATA & AI SERVICES"
             width={160}
             height={40}
-            className="h-8 w-auto"
+            className="hidden h-8 w-auto md:block"
             priority
           />
+          {/* logo Mobile */}
+          <Image
+            src="/logos/logo-mobile.png"
+            alt="DATA & AI SERVICES"
+            width={160}
+            height={60}
+            className="block h-9 w-auto md:hidden"
+            priority
+          />
+
           <Separator orientation="vertical" className="h-8 w-px" />
           <span className="text-base md:text-lg font-bold text-[#038DD3]">
             DATA & AI SERVICES
@@ -130,7 +141,7 @@ export const Navbar = () => {
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
           {/* <ThemeToggle /> */}
-          <LanguageSwitcher />
+          <LanguageSwitcher className="hidden lg:inline-flex" />
           <Link href="/contact" className="max-lg:hidden">
             <MainButton text={t("bookDemo")} className="border-none" size="small" />
           </Link>
@@ -235,6 +246,13 @@ export const Navbar = () => {
               </Link>
             ),
           )}
+          <LanguageSwitcher
+            mode="mobile"
+            onLocaleChange={() => {
+              setIsMenuOpen(false);
+              setOpenDropdown(null);
+            }}
+          />
         </nav>
       </div>
     </section>
