@@ -62,7 +62,10 @@ export const Navbar = () => {
       )}
     >
       <div className="flex items-center justify-between px-6 py-3">
-        <Link href="/" className="flex shrink-0 items-center gap-2 text-[#276df0]">
+        <Link href="/" className="flex shrink-0 items-center gap-2 text-[#276df0]"onClick={()=>{
+          setIsMenuOpen(false)
+          setOpenDropdown(null)
+        }}>
           {/* logo Desktop */}
           <Image
             src="/logos/logo.png"
