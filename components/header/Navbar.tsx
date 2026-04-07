@@ -253,6 +253,12 @@ export const Navbar = () => {
               setOpenDropdown(null);
             }}
           />
+          <Link href={"/contact"} className="block w-full pt-4 text-center" onClick={()=>{
+            setIsMenuOpen(false)
+            setOpenDropdown(null)
+          }}>
+            <MainButton text={t("bookDemo")} size="small" />
+          </Link>
         </nav>
       </div>
     </section>
