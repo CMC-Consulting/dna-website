@@ -154,7 +154,7 @@ export const Navbar = () => {
             className="text-muted-foreground relative flex size-8 lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <span className="sr-only">Open main menu</span>
+            <span className="sr-only">{t("openMainMenu")}</span>
             <div className="absolute top-1/2 left-1/2 block w-[18px] -translate-x-1/2 -translate-y-1/2">
               <span
                 aria-hidden="true"

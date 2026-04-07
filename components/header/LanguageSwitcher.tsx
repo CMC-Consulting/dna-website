@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronRight, Languages } from "lucide-react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { useState, useTransition } from "react";
 
@@ -26,6 +26,7 @@ export function LanguageSwitcher({
   className,
   onLocaleChange,
 }: LanguageSwitcherProps) {
+  const t = useTranslations("LanguageSwitcher");
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -57,7 +58,7 @@ export function LanguageSwitcher({
         >
           <span className="flex items-center gap-2">
             <Languages className="h-4 w-4" />
-            <span>Language</span>
+            <span>{t("label")}</span>
           </span>
           <span className="text-muted-foreground flex items-center gap-2 text-sm font-normal">
             <span>{LOCALE_NAMES[locale] ?? locale.toUpperCase()}</span>
@@ -109,7 +110,7 @@ export function LanguageSwitcher({
           disabled={isPending}
         >
           <Languages className="h-4 w-4" />
-          <span className="sr-only">Change language</span>
+          <span className="sr-only">{t("changeLanguage")}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

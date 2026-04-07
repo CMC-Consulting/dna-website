@@ -3,7 +3,9 @@
     "title": "Gợi ý ngôn ngữ",
     "description": "Chúng tôi nhận thấy ngôn ngữ trình duyệt của bạn khác với ngôn ngữ hiện tại của trang. Bạn có thể đổi ngôn ngữ bất cứ lúc nào.",
     "countdown": "Tự động đóng sau {countdown} giây",
-    "switchTo": "Chuyển sang"
+    "switchTo": "Chuyển sang",
+    "alertAriaLabel": "Thông báo gợi ý ngôn ngữ",
+    "dismissAriaLabel": "Đóng gợi ý ngôn ngữ"
   },
   "Header": {
     "links": [
@@ -34,6 +36,9 @@
       "name": "CMCC AI",
       "description": "Chúng tôi là đội ngũ chuyên gia Dữ liệu và AI của CMC Consulting, đồng hành cùng doanh nghiệp khai thác sức mạnh của AI và dữ liệu để đạt được mục tiêu kinh doanh."
     },
+    "Badges": {
+      "featuredOnFirstLook": "Được giới thiệu trên FirstLook.Tools"
+    },
     "Columns": {
       "Product": {
         "title": "Sản phẩm"
@@ -57,7 +62,7 @@
         "termsConditions": "Điều khoản & Điều kiện"
       }
     },
-    "Copyright": "Bản quyền © {year} {name} Giữ toàn bộ bản quyền.",
+    "Copyright": "© {year} {name}. Bảo lưu mọi quyền.",
     "PrivacyPolicy": "Chính sách bảo mật",
     "TermsOfService": "Điều khoản dịch vụ",
     "Links": {
@@ -132,6 +137,7 @@
     "Newsletter": {
       "title": "Đăng ký nhận bản tin",
       "description": "Nhận tin tức và cập nhật mới nhất từ Next.js Starter.",
+      "placeholder": "email@cuaban.com",
       "defaultErrorMessage": "Vui lòng nhập một địa chỉ email hợp lệ.",
       "successMessage": "Đăng ký thành công.",
       "errorMessage": "Đăng ký không thành công.",
@@ -237,6 +243,7 @@
     "blogSection": {
       "title": "Góc nhìn Công nghệ & AI",
       "subtitle": "Chia sẻ kiến thức và xu hướng mới trong lĩnh vực dữ liệu, AI và chuyển đổi số",
+      "metaLabel": "Tin tức",
       "readMore": "Xem thêm",
       "posts": {
         "1": {
@@ -273,8 +280,38 @@
     }
   },
   "Blog": {
-    "title": "Bài viết blog",
-    "description": "Chia sẻ kiến thức, xu hướng và kinh nghiệm triển khai AI & Dữ liệu trong doanh nghiệp"
+    "title": "Thông tin chuyên sâu & Tài nguyên",
+    "description": "Khám phá những góc nhìn chuyên sâu từ các chuyên gia hàng đầu về SAP, AI và giải pháp dữ liệu. Chúng tôi mang đến những insight thực tiễn, cập nhật xu hướng mới nhất và định hướng chiến lược giúp bạn tăng tốc chuyển đổi số, tối ưu vận hành và khai phá tối đa tiềm năng hệ thống doanh nghiệp.",
+    "stats": {
+      "articlesCount": "{count} bài viết",
+      "updatedWeekly": "Cập nhật hàng tuần"
+    },
+    "sections": {
+      "featuredArticle": "Bài viết nổi bật",
+      "latestArticles": "Bài viết mới nhất"
+    },
+    "empty": {
+      "title": "Chưa có bài viết",
+      "description": "Vui lòng quay lại sau để xem nội dung mới."
+    },
+    "card": {
+      "featured": "Nổi bật",
+      "readTime": "{minutes} phút đọc",
+      "readArticle": "Đọc bài viết",
+      "readMore": "Xem thêm"
+    },
+    "feed": {
+      "loadingMore": "Đang tải thêm bài viết...",
+      "endReached": "Bạn đã xem hết nội dung"
+    },
+    "cta": {
+      "title": "Bạn đang có dự án cần triển khai?",
+      "titleHighlight": "Hãy trao đổi cùng chúng tôi.",
+      "description": "Đội ngũ chuyên gia AI và Dữ liệu của chúng tôi sẵn sàng đồng hành cùng bạn để xây dựng các giải pháp hiện đại cho doanh nghiệp.",
+      "primaryAction": "Liên hệ tư vấn",
+      "secondaryAction": "Tìm hiểu về chúng tôi",
+      "imageAlt": "Minh họa sẵn sàng xây dựng giải pháp"
+    }
   },
   "BlogTag": {
     "title": "Bài viết về {tag}",
@@ -283,31 +320,36 @@
     "articlesCount": "{count} bài viết",
     "noArticles": "Chưa có bài viết",
     "noArticlesDescription": "Hiện tại chưa có bài viết nào về chủ đề này. Hãy quay lại sau.",
-    "tags": {
-      "data-services": "Dịch vụ Dữ liệu",
-      "data-governance": "Quản trị Dữ liệu",
-      "data-lakehouse": "Kiến trúc Data Lakehouse",
-      "data-integration": "Tích hợp Dữ liệu",
-      "data-pipelines": "Pipeline Dữ liệu",
-      "ai": "Trí tuệ Nhân tạo",
-      "generative-ai": "AI Tạo sinh",
-      "sap": "SAP",
-      "enterprise": "Doanh nghiệp",
-      "automation": "Tự động hóa",
-      "llm": "Mô hình Ngôn ngữ Lớn",
-      "prisma-ai": "Prisma AI",
-      "smart-email": "Smart Email",
-      "smart-invoice": "Smart Invoice"
+    "sections": {
+      "featuredArticle": "Bài viết nổi bật",
+      "latestArticles": "Bài viết mới nhất"
+    }
+  },
+  "BlogPost": {
+    "backToBlog": "Quay lại Blog",
+    "backToAllPosts": "Quay lại tất cả bài viết",
+    "readTime": "{minutes} phút đọc",
+    "relatedPosts": {
+      "title": "Bài viết liên quan",
+      "description": "Tiếp tục khám phá với những bài viết liên quan này",
+      "viewAllPosts": "Xem tất cả bài viết"
+    },
+    "aria": {
+      "backToBlog": "Quay lại danh sách blog",
+      "backToAllPosts": "Quay lại tất cả bài viết blog",
+      "viewAllPosts": "Xem tất cả bài viết blog"
     }
   },
   "About": {
     "title": "Giới thiệu",
     "description": "Giới thiệu về năng lực AI và Dữ liệu của CMC Consulting",
+    "parallaxImageAlt": "Văn phòng CMC Consulting",
     "hero": {
       "headline1": "CMC Consulting AI & Data",
       "headlineHighlight": "Tối ưu Trí tuệ Doanh nghiệp",
       "subtitle": "CMC Consulting cung cấp dịch vụ tư vấn, xây dựng chiến lược và triển khai các giải pháp AI & Dữ liệu toàn diện, giúp doanh nghiệp khai thác giá trị thực sự từ dữ liệu.",
       "subtitle2": "Chúng tôi kết hợp tư duy chiến lược, năng lực công nghệ và kinh nghiệm triển khai thực tế để thiết kế các nền tảng dữ liệu hiện đại, sẵn sàng cho AI, phân tích nâng cao và chuyển đổi số bền vững.",
+      "scrollLabel": "Cuộn xuống",
       "stats": [
         {
           "value": "End-to-End",
@@ -367,6 +409,7 @@
     "productNameLabel": "Tên giải pháp",
     "productNamePlaceholder": "Giải pháp AI của tôi",
     "productUrlLabel": "URL sản phẩm",
+    "productUrlPlaceholder": "https://website-cua-ban.com",
     "submit": "Gửi thông tin",
     "submitting": "Đang gửi...",
     "successMessage": "Cảm ơn bạn! Chúng tôi đã nhận được thông tin và sẽ sớm liên hệ lại.",
@@ -524,7 +567,31 @@
     "aboutUs": "Về chúng tôi",
     "techInsights": "Bài viết Công nghệ",
     "contact": "Liên hệ",
-    "bookDemo": "Đặt lịch Demo"
+    "bookDemo": "Đặt lịch Demo",
+    "openMainMenu": "Mở menu chính"
+  },
+  "LanguageSwitcher": {
+    "label": "Ngôn ngữ",
+    "changeLanguage": "Thay đổi ngôn ngữ"
+  },
+  "ThemeToggle": {
+    "toggleTheme": "Chuyển đổi giao diện",
+    "light": "Sáng",
+    "dark": "Tối",
+    "system": "Theo hệ thống"
+  },
+  "Carousel": {
+    "previousSlide": "Slide trước",
+    "nextSlide": "Slide tiếp theo"
+  },
+  "MdxCard": {
+    "view": "Xem"
+  },
+  "BuiltWithButton": {
+    "title": "Được xây dựng với NEXTY.DEV",
+    "label": "Được xây dựng với",
+    "logoAlt": "Logo NEXTY.DEV",
+    "logoTitle": "Logo NEXTY.DEV"
   },
   "Contact": {
     "title": "Liên hệ chúng tôi",
@@ -599,5 +666,8 @@
     "errorMessage": "Đăng ký thất bại",
     "errorMessage2": "Đăng ký thất bại. Vui lòng thử lại sau.",
     "privacyNote": "Chúng tôi tôn trọng quyền riêng tư của bạn. Hủy đăng ký bất cứ lúc nào."
+  },
+  "ParallaxImage": {
+    "defaultImageAlt": "Ảnh parallax"
   }
 }

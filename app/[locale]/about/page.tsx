@@ -28,14 +28,17 @@ export async function generateMetadata({
   });
 }
 
-export default async function AboutPage(_props: { params: Params }) {
+export default async function AboutPage({ params }: { params: Params }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "About" });
+
   return (
     <>
       <AboutHero />
       <About />
       <ParallaxImage
         imageSrc="/about/cmcc.jpg"
-        imageAlt="CMC Consulting Office"
+        imageAlt={t("parallaxImageAlt")}
         height="h-[400px] md:h-[500px] lg:h-[600px]"
         overlayOpacity={0.2}
       />

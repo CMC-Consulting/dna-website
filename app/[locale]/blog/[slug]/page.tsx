@@ -11,6 +11,7 @@ import { Metadata } from "next";
 import { MDXRemote } from "next-mdx-remote-client/rsc";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 import remarkGfm from "remark-gfm";
 import { FeaturedPostsCarousel } from "./FeaturedPostsCarousel";
 
@@ -61,6 +62,7 @@ export async function generateMetadata({
 export default async function BlogPage({ params }: { params: Params }) {
   const { locale, slug } = await params;
   let { posts }: { posts: BlogPost[] } = await getPosts(locale);
+  const t = await getTranslations({ locale, namespace: "BlogPost" });
 
   const post = posts.find((item) => item.slug === "/" + slug);
 
@@ -82,10 +84,10 @@ export default async function BlogPage({ params }: { params: Params }) {
         <I18nLink
           href="/blog"
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6 sm:mb-8"
-          aria-label="Back to blog listing"
+          aria-label={t("aria.backToBlog")}
         >
           <ArrowLeft className="size-4 shrink-0" />
-          <span className="truncate">Back to Blog</span>
+          <span className="truncate">{t("backToBlog")}</span>
         </I18nLink>
 
         {/* Header */}
@@ -120,7 +122,7 @@ export default async function BlogPage({ params }: { params: Params }) {
             </div>
             <div className="flex items-center gap-1.5">
               <Clock className="size-4" />
-              <span>{readTime} min read</span>
+              <span>{t("readTime", { minutes: readTime })}</span>
             </div>
           </div>
         </header>
@@ -164,10 +166,10 @@ export default async function BlogPage({ params }: { params: Params }) {
           <I18nLink
             href="/blog"
             className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-            aria-label="Back to all blog posts"
+            aria-label={t("aria.backToAllPosts")}
           >
             <ArrowLeft className="size-4 shrink-0" />
-            <span className="truncate">Back to all posts</span>
+            <span className="truncate">{t("backToAllPosts")}</span>
           </I18nLink>
         </footer>
       </div>

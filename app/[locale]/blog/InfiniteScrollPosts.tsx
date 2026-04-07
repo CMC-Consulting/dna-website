@@ -3,6 +3,7 @@
 import { BlogCard } from "@/app/[locale]/blog/BlogCard";
 import { BlogPost } from "@/types/blog";
 import { Loader2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 
 type InfiniteScrollPostsProps = {
@@ -18,6 +19,7 @@ export function InfiniteScrollPosts({
   initialCount = 6,
   loadMoreCount = 3,
 }: InfiniteScrollPostsProps) {
+  const t = useTranslations("Blog");
   const [displayCount, setDisplayCount] = useState(initialCount);
   const [isLoading, setIsLoading] = useState(false);
   const loaderRef = useRef<HTMLDivElement>(null);
@@ -71,7 +73,7 @@ export function InfiniteScrollPosts({
           {isLoading && (
             <div className="flex items-center gap-2 text-muted-foreground">
               <Loader2 className="size-5 animate-spin" />
-              <span className="text-sm">Loading more articles...</span>
+              <span className="text-sm">{t("feed.loadingMore")}</span>
             </div>
           )}
         </div>
@@ -79,9 +81,7 @@ export function InfiniteScrollPosts({
 
       {!hasMore && posts.length > initialCount && (
         <div className="flex items-center justify-center py-8">
-          <span className="text-sm text-muted-foreground">
-            You&apos;ve reached the end
-          </span>
+          <span className="text-sm text-muted-foreground">{t("feed.endReached")}</span>
         </div>
       )}
     </>

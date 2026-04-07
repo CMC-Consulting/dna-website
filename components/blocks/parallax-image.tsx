@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { useRef } from "react";
 
 interface ParallaxImageProps {
@@ -15,13 +16,15 @@ interface ParallaxImageProps {
 
 export const ParallaxImage = ({
   imageSrc,
-  imageAlt = "Parallax image",
+  imageAlt,
   height = "h-[400px] md:h-[500px] lg:h-[600px]",
   overlayOpacity = 0.3,
   title,
   subtitle,
 }: ParallaxImageProps) => {
+  const t = useTranslations("ParallaxImage");
   const containerRef = useRef<HTMLDivElement>(null);
+  const resolvedImageAlt = imageAlt || t("defaultImageAlt");
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -54,7 +57,7 @@ export const ParallaxImage = ({
         <motion.div style={{ opacity }} className="relative w-full h-full">
           <Image
             src={imageSrc}
-            alt={imageAlt}
+            alt={resolvedImageAlt}
             fill
             className="object-cover"
             priority={false}
