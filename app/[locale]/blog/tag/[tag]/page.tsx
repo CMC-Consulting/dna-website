@@ -20,12 +20,10 @@ export async function generateMetadata({
   const { locale, tag } = await params;
   const t = await getTranslations({ locale, namespace: "BlogTag" });
 
-  const tagName = t.has(`tags.${tag}`) ? t(`tags.${tag}`) : tag;
-
   return constructMetadata({
     page: "BlogTag",
-    title: t("title", { tag: tagName }),
-    description: t("description", { tag: tagName }),
+    title: t("title", { tag }),
+    description: t("description", { tag }),
     locale: locale as Locale,
     path: `/blog/tag/${tag}`,
     canonicalUrl: `/blog/tag/${tag}`,
@@ -36,8 +34,6 @@ export default async function TagPage({ params }: { params: Params }) {
   const { locale, tag } = await params;
   const { posts } = await getPostsByTag(locale, tag);
   const t = await getTranslations("BlogTag");
-
-  const tagName = t.has(`tags.${tag}`) ? t(`tags.${tag}`) : tag;
 
   const featuredPost = posts.find((post) => post.pin);
   const regularPosts = posts.filter((post) => !post.pin);
@@ -72,28 +68,25 @@ export default async function TagPage({ params }: { params: Params }) {
             <div className="mb-5 flex flex-wrap items-center justify-center gap-3">
               <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
                 <Tag className="size-4" />
-                <span className="max-w-[min(60vw,420px)] truncate">{tagName}</span>
+                <span className="max-w-[min(60vw,420px)] truncate">{tag}</span>
               </span>
             </div>
 
             {/* Title */}
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              {t("title", { tag: tagName })}
+              {t("title", { tag })}
             </h1>
 
             {/* Description */}
             <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-              {t("description", { tag: tagName })}
+              {t("description", { tag })}
             </p>
 
             {/* Stats */}
             <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-muted-foreground">
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-4 py-2 backdrop-blur">
                 <BookOpen className="size-4 text-primary" />
-                <span>
-                  <strong className="text-foreground">{posts.length}</strong>{" "}
-                  {t("articlesCount", { count: posts.length })}
-                </span>
+                <span>{t("articlesCount", { count: posts.length })}</span>
               </div>
             </div>
           </div>
@@ -109,7 +102,7 @@ export default async function TagPage({ params }: { params: Params }) {
               <div className="mb-6 flex items-center gap-2">
                 <div className="h-px flex-1 bg-gradient-to-r from-border to-transparent" />
                 <span className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                  Featured Article
+                  {t("sections.featuredArticle")}
                 </span>
                 <div className="h-px flex-1 bg-gradient-to-l from-border to-transparent" />
               </div>
@@ -122,7 +115,7 @@ export default async function TagPage({ params }: { params: Params }) {
             <div className="mb-10 flex items-center gap-2">
               <div className="h-px flex-1 bg-gradient-to-r from-border to-transparent" />
               <span className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                Latest Articles
+                {t("sections.latestArticles")}
               </span>
               <div className="h-px flex-1 bg-gradient-to-l from-border to-transparent" />
             </div>

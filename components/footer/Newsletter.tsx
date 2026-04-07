@@ -14,7 +14,6 @@ export function Newsletter() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const t = useTranslations("Footer.Newsletter");
-
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
@@ -50,9 +49,7 @@ export function Newsletter() {
       setTimeout(() => setSubscribeStatus("idle"), 5000);
     } catch (error) {
       setSubscribeStatus("error");
-      setErrorMessage(
-        error instanceof Error ? error.message : t("errorMessage2")
-      );
+      setErrorMessage(error instanceof Error ? error.message : t("errorMessage2"));
       setTimeout(() => setSubscribeStatus("idle"), 5000);
     }
   };
@@ -66,7 +63,7 @@ export function Newsletter() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="your@email.com"
+            placeholder={t("placeholder")}
             required
             className="w-full px-3 py-2 bg-gray-200 text-black text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
             disabled={subscribeStatus === "loading"}

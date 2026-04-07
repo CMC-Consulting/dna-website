@@ -76,7 +76,7 @@ export const AboutHero = () => {
       </div>
       {/* Scroll Down Indicator */}
       <div className="absolute bottom-4 md:bottom-12 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 cursor-pointer group">
-        <span className="text-white/60 text-xs md:text-sm font-medium tracking-[0.2em] uppercase group-hover:text-white/80 transition-colors">Scroll</span>
+        <span className="text-white/60 text-xs md:text-sm font-medium tracking-[0.2em] uppercase group-hover:text-white/80 transition-colors">{t("scrollLabel")}</span>
         <div className="flex flex-col items-center animate-bounce">
           <ChevronDown className="w-5 h-5 md:w-6 md:h-6 text-white/60 group-hover:text-white/80 transition-colors" />
           <ChevronDown className="w-5 h-5 md:w-6 md:h-6 text-white/60 group-hover:text-white/80 transition-colors -mt-3" />

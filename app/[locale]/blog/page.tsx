@@ -84,13 +84,11 @@ export default async function Page({ params }: { params: Params }) {
             <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <BookOpen className="size-5 text-primary" />
-                <span>
-                  <strong className="text-foreground">{posts.length}</strong> Articles
-                </span>
+                <span>{t("stats.articlesCount", { count: posts.length })}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Rss className="size-5 text-primary" />
-                <span>Updated Weekly</span>
+                <span>{t("stats.updatedWeekly")}</span>
               </div>
             </div>
           </div>
@@ -132,7 +130,7 @@ export default async function Page({ params }: { params: Params }) {
               <div className="mb-6 flex items-center gap-2">
                 <div className="h-px flex-1 bg-gradient-to-r from-border to-transparent" />
                 <span className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                  Featured Article
+                  {t("sections.featuredArticle")}
                 </span>
                 <div className="h-px flex-1 bg-gradient-to-l from-border to-transparent" />
               </div>
@@ -145,7 +143,7 @@ export default async function Page({ params }: { params: Params }) {
             <div className="mb-10 flex items-center gap-2">
               <div className="h-px flex-1 bg-gradient-to-r from-border to-transparent" />
               <span className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                Latest Articles
+                {t("sections.latestArticles")}
               </span>
               <div className="h-px flex-1 bg-gradient-to-l from-border to-transparent" />
             </div>
@@ -166,10 +164,10 @@ export default async function Page({ params }: { params: Params }) {
                 <BookOpen className="size-8 text-muted-foreground" />
               </div>
               <h3 className="mb-2 text-lg font-semibold text-foreground">
-                No articles yet
+                {t("empty.title")}
               </h3>
               <p className="text-muted-foreground">
-                Check back soon for new content.
+                {t("empty.description")}
               </p>
             </div>
           )}
@@ -188,11 +186,10 @@ export default async function Page({ params }: { params: Params }) {
             <div className="relative flex flex-col items-center justify-between gap-8 p-8 sm:p-10 md:flex-row md:items-center md:gap-12 lg:gap-16 lg:p-14">
               <div className="max-w-2xl text-center md:text-left">
                 <h2 className="text-balance text-2xl font-bold tracking-tight leading-tight text-[#a3c4fa] sm:text-3xl lg:text-4xl">
-                  Have a project in mind?{" "}
-                  <span className="text-white">Let&apos;s talk.</span>
+                  {t("cta.title")} <span className="text-white">{t("cta.titleHighlight")}</span>
                 </h2>
                 <p className="mt-4 text-white/80 text-base sm:text-lg">
-                  Our team of AI and data experts is ready to help you transform your business with cutting-edge solutions.
+                  {t("cta.description")}
                 </p>
 
                 <div className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center md:justify-start gap-3 sm:gap-4">
@@ -200,14 +197,14 @@ export default async function Page({ params }: { params: Params }) {
                     asChild
                     className="rounded-[12px] border-none bg-[#5a94f5]/40 hover:bg-[#5a94f5]/60 text-white px-6 py-2.5"
                   >
-                    <Link href="/contact">Get in touch</Link>
+                    <Link href="/contact">{t("cta.primaryAction")}</Link>
                   </Button>
                   <Button
                     asChild
                     variant="secondary"
                     className="rounded-[12px] border border-[#EDEEF0] bg-white hover:bg-white/90 text-[#31373D] px-6 py-2.5"
                   >
-                    <Link href="/about">Learn about us</Link>
+                    <Link href="/about">{t("cta.secondaryAction")}</Link>
                   </Button>
                 </div>
               </div>
@@ -215,7 +212,7 @@ export default async function Page({ params }: { params: Params }) {
               <div className="hidden md:block w-full max-w-xs lg:max-w-sm shrink-0">
                 <img
                   src="/ready_to_build.png"
-                  alt="Ready to build illustration"
+                  alt={t("cta.imageAlt")}
                   className="w-full h-auto select-none"
                   loading="lazy"
                 />

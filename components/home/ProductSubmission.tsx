@@ -88,7 +88,7 @@ export default function ProductSubmission() {
                     type="url"
                     id="productUrl"
                     name="productUrl"
-                    placeholder="https://your-awesome-site.com"
+                    placeholder={t("productUrlPlaceholder")}
                     required
                     className="w-full px-4 py-3 bg-white/20 text-white placeholder-white/50 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 transition-all"
                     disabled={status === "loading"}

@@ -12,6 +12,7 @@ import { BlogPost } from "@/types/blog";
 import dayjs from "dayjs";
 import { ArrowRight, Calendar } from "lucide-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 type FeaturedPostsCarouselProps = {
   posts: BlogPost[];
@@ -22,6 +23,7 @@ export function FeaturedPostsCarousel({
   posts,
   currentSlug,
 }: FeaturedPostsCarouselProps) {
+  const t = useTranslations("BlogPost");
   // Filter out current post and get up to 6 related posts
   const relatedPosts = posts
     .filter((post) => post.slug !== currentSlug)
@@ -34,17 +36,17 @@ export function FeaturedPostsCarousel({
       <div className="mb-8 flex items-center justify-between">
         <div>
           <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-            More Articles
+            {t("relatedPosts.title")}
           </h2>
           <p className="mt-2 text-muted-foreground">
-            Continue reading with these related posts
+            {t("relatedPosts.description")}
           </p>
         </div>
         <I18nLink
           href="/blog"
           className="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
         >
-          View all posts
+          {t("relatedPosts.viewAllPosts")}
           <ArrowRight className="size-4" />
         </I18nLink>
       </div>
@@ -120,9 +122,9 @@ export function FeaturedPostsCarousel({
       <I18nLink
         href="/blog"
         className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline sm:mt-6 sm:hidden"
-        aria-label="View all blog posts"
+        aria-label={t("aria.viewAllPosts")}
       >
-        View all posts
+        {t("relatedPosts.viewAllPosts")}
         <ArrowRight className="size-4 shrink-0" />
       </I18nLink>
     </section>

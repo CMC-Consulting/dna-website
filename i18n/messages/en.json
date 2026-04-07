@@ -3,7 +3,9 @@
     "title": "Language Suggestion",
     "description": "We noticed your browser language differs from the current site language. You can switch languages anytime.",
     "countdown": "Closing in {countdown} seconds",
-    "switchTo": "Switch to"
+    "switchTo": "Switch to",
+    "alertAriaLabel": "Language detection alert",
+    "dismissAriaLabel": "Dismiss language suggestion"
   },
   "Header": {
     "links": [
@@ -34,6 +36,9 @@
       "name": "DATA & AI SERVICES",
       "description": "We are a team of AI and Data experts from CMC Consulting, passionate about helping businesses leverage the power of AI and data to achieve their goals."
     },
+    "Badges": {
+      "featuredOnFirstLook": "Featured on FirstLook.Tools"
+    },
     "Columns": {
       "Product": {
         "title": "Products"
@@ -57,7 +62,7 @@
         "termsConditions": "Terms & Conditions"
       }
     },
-    "Copyright": "Copyright © {year} {name} All rights reserved.",
+    "Copyright": "© {year} {name}. All rights reserved.",
     "PrivacyPolicy": "Privacy Policy",
     "TermsOfService": "Terms of Service",
     "Links": {
@@ -132,6 +137,7 @@
     "Newsletter": {
       "title": "Subscribe to our newsletter",
       "description": "Get the latest news and updates from Next.js Starter",
+      "placeholder": "your@email.com",
       "defaultErrorMessage": "Please enter a valid email address",
       "successMessage": "Subscription successful",
       "errorMessage": "Subscription failed",
@@ -229,6 +235,7 @@
     "blogSection": {
       "title": "Tech Insights",
       "subtitle": "Exploring cutting-edge technologies shaping tomorrow's digital landscape",
+      "metaLabel": "Tech Insights",
       "readMore": "Read More",
       "posts": {
         "1": {
@@ -266,7 +273,37 @@
   },
   "Blog": {
     "title": "Insights & Resources",
-    "description": "Explore expert perspectives on SAP, AI, and data solutions. Our team shares practical insights, industry trends, and strategic guidance to help you navigate digital transformation and unlock the full potential of your enterprise systems."
+    "description": "Explore expert perspectives on SAP, AI, and data solutions. Our team shares practical insights, industry trends, and strategic guidance to help you navigate digital transformation and unlock the full potential of your enterprise systems.",
+    "stats": {
+      "articlesCount": "{count} Articles",
+      "updatedWeekly": "Updated Weekly"
+    },
+    "sections": {
+      "featuredArticle": "Featured Article",
+      "latestArticles": "Latest Articles"
+    },
+    "empty": {
+      "title": "No articles yet",
+      "description": "Check back soon for new content."
+    },
+    "card": {
+      "featured": "Featured",
+      "readTime": "{minutes} min read",
+      "readArticle": "Read Article",
+      "readMore": "Read more"
+    },
+    "feed": {
+      "loadingMore": "Loading more articles...",
+      "endReached": "You've reached the end"
+    },
+    "cta": {
+      "title": "Have a project in mind?",
+      "titleHighlight": "Let's talk.",
+      "description": "Our team of AI and data experts is ready to help you transform your business with cutting-edge solutions.",
+      "primaryAction": "Get in touch",
+      "secondaryAction": "Learn about us",
+      "imageAlt": "Ready to build illustration"
+    }
   },
   "BlogTag": {
     "title": "Articles about {tag}",
@@ -275,31 +312,36 @@
     "articlesCount": "{count} articles",
     "noArticles": "No articles yet",
     "noArticlesDescription": "There are no articles on this topic yet. Check back soon.",
-    "tags": {
-      "data-services": "Data Services",
-      "data-governance": "Data Governance",
-      "data-lakehouse": "Data Lakehouse Architecture",
-      "data-integration": "Data Integration",
-      "data-pipelines": "Data Pipelines",
-      "ai": "Artificial Intelligence",
-      "generative-ai": "Generative AI",
-      "sap": "SAP",
-      "enterprise": "Enterprise",
-      "automation": "Automation",
-      "llm": "Large Language Models",
-      "prisma-ai": "Prisma AI",
-      "smart-email": "Smart Email",
-      "smart-invoice": "Smart Invoice"
+    "sections": {
+      "featuredArticle": "Featured Article",
+      "latestArticles": "Latest Articles"
+    }
+  },
+  "BlogPost": {
+    "backToBlog": "Back to Blog",
+    "backToAllPosts": "Back to all posts",
+    "readTime": "{minutes} min read",
+    "relatedPosts": {
+      "title": "More Articles",
+      "description": "Continue reading with these related posts",
+      "viewAllPosts": "View all posts"
+    },
+    "aria": {
+      "backToBlog": "Back to blog listing",
+      "backToAllPosts": "Back to all blog posts",
+      "viewAllPosts": "View all blog posts"
     }
   },
   "About": {
     "title": "About",
     "description": "About CMC Consulting AI",
+    "parallaxImageAlt": "CMC Consulting office",
     "hero": {
       "headline1": "CMC Consulting AI",
       "headlineHighlight": "Shaping the New Era of AI",
       "subtitle": "CMC Consulting AI specializes in delivering advanced AI and data services to companies and groups, empowering them with innovative tools to meet their operational needs.",
       "subtitle2": "CMC Consulting AI is committed to delivering artificial intelligence and data-driven services to companies. Our goal is to support enterprises in realizing their objectives through innovative AI and data strategies.",
+      "scrollLabel": "Scroll",
       "stats": [
         {
           "value": "End-to-End",
@@ -359,6 +401,7 @@
     "productNameLabel": "Product Name",
     "productNamePlaceholder": "My Awesome Project",
     "productUrlLabel": "Product URL",
+    "productUrlPlaceholder": "https://your-awesome-site.com",
     "submit": "Submit Product",
     "submitting": "Submitting...",
     "successMessage": "Thank you! Your submission has been received. We'll review it shortly.",
@@ -516,7 +559,31 @@
     "aboutUs": "About Us",
     "techInsights": "Tech Insights",
     "contact": "Contact",
-    "bookDemo": "Book demo"
+    "bookDemo": "Book demo",
+    "openMainMenu": "Open main menu"
+  },
+  "LanguageSwitcher": {
+    "label": "Language",
+    "changeLanguage": "Change language"
+  },
+  "ThemeToggle": {
+    "toggleTheme": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "Carousel": {
+    "previousSlide": "Previous slide",
+    "nextSlide": "Next slide"
+  },
+  "MdxCard": {
+    "view": "View"
+  },
+  "BuiltWithButton": {
+    "title": "Built with NEXTY.DEV",
+    "label": "Built with",
+    "logoAlt": "NEXTY.DEV logo",
+    "logoTitle": "NEXTY.DEV logo"
   },
   "Contact": {
     "title": "Contact us",
@@ -591,5 +658,8 @@
     "errorMessage": "Subscription failed",
     "errorMessage2": "Subscription failed. Please try again later.",
     "privacyNote": "We respect your privacy. Unsubscribe at any time."
+  },
+  "ParallaxImage": {
+    "defaultImageAlt": "Parallax image"
   }
 }

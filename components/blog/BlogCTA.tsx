@@ -15,7 +15,6 @@ export function BlogCTA() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const t = useTranslations("BlogCTA");
-
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
@@ -50,9 +49,7 @@ export function BlogCTA() {
       setErrorMessage("");
     } catch (error) {
       setSubscribeStatus("error");
-      setErrorMessage(
-        error instanceof Error ? error.message : t("errorMessage2")
-      );
+      setErrorMessage(error instanceof Error ? error.message : t("errorMessage2"));
       setTimeout(() => setSubscribeStatus("idle"), 5000);
     }
   };

@@ -8,7 +8,6 @@ import Image from "next/image";
 const Footer = () => {
   const t = useTranslations("Footer");
   const year = new Date().getFullYear();
-  const brandName = t("Brand.name");
   const companyWebsite = "https://cmcconsulting.vn/";
 
   return (
@@ -207,7 +206,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-border/60">
           <p className="text-sm text-muted-foreground text-center">
-           ©{year} CMC Consulting. All rights reserved.
+            {t("Copyright", { year, name: "CMC Consulting" })}
           </p>
         </div>
       </div>

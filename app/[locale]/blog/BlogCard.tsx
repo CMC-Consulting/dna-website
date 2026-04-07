@@ -3,6 +3,7 @@ import { BlogPost } from "@/types/blog";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import dayjs from "dayjs";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 type BlogCardProps = {
   post: BlogPost;
@@ -11,6 +12,7 @@ type BlogCardProps = {
 };
 
 export function BlogCard({ post, locale, featured = false }: BlogCardProps) {
+  const t = useTranslations("Blog");
   // Estimate read time (roughly 200 words per minute)
   const wordCount = post.content?.split(/\s+/).length || 0;
   const readTime = Math.max(1, Math.ceil(wordCount / 200));
@@ -44,7 +46,7 @@ export function BlogCard({ post, locale, featured = false }: BlogCardProps) {
                 </span>
               )}
               <span className="text-xs font-medium text-amber-600 dark:text-amber-400">
-                Featured
+                {t("card.featured")}
               </span>
             </div>
 
@@ -67,7 +69,7 @@ export function BlogCard({ post, locale, featured = false }: BlogCardProps) {
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="size-4" />
-                <span>{readTime} min read</span>
+                <span>{t("card.readTime", { minutes: readTime })}</span>
               </div>
             </div>
 
@@ -76,7 +78,7 @@ export function BlogCard({ post, locale, featured = false }: BlogCardProps) {
               prefetch={false}
               className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
             >
-              Read Article
+              {t("card.readArticle")}
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
             </I18nLink>
           </div>
@@ -115,7 +117,7 @@ export function BlogCard({ post, locale, featured = false }: BlogCardProps) {
           <span className="text-border">|</span>
           <div className="flex items-center gap-1.5">
             <Clock className="size-3.5" />
-            <span>{readTime} min read</span>
+            <span>{t("card.readTime", { minutes: readTime })}</span>
           </div>
         </div>
 
@@ -136,7 +138,7 @@ export function BlogCard({ post, locale, featured = false }: BlogCardProps) {
           prefetch={false}
           className="mt-auto inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors hover:text-primary/80"
         >
-          Read more
+          {t("card.readMore")}
           <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
         </I18nLink>
       </div>

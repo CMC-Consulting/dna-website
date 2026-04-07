@@ -1,15 +1,18 @@
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 // NEXTY.DEV Affiliate Link: https://affiliates.nexty.dev/
 // sign up and use your affiliate link on BuiltWithButton to earn money
 
 export default function BuiltWithButton() {
+  const t = useTranslations("BuiltWithButton");
+
   return (
     <Link
       href="https://nexty.dev"
-      title="Built with NEXTY.DEV"
+      title={t("title")}
       prefetch={false}
       target="_blank"
       rel="noopener noreferrer"
@@ -18,7 +21,7 @@ export default function BuiltWithButton() {
         "px-4 rounded-md bg-transparent border-gray-500 hover:bg-gray-950 text-white hover:text-gray-100"
       )}
     >
-      <span>Built with</span>
+      <span>{t("label")}</span>
       <span>
         <LogoNexty className="size-4 rounded-full" />
       </span>
@@ -30,11 +33,13 @@ export default function BuiltWithButton() {
 }
 
 function LogoNexty({ className }: { className?: string }) {
+  const t = useTranslations("BuiltWithButton");
+
   return (
     <img
       src="/logo_nexty.png"
-      alt="Logo"
-      title="Logo"
+      alt={t("logoAlt")}
+      title={t("logoTitle")}
       loading="lazy"
       width={96}
       height={96}

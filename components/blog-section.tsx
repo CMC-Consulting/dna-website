@@ -23,7 +23,7 @@ type BlogPost = {
 export const BlogSection = async ({ locale }: BlogSectionProps) => {
   const t = await getTranslations({ locale, namespace: "Home.blogSection" });
   const { posts } = await getPosts(locale);
-  const metaLabel = locale === "vi" ? "Tin tức" : "Tech Insights";
+  const metaLabel = t("metaLabel");
   const dateFormatter = new Intl.DateTimeFormat(locale === "vi" ? "vi-VN" : "en-US", {
     day: "2-digit",
     month: "short",

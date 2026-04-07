@@ -62,7 +62,10 @@ export const Navbar = () => {
       )}
     >
       <div className="flex items-center justify-between px-6 py-3">
-        <Link href="/" className="flex shrink-0 items-center gap-2 text-[#276df0]">
+        <Link href="/" className="flex shrink-0 items-center gap-2 text-[#276df0]"onClick={()=>{
+          setIsMenuOpen(false)
+          setOpenDropdown(null)
+        }}>
           {/* logo Desktop */}
           <Image
             src="/logos/logo.png"
@@ -151,7 +154,7 @@ export const Navbar = () => {
             className="text-muted-foreground relative flex size-8 lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <span className="sr-only">Open main menu</span>
+            <span className="sr-only">{t("openMainMenu")}</span>
             <div className="absolute top-1/2 left-1/2 block w-[18px] -translate-x-1/2 -translate-y-1/2">
               <span
                 aria-hidden="true"
@@ -173,7 +176,7 @@ export const Navbar = () => {
       {/*  Mobile Menu Navigation */}
       <div
         className={cn(
-          "bg-background fixed inset-x-0 top-[calc(100%+1rem)] flex flex-col rounded-2xl border p-6 transition-all duration-300 ease-in-out lg:hidden",
+          "bg-background fixed inset-x-0 top-[calc(100%+1rem)] flex flex-col rounded-2xl border p-6 transition-all duration-300 ease-in-out lg:hidden max-h-[85dvh] overflow-y-scroll",
           isMenuOpen
             ? "visible translate-y-0 opacity-100"
             : "invisible -translate-y-4 opacity-0",
@@ -253,6 +256,12 @@ export const Navbar = () => {
               setOpenDropdown(null);
             }}
           />
+          <Link href={"/contact"} className="block w-full pt-4 text-center" onClick={()=>{
+            setIsMenuOpen(false)
+            setOpenDropdown(null)
+          }}>
+            <MainButton text={t("bookDemo")} size="medium" className="w-full"/>
+          </Link>
         </nav>
       </div>
     </section>

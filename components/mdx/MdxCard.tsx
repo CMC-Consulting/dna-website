@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   href?: string;
@@ -13,6 +14,8 @@ export function MdxCard({
   disabled,
   ...props
 }: CardProps) {
+  const t = useTranslations("MdxCard");
+
   return (
     <div
       className={cn(
@@ -33,7 +36,7 @@ export function MdxCard({
           className="absolute inset-0"
           prefetch={false}
         >
-          <span className="sr-only">View</span>
+          <span className="sr-only">{t("view")}</span>
         </Link>
       )}
     </div>
