@@ -1,0 +1,48 @@
+.particle {
+  position: absolute;
+  background: rgba(14, 165, 233, 0.7);
+  border-radius: 50%;
+
+  opacity: 0.6;
+  filter: blur(1px);
+
+  animation: float 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+
+  20% {
+    transform: translate(
+      calc(var(--move-x) * 0.3),
+      calc(var(--move-y) * -0.2)
+    ) scale(1.2) rotate(30deg);
+  }
+
+  40% {
+    transform: translate(
+      calc(var(--move-x) * 0.6),
+      calc(var(--move-y) * 0.4)
+    ) scale(0.9) rotate(90deg);
+  }
+
+  60% {
+    transform: translate(
+      calc(var(--move-x) * -0.4),
+      calc(var(--move-y) * 0.6)
+    ) scale(1.3) rotate(180deg);
+  }
+
+  80% {
+    transform: translate(
+      calc(var(--move-x) * -0.2),
+      calc(var(--move-y) * -0.3)
+    ) scale(1.1) rotate(270deg);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1) rotate(360deg);
+  }
+}
