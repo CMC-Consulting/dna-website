@@ -13,26 +13,26 @@ export default function PrismaHero() {
 
         <div className='max-w-5xl mx-auto '>
           <div className='flex flex-col gap-10 items-center'>
-            <h1 className='text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold drop-shadow-lg text-center flex flex-col gap-3'>
+            <h1 className='text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold drop-shadow-lg text-center flex flex-col gap-3 text-[#111827]'>
               <span>Prisma,</span>
               <span>Build Faster. Scale Smarter. Power Your Data with Prisma.</span>
             </h1>
             <span className='text-center md:text-lg lg:text-2xl'>Streamline your database workflows with a modern, type-safe ORM designed for speed, scalability, and developer productivity.</span>
           </div>
-          <div className='flex justify-center items-center gap-6 py-12 flex-wrap'>
-            <Link href="/features" className="flex justify-center max-w-[70%]">
+          <div className='flex justify-center items-center gap-6 md:gap-11 py-12 flex-wrap'>
+            <Link href="#feature-list" className="flex justify-center max-w-[70%]">
               <MainButton
                 text='Notable features'
                 size='medium'
-                className='w-full bg-[linear-gradient(135deg,#0f1e35,#276df0)] px-6 text-base font-semibold text-primary-foreground rounded-lg shadow-lg backdrop-blur-md transition-all duration-300 ease-out hover:brightness-110 hover:shadow-2xl hover:scale-[1.03] hover:-translate-y-0.5 active:scale-[0.97]'
+                className='w-full rounded-lg bg-[linear-gradient(135deg,#0f1e35,#276df0)] px-6 text-base font-semibold text-primary-foreground shadow-md backdrop-blur-md transition-all duration-300 ease-out hover:brightness-105 hover:shadow-lg hover:scale-[1.01] hover:-translate-y-px active:scale-[0.99]'
               />
             </Link>
 
-            <Link href="/evaluate" className="flex justify-center max-w-[65%]">
+            <Link href="#review-list" className="flex justify-center max-w-[65%]">
               <MainButton
                 text='Evaluate'
                 size='medium'
-                className='w-full rounded-lg bg-white/80 backdrop-blur-md text-gray-800 border border-white/40 shadow-md transition-all duration-300 ease-out hover:bg-white hover:shadow-2xl hover:scale-[1.03] hover:-translate-y-0.5 active:scale-[0.97]'
+                className='w-full rounded-lg border border-[#cdd9e8]  bg-white/80 text-gray-800 shadow-sm backdrop-blur-md transition-all duration-300 ease-out hover:bg-white/95 hover:shadow-md hover:scale-[1.01] hover:-translate-y-px active:scale-[0.99]'
               />
             </Link>
 

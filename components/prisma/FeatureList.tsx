@@ -32,16 +32,18 @@ export default function FeatureList() {
     },
   ]
   return (
-    <div className="w-full flex flex-col justify-center py-12 sm:py-8 lg:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto gap-10 md:gap-12">
-      <h1 className="text-3xl font-extrabold text-center md:text-4xl">Why Choose Prisma?</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 items-stretch">
-        {dataFeatureCard.map((item) => {
-          return (
-            <FeatureCard key={item.title} feature={item} />
-          )
-        })}
+    <section id="feature-list" className="scroll-mt-24">
+      <div className="w-full flex flex-col justify-center py-12 sm:py-8 lg:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto gap-10 md:gap-12">
+        <h1 className="text-3xl font-extrabold text-center md:text-4xl text-[#111827]">Why Choose Prisma?</h1>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 items-stretch">
+          {dataFeatureCard.map((item) => {
+            return (
+              <FeatureCard key={item.title} feature={item} />
+            )
+          })}
 
+        </div>
       </div>
-    </div>
+    </section>
   )
 }

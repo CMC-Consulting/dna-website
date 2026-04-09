@@ -1,0 +1,30 @@
+/* ReviewList.module.css */
+.viewport {
+  mask-image: linear-gradient(to bottom,
+      transparent 0%,
+      black 20%,
+      black 80%,
+      transparent 100%);
+}
+
+.track {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: review-marquee var(--review-duration) linear infinite;
+  will-change: transform;
+}
+
+.reverse {
+  animation-direction: reverse;
+}
+
+@keyframes review-marquee {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-50% - 0.5rem));
+  }
+}

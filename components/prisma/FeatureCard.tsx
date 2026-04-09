@@ -46,10 +46,10 @@ export default function FeatureCard({ feature }: FeatureCardProps) {
 
           {/* content */}
           <div className="text-[#111827]">
-            <h1 className="text-sm font-bold md:text-base lg:text-lg b-2 pr-20">
+            <h1 className="text-sm font-bold md:text-base lg:text-lg b-2 pr-20 text-[#111827]">
               {feature.title}
             </h1>
-            <span className="text-xs md:text-sm lg:text-base ">
+            <span className="text-xs md:text-sm lg:text-base">
             {feature.desc}
             </span>
           </div>

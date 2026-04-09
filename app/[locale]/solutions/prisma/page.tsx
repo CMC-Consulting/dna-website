@@ -1,10 +1,4 @@
-import FeatureList from '@/components/prisma/FeatureList';
-import PrismaHero from './../../../../components/blocks/prisma-hero';
+import PrismaContent from '@/components/prisma/PrismaContent';
 export default function Page() {
-  return (
-    <>
-    <PrismaHero></PrismaHero>
-    <FeatureList/>
-    </>
-  )
+  return <PrismaContent />;
 }
